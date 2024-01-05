@@ -5,11 +5,10 @@
     box-sizing: border-box;
 }
 
-:root{
-
-}
-
 
 body{
-    color: red;
+    font-family: open_sans, sans-serif;
+    font-weight: 400;
+    color: $color-text-main;
+    background: $color-main;
 }

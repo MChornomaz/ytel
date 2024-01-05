@@ -1,4 +1,18 @@
-@font-face {}
+@font-face {
+  font-family: open_sans;
+  src: url(../fonts/OpenSans-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: open_sans;
+  src: url(../fonts/OpenSans-SemiBold.woff2);
+  font-weight: 600;
+}
+@font-face {
+  font-family: open_sans;
+  src: url(../fonts/OpenSans-Bold.woff2);
+  font-weight: 700;
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,5 +20,8 @@
 }
 
 body {
-  color: red;
+  font-family: open_sans, sans-serif;
+  font-weight: 400;
+  color: #000000;
+  background: #ffffff;
 }
