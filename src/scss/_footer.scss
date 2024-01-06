@@ -1,0 +1,64 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 36px; 
+    border-top: 0.6px solid $color-secondary;
+    padding-left: 20px;
+
+    &__text{
+        font-size: 12px;
+        line-height: 18px;
+        color: #707070;
+    }
+
+    &__buttons{
+        height: 100%;
+        width: 72px;
+        display: flex;
+    }
+
+    &__button{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }   
+
+    &__record{
+        background-color: #F1F1F1;
+
+        &--white{
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #FFF4F4;
+        }
+
+        &--pink{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #FFC5C5;
+        }
+
+        &--red{
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #FF2020;
+        }
+    }
+
+    &__call{
+        background: $gradient-main;
+
+        svg{
+            width: 16px;
+            height: 16px;
+            fill: $color-main;
+        }
+    }
+}

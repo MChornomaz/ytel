@@ -16,7 +16,7 @@ a{
 
 
 body{
-    font-family: open_sans, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     color: $color-text-main;
     background: $color-main;
@@ -27,4 +27,10 @@ body{
     height: 100vh;
     background: $color-main;
     position: relative;
+}
+
+.centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
