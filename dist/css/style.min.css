@@ -389,6 +389,41 @@ body {
   }
 }
 
+.scripts__content {
+  padding: 16px;
+  overflow-y: auto;
+  height: calc(100% - 60px);
+  position: relative;
+}
+.scripts__content textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: linear-gradient(to right, rgba(32, 32, 32, 0.18) 1px, transparent 1px, transparent 20px), linear-gradient(to bottom, rgba(32, 32, 32, 0.18) 1px, transparent 1px, transparent 20px);
+  background-size: 20px 20px;
+  box-shadow: inset 0px 0px 0px 1px #ffffff;
+}
+.scripts__refresh {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: linear-gradient(to right, rgb(105, 105, 194), rgb(147, 147, 236));
+}
+.scripts__refresh svg {
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
+}
+
 .page-content {
   width: 100%;
   height: 100%;
