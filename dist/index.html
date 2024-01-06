@@ -250,7 +250,126 @@
                 <!-- WORKING AREA STARTS  -->
 
                 <section class="working-area">
-                    <div class="working-area__item">ITEM 1</div>
+
+                    <!-- CUSTOMER INFO STARTS  -->
+                    <div class="working-area__item">
+                        <div class="working-area__data">
+                            <h3 class="working-area__title">Customer Info</h3>
+                            <div class="working-area__icons">
+                                <button class="working-area__icon" id="minimaizeCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="minus">
+                                        <g data-name="Layer 2">
+                                            <g data-name="minus-square">
+                                                <path
+                                                    d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                                </path>
+                                                <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="working-area__icon" id="expendCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        id="expand">
+                                        <path fill="#7A7A7A"
+                                            d="M5.3 6.7l1.4-1.4-3-3L5 1H1v4l1.3-1.3zM6.7 10.7L5.3 9.3l-3 3L1 11v4h4l-1.3-1.3zM10.7 9.3l-1.4 1.4 3 3L11 15h4v-4l-1.3 1.3zM11 1l1.3 1.3-3 3 1.4 1.4 3-3L15 5V1z">
+                                        </path>
+                                    </svg>
+                                </button>
+                                <button class="working-area__icon" id="trayCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 32 32"
+                                        id="down-arrow">
+                                        <path
+                                            d="M16 22a2 2 0 0 1-1.41-.59l-10-10a2 2 0 0 1 2.82-2.82L16 17.17l8.59-8.58a2 2 0 0 1 2.82 2.82l-10 10A2 2 0 0 1 16 22Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <form class="customer-form">
+                            <div class="customer-form__row">
+                                <div class="input-field">
+                                    <label for="title">Title</label>
+                                    <input type="text" placeholder="Input title" id="title">
+                                </div>
+                                <div class="input-field">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" placeholder="Input full name" id="name">
+                                </div>
+                            </div>
+                            <div class="customer-form__row">
+                                <div class="input-field">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" placeholder="Input phone number" id="phone">
+                                </div>
+                                <div class="input-field">
+                                    <label for="altPhone">Alt. Phone Number</label>
+                                    <input type="tel" placeholder="Input alt. phone number" id="altPhone">
+                                </div>
+                            </div>
+                            <div class="customer-form__row">
+                                <div class="input-field">
+                                    <label for="email">Email</label>
+                                    <input type="email" placeholder="Input email" id="email">
+                                </div>
+                                <div class="input-field">
+                                    <label for="security">Security Phrase</label>
+                                    <input type="text" placeholder="Input security phrase" id="security">
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <label for="address1">Address Line 1</label>
+                                <input type="text" placeholder="Input address line 1" id="address1">
+                            </div>
+                            <div class="input-field">
+                                <label for="address2">Address Line 2</label>
+                                <input type="text" placeholder="Input address line 2" id="address2">
+                            </div>
+                            <div class="customer-form__row">
+                                <div class="input-field">
+                                    <label for="city">City</label>
+                                    <select class="form-select" type="text" id="city">
+                                        <option value="0">Choose city</option>
+                                        <option value="1">City 1</option>
+                                        <option value="2">City 2</option>
+                                        <option value="3">City 3</option>
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label for="state">State</label>
+                                    <select class="form-select" type="text" id="state">
+                                        <option value="0">Choose state</option>
+                                        <option value="1">State 1</option>
+                                        <option value="2">State 2</option>
+                                        <option value="3">State 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="customer-form__row">
+                                <div class="input-field">
+                                    <label for="province">Province</label>
+                                    <select class="form-select" type="text" id="province">
+                                        <option value="0">Choose province</option>
+                                        <option value="1">Province 1</option>
+                                        <option value="2">Province 2</option>
+                                        <option value="3">Province 3</option>
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label for="postCode">Post Code</label>
+                                    <input type="number" placeholder="Input post code" id="postCode">
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <label for="comment">Comment</label>
+                                <textarea type="text" placeholder="Write comment here..." id="comment"></textarea>
+                            </div>
+                        </form>
+
+
+
+                    </div>
+                    <!-- CUSTOMER INFO ENDS  -->
                     <div class="working-area__item">ITEM 2</div>
                 </section>
                 <!-- WORKING AREA STARTS  -->

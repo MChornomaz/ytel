@@ -20,11 +20,14 @@ body{
     font-weight: 400;
     color: $color-text-main;
     background: $color-main;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 .wrapper{
     width: 100vw;
     height: 100vh;
+    max-height: 100vh;
     background: $color-main;
     position: relative;
 }
