@@ -3,6 +3,142 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
 
-    border: 1px solid red;
-}
+    &__logo{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        margin-bottom: 35px;
+
+        img{
+            height: 100%;
+        }
+    }
+
+    &__select{
+        margin-bottom: 20px;
+
+        h5{
+            margin-bottom: 10px;
+        }
+    }
+
+    &__title{
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-text-secondary;
+    }
+
+    &__tools-list{
+        margin-top: 20px;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__icon-container{
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__tool-item{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+
+        svg{
+            height: 100%;
+        }
+
+        p{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            color: $color-text-third;
+        }
+    }
+
+    &--bottom{
+        width: 100%;
+        padding-right: 25px;
+        position: relative;
+        z-index: 100;
+    }
+
+    &__controls{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+    }
+
+    &__key{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        color: $color-text-third;
+    }
+
+    &__value{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+
+    }
+
+    &__help{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 45px;
+        margin-bottom: 20px;
+
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__menu-icon{
+        cursor: pointer;
+        width: 18px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__user{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        
+    }
+
+    &__avatar{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+}  
