@@ -75,6 +75,10 @@ body{
         transform: translate(-50%, -50%);
     }
 
+    &.group.active{
+        max-width: 645px;
+    }
+
     @media screen and (max-width: 1000px) {
         width: 80%;
         height: 95vh;

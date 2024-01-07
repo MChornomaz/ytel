@@ -461,7 +461,7 @@
 
 
         <!-- MODALS STARTS  -->
-        <div class="backdrop active"></div>
+        <div class="backdrop"></div>
         <!-- MANUAL DIAL MODAL STARTS  -->
         <div class="modal-window" id="manualDial">
             <div class="modal-window__heading">
@@ -576,7 +576,7 @@
         <!-- MANUAL DIAL MODAL ENDS  -->
 
         <!-- DISPO MODAL STARTS  -->
-        <div class="modal-window active" id="dispoModal">
+        <div class="modal-window" id="dispoModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Dispo</h3>
                 <button id="mdialCloseBbtn">
@@ -690,6 +690,93 @@
             </div>
         </div>
         <!-- DISPO MODAL ENDS  -->
+
+        <!-- GROUP SELECTION MODAL STARTS  -->
+        <div class="modal-window group " id="groupSelectionModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Group Selection</h3>
+                <button id="mdialCloseBbtn">
+                    <svg  viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="group__section">
+                    <div class="group__heading">
+                        <h4>Available Groups</h4>
+                        <button class="group__select-all-btn">Select All</button>
+                    </div>
+                    <div class="group__row">
+                        <div class="group__checkbox">
+                            <input type="checkbox" name="group" id="group1" class="group_checkbox-input">
+                            <label for="group1">Group 1</label>
+                        </div>
+                        <div class="group__checkbox">
+                            <input type="checkbox" name="group" id="group6" class="group_checkbox-input">
+                            <label for="group6">Group 6</label>
+                        </div>
+                    </div>
+                    <div class="group__row">
+                        <div class="group__checkbox">
+                            <input type="checkbox" name="group" id="group2" class="group_checkbox-input">
+                            <label for="group2">Group 2</label>
+                        </div>
+                        <div class="group__checkbox">
+                            <input type="checkbox" name="group" id="group7" class="group_checkbox-input">
+                            <label for="group7">Group 7</label>
+                        </div>
+                    </div>
+                    <div class="group__row">
+                        <div class="group__checkbox">
+                            <input type="checkbox" name="group" id="group3" class="group_checkbox-input">
+                            <label for="group3">Group 3</label>
+                        </div>
+                        <div class="group__checkbox">
+                            <input type="checkbox" name="group" id="group8" class="group_checkbox-input">
+                            <label for="group8">Group 8</label>
+                        </div>
+                    </div>
+                    <div class="group__row">
+                        <div class="group__checkbox">
+                            <input type="checkbox" name="group" id="group4" class="group_checkbox-input">
+                            <label for="group4">Group 4</label>
+                        </div>
+                        <div class="group__checkbox">
+                            <input type="checkbox" name="group" id="group9" class="group_checkbox-input">
+                            <label for="group9">Group 9</label>
+                        </div>
+                    </div>
+                    <div class="group__row">
+                        <div class="group__checkbox">
+                            <input type="checkbox" name="group" id="group5" class="group_checkbox-input">
+                            <label for="group5">Group 5</label>
+                        </div>
+                        <div class="group__checkbox">
+                            <input type="checkbox" name="group" id="group10" class="group_checkbox-input">
+                            <label for="group10">Group 10</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group-modal__footer">
+                <div class="group-modal__footer-content">
+                    <div class="group-modal__switch">
+                        <p>Pause Dialing</p>
+                        <div class="switch-box">
+                            <input class="switch-box__checkbox" type="checkbox" id="pause-dialing" checked />
+                            <label class="switch-box__label" for="pause-dialing"></label>
+                        </div>
+                    </div>
+                    <button class="blue-btn" disabled>Submit</button>
+                </div>
+            </div>
+        </div>
+        <!-- GROUP SELECTION MODAL ENDS  -->
+
+  
 
 
         <!-- MODALS ENDS  -->
