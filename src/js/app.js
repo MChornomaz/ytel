@@ -3,7 +3,7 @@ import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
 
-
+//MENU DROPDOWN
 
 const menuBtn = document.querySelector('#menuBtn');
 const menuDropdown = document.querySelector('#menuDropdown');
@@ -29,3 +29,29 @@ document.addEventListener('click', () => {
         menuIsShown = true;
     }
 });
+
+
+
+
+//MANUAL DIAL MODAL
+
+const manualDialModal = document.querySelector('#manualDial')
+const manualDialBtn = document.querySelector('#mDialBtn')
+const closeManualDialBtn = document.querySelector('#mdialCloseBbtn')
+const backdrop = document.querySelector('.backdrop')
+
+
+
+if(manualDialModal && backdrop){
+    manualDialBtn.addEventListener('click', () => {
+        manualDialModal.classList.add('active')
+        backdrop.classList.add('active')
+    })
+    
+    closeManualDialBtn.addEventListener('click', () => {
+        manualDialModal.classList.remove('active')
+        backdrop.classList.remove('active')
+    })
+}
+
+

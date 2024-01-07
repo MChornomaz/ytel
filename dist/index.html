@@ -36,7 +36,7 @@
                     <h5 class="sidebar__title">Tools</h5>
 
                     <ul class="sidebar__tools-list">
-                        <li class="sidebar__tool-item">
+                        <li class="sidebar__tool-item" id="mDialBtn">
                             <div class="sidebar__icon-container">
                                 <svg height="48" viewBox="0 0 48 48" width="48">
                                     <path d="M0 0h48v48H0z" fill="none" />
@@ -362,7 +362,8 @@
                             </div>
                             <div class="input-field">
                                 <label for="comment">Comment</label>
-                                <textarea type="text" placeholder="Write comment here..." id="comment" rows="5"></textarea>
+                                <textarea type="text" placeholder="Write comment here..." id="comment"
+                                    rows="5"></textarea>
                             </div>
                         </form>
                     </div>
@@ -401,19 +402,29 @@
                                         </path>
                                     </svg>
                                 </button>
-                                <button class="working-area__icon" id="trayCustomer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                <button class="working-area__icon" id="closeCustomer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-x">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
                                 </button>
                             </div>
                         </div>
                         <div class="scripts__content">
                             <textarea name="scripts"></textarea>
                             <button class="scripts__refresh">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="refresh"><path d="M20,9H15a1,1,0,0,1,0-2h4V3a1,1,0,0,1,2,0V8A1,1,0,0,1,20,9Z"></path><path d="M12,22A10,10,0,1,1,20.89,7.42a1,1,0,0,1-1.78.92A8,8,0,1,0,20,12a1,1,0,0,1,2,0A10,10,0,0,1,12,22Z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="refresh">
+                                    <path d="M20,9H15a1,1,0,0,1,0-2h4V3a1,1,0,0,1,2,0V8A1,1,0,0,1,20,9Z"></path>
+                                    <path
+                                        d="M12,22A10,10,0,1,1,20.89,7.42a1,1,0,0,1-1.78.92A8,8,0,1,0,20,12a1,1,0,0,1,2,0A10,10,0,0,1,12,22Z">
+                                    </path>
+                                </svg>
                             </button>
                         </div>
                     </div>
-                     <!-- SCRIPTS SECTION ENDS  -->
+                    <!-- SCRIPTS SECTION ENDS  -->
                 </section>
                 <!-- WORKING AREA STARTS  -->
 
@@ -447,7 +458,126 @@
         </div>
         <!-- CONTENT ENDS -->
         </div>
+
+
+        <!-- MODALS STARTS  -->
+        <div class="backdrop"></div>
+        <!-- MANUAL DIAL MODAL STARTS  -->
+        <div class="modal-window" id="manualDial">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Manual Dial</h3>
+                <button id="mdialCloseBbtn">
+                    <svg  viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="modal-window__dial">
+                    <div class="customer-form__row modal-window__inputs">
+                        <div class=" code-field">
+                            <select class="form-select modal-window__input" id="code">
+                                <option value="0">+1</option>
+                                <option value="1">+2</option>
+                                <option value="2">+3</option>
+                                <option value="3">+4</option>
+                            </select>
+                        </div>
+                            <input class="modal-window__input" type="text" placeholder="eg. 18391913" id="call-number">
+                    </div>
+                    <div class="modal-window__keyboard">
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number1">1</div>
+                            <div class="number" id="number2">2</div>
+                            <div class="number" id="number3">3</div>
+                        </div>
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number4">4</div>
+                            <div class="number" id="number5">5</div>
+                            <div class="number" id="number6">6</div>
+                        </div>
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number7">7</div>
+                            <div class="number" id="number8">8</div>
+                            <div class="number" id="number9">9</div>
+                        </div>
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number1">*</div>
+                            <div class="number" id="number2">0</div>
+                            <div class="number" id="number3">#</div>
+                        </div>
+                        <div class="centered">
+                            <button class="modal-window__call-btn" id="callBtn">
+                                <svg x="0" y="0" version="1.1" viewBox="0 0 29 29" xml:space="preserve">
+                                    <path
+                                        d="m20.914 17.743-2.091 1.178a1.319 1.319 0 0 1-1.58-.217l-6.979-6.979a1.32 1.32 0 0 1-.217-1.58l1.178-2.091a1.978 1.978 0 0 0-.325-2.37L7.766 2.55a1.978 1.978 0 0 0-2.798 0L3.545 3.972a5.276 5.276 0 0 0-.793 6.446l.714 1.19a41.36 41.36 0 0 0 14.946 14.631l.141.081c2.102 1.201 4.699.851 6.382-.831l1.486-1.486a1.978 1.978 0 0 0 0-2.798l-3.136-3.136a1.978 1.978 0 0 0-2.371-.326z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-window__logs">
+                    <div class="modal-window__log-heading">
+                        <h4>Call Log</h4>
+                        <p><span class="plus">+</span>Complete All Log</p>
+                    </div>
+                    <div class="modal-window__log-list">
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar pink">JD</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Jakob Dorwart</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar green">EW</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Emerson Westervelt</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar grey">TP</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Tiana Press</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar green">AD</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Adnan Daryl</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                    </div>
+
+                    <p class="modal-window__log-btn">Quick Dial</p>
+                    <p class="modal-window__log-btn">Last Number Connected</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- MANUAL DIAL MODAL ENDS  -->
+        <!-- MODALS ENDS  -->
     </main>
+
+
 
 
     <!-- BOOTSTRAP JS  -->
