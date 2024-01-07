@@ -33,6 +33,10 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --dial-numbers-color-light: rgba(215, 215, 215, 0.5); 
     --modal-input-color-light: #687175;
     --switch-background-light: #00AE5B;
+    --button-border-color-light: #6969C2;
+    --transfer-modal-input-color-light: #3D3D3D;
+    --transfer-modal-input-border-light: #3D3D3D;
+    
 
     --skills-refresh-gradient-light: linear-gradient(to right, rgba(105, 105, 194, 1), rgba(147, 147, 236, 1));
 
@@ -53,7 +57,11 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --modal-bg-color-dark: #0A1D32;
     --dial-numbers-color-dark: #0C161E;
     --modal-input-color-dark: #B8B8B8;
-    --switch-background-dark: linear-gradient(to right, #5590F5, #44BFFF);;
+    --switch-background-dark: linear-gradient(to right, #5590F5, #44BFFF);
+    --button-border-color-dark: #44BFFF;
+    --transfer-modal-input-color-dark: #ffffff;
+    --transfer-modal-input-border-dark: transparent;
+
 
     --skills-refresh-gradient-dark: linear-gradient(to right, #5590F5, #44BFFF);
 
@@ -81,6 +89,9 @@ body{
         --dial-numbers-color: var(--dial-numbers-color-light);
         --modal-input-color: var(--modal-input-color-light);
         --switch-background: var(--switch-background-light);
+        --button-border-color: var(--button-border-color-light);
+        --transfer-modal-input-color: var(--transfer-modal-input-color-light);
+        --transfer-modal-input-border: var(--transfer-modal-input-border-light);
         
 
         background-color: var(--color-main);
@@ -104,6 +115,9 @@ body{
         --dial-numbers-color: var(--dial-numbers-color-dark);
         --modal-input-color: var(--modal-input-color-dark);
         --switch-background: var(--switch-background-dark);
+        --button-border-color: var(--button-border-color-dark);
+        --transfer-modal-input-color: var(--transfer-modal-input-color-dark);
+        --transfer-modal-input-border: var(--transfer-modal-input-border-dark);
 
         background-color: var(--color-secondary);
     }
