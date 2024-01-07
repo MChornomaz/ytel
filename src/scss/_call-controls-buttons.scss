@@ -39,7 +39,7 @@
 }
 
 
-.dial-next-btn{
+.transparent-blue-btn{
     width: 156px;
     height: 40px;
     border-width: 1px;
@@ -49,4 +49,19 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     border-radius: 8px;
+}
+
+.blue-btn{
+    background: $gradient-main;
+    height: 44px;
+    border-radius: 8px;
+    border: none;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:disabled{
+        background: #D5D5D5;
+    }
 }

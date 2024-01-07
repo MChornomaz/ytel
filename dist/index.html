@@ -461,7 +461,7 @@
 
 
         <!-- MODALS STARTS  -->
-        <div class="backdrop"></div>
+        <div class="backdrop active"></div>
         <!-- MANUAL DIAL MODAL STARTS  -->
         <div class="modal-window" id="manualDial">
             <div class="modal-window__heading">
@@ -574,6 +574,124 @@
 
         </div>
         <!-- MANUAL DIAL MODAL ENDS  -->
+
+        <!-- DISPO MODAL STARTS  -->
+        <div class="modal-window active" id="dispoModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Dispo</h3>
+                <button id="mdialCloseBbtn">
+                    <svg  viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="rate-section">
+                    <p class="rate-section__number-name">Unknown Number</p>
+                    <p class="rate-section__number">+1 8171 831</p>
+                    <button class="rate-section__btn">Hangup Again</button>
+                    <p class="rate-section__question">How would you like to rate your last call experience ?</p>
+                    <div class="rate-section__stars">
+                        <svg viewBox="0 0 24 24" id="star">
+                            <g data-name="Layer 2"><g data-name="star">
+                                <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                                <path d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z"></path>
+                            </g></g>
+                        </svg>
+                        <svg viewBox="0 0 24 24" id="star">
+                            <g data-name="Layer 2"><g data-name="star">
+                                <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                                <path d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z"></path>
+                            </g></g>
+                        </svg>
+                        <svg viewBox="0 0 24 24" id="star">
+                            <g data-name="Layer 2"><g data-name="star">
+                                <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                                <path d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z"></path>
+                            </g></g>
+                        </svg>
+                        <svg viewBox="0 0 24 24" id="star">
+                            <g data-name="Layer 2"><g data-name="star">
+                                <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                                <path d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z"></path>
+                            </g></g>
+                        </svg>
+                        <svg viewBox="0 0 24 24" id="star">
+                            <g data-name="Layer 2"><g data-name="star">
+                                <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                                <path d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z"></path>
+                            </g></g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="result-section">
+                    <h4>Whats Next?</h4>
+                    <div class="result-section__row">
+                        <div class="result-section__radio">
+                            <input type="radio" name="call-result" id="transferred">
+                            <label for="transferred">Call Transferred</label>
+                        </div>
+                        <div class="result-section__radio">
+                            <input type="radio" name="call-result" id="no-result">
+                            <label for="no-result">No Answer</label>
+                        </div>
+                    </div>
+                    <div class="result-section__row">
+                        <div class="result-section__radio">
+                            <input type="radio" name="call-result" id="machine">
+                            <label for="machine">Answering Machine</label>
+                        </div>
+                        <div class="result-section__radio">
+                            <input type="radio" name="call-result" id="sale-made">
+                            <label for="sale-made">Sale Made</label>
+                        </div>
+                    </div>
+                    <div class="result-section__row">
+                        <div class="result-section__radio">
+                            <input type="radio" name="call-result" id="callback">
+                            <label for="callback">Call Back</label>
+                        </div>
+                        <div class="result-section__radio">
+                            <input type="radio" name="call-result" id="not-call">
+                            <label for="not-call">Do Not Call</label>
+                        </div>
+                    </div>
+                    <div class="result-section__row">
+                        <div class="result-section__radio">
+                            <input type="radio" name="call-result" id="not-interested">
+                            <label for="not-interested">Not Interested</label>
+                        </div>
+                        <div class="result-section__radio">
+                            <input type="radio" name="call-result" id="busy">
+                            <label for="busy">Busy</label>
+                        </div>
+                    </div>
+                    <div class="result-section__wide-row">
+                        <p>Pause Dialing</p>
+                        <div class="switch-box">
+                            <input class="switch-box__checkbox" type="checkbox" id="pause-dialing" />
+                            <label class="switch-box__label" for="pause-dialing"></label>
+                        </div>
+                    </div>
+                    <div class="result-section__checkbox">
+                        <input type="checkbox" name="remember-pause-dialing" id="remember-pause">
+                        <label for="remember-pause">Remember Pause Dialing</label>
+                    </div>
+                </div>
+            </div>
+            <div class="dispo-modal__footer">
+                <div class="dispo-modal__footer-buttons">
+                    <button class="transparent-blue-btn">Clear</button>
+                    <button class="transparent-blue-btn">Web Form Submit</button>
+                    <button class="blue-btn">Submit</button>
+                </div>
+            </div>
+        </div>
+        <!-- DISPO MODAL ENDS  -->
+
+
         <!-- MODALS ENDS  -->
     </main>
 
