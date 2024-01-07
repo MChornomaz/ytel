@@ -1,0 +1,87 @@
+.call-actions{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 40px;
+
+    &__sound{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        svg{
+            width: 20px;
+            cursor: pointer;
+            fill: var(--color-text-main);
+        }
+    }
+
+    &__volume-container{
+        width: 80px;
+        height: 8px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    &__volume-bar{
+        width: 100%;
+        height: 2px;
+        background-color: #B8B8B8;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__volume-level{
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        z-index: 4;
+        top: -1px;
+        left: -40%;
+        background: $gradient-reversed;
+    }
+
+    &__volume-mark{
+        width: 3px;
+        height: 6px;
+        background: $gradient-reversed;
+        position: absolute;
+        top: -1px;
+        right: 0;
+    }
+
+    &__mute-btn{
+        width: 83px;
+        height: 23px;
+        border-radius: 4px;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 12px;
+        border: 0.6px solid $color-red;
+        color: $color-red;
+
+        svg{
+            width: 16px;
+            fill: $color-red;
+            stroke: $color-red;
+        }
+
+
+        &.unmute{
+            border: 0.6px solid $color-blue;
+            color: $color-blue;
+
+            svg{
+                fill: $color-blue;
+                stroke: $color-blue;
+            }
+        }
+    }
+}
