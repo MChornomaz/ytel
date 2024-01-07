@@ -36,6 +36,9 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --button-border-color-light: #6969C2;
     --transfer-modal-input-color-light: #3D3D3D;
     --transfer-modal-input-border-light: #3D3D3D;
+    --agent-call-modal-input-text-color-light: #7A7A7A; 
+    --table-head-text-color-light: #3d3d3d;
+    --table-head-border-color-light: #B8B8B8;
     
 
     --skills-refresh-gradient-light: linear-gradient(to right, rgba(105, 105, 194, 1), rgba(147, 147, 236, 1));
@@ -61,7 +64,9 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --button-border-color-dark: #44BFFF;
     --transfer-modal-input-color-dark: #ffffff;
     --transfer-modal-input-border-dark: transparent;
-
+    --agent-call-modal-input-text-color-dark: #B8B8B8;
+    --table-head-text-color-dark: #D7D7D7;
+    --table-head-border-color-dark: #3D3D3D;
 
     --skills-refresh-gradient-dark: linear-gradient(to right, #5590F5, #44BFFF);
 
@@ -92,6 +97,9 @@ body{
         --button-border-color: var(--button-border-color-light);
         --transfer-modal-input-color: var(--transfer-modal-input-color-light);
         --transfer-modal-input-border: var(--transfer-modal-input-border-light);
+        --agent-call-modal-input-text-color: var(--agent-call-modal-input-text-color-light);
+        --table-head-text-color: var(--table-head-text-color-light);
+        --table-head-border-color: var(--table-head-border-color-light);
         
 
         background-color: var(--color-main);
@@ -118,6 +126,9 @@ body{
         --button-border-color: var(--button-border-color-dark);
         --transfer-modal-input-color: var(--transfer-modal-input-color-dark);
         --transfer-modal-input-border: var(--transfer-modal-input-border-dark);
+        --agent-call-modal-input-text-color: var(--agent-call-modal-input-text-color-dark);
+        --table-head-text-color: var(--table-head-text-color-dark);
+        --table-head-border-color: var(--table-head-border-color-dark);
 
         background-color: var(--color-secondary);
     }

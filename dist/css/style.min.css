@@ -18,6 +18,9 @@
   --button-border-color-light: #6969C2;
   --transfer-modal-input-color-light: #3D3D3D;
   --transfer-modal-input-border-light: #3D3D3D;
+  --agent-call-modal-input-text-color-light: #7A7A7A;
+  --table-head-text-color-light: #3d3d3d;
+  --table-head-border-color-light: #B8B8B8;
   --skills-refresh-gradient-light: linear-gradient(to right, rgba(105, 105, 194, 1), rgba(147, 147, 236, 1));
   --color-main-dark: #000000;
   --color-secondary-dark: #0C161E;
@@ -38,6 +41,9 @@
   --button-border-color-dark: #44BFFF;
   --transfer-modal-input-color-dark: #ffffff;
   --transfer-modal-input-border-dark: transparent;
+  --agent-call-modal-input-text-color-dark: #B8B8B8;
+  --table-head-text-color-dark: #D7D7D7;
+  --table-head-border-color-dark: #3D3D3D;
   --skills-refresh-gradient-dark: linear-gradient(to right, #5590F5, #44BFFF);
 }
 
@@ -62,6 +68,9 @@ body.light {
   --button-border-color: var(--button-border-color-light);
   --transfer-modal-input-color: var(--transfer-modal-input-color-light);
   --transfer-modal-input-border: var(--transfer-modal-input-border-light);
+  --agent-call-modal-input-text-color: var(--agent-call-modal-input-text-color-light);
+  --table-head-text-color: var(--table-head-text-color-light);
+  --table-head-border-color: var(--table-head-border-color-light);
   background-color: var(--color-main);
 }
 body.dark {
@@ -85,6 +94,9 @@ body.dark {
   --button-border-color: var(--button-border-color-dark);
   --transfer-modal-input-color: var(--transfer-modal-input-color-dark);
   --transfer-modal-input-border: var(--transfer-modal-input-border-dark);
+  --agent-call-modal-input-text-color: var(--agent-call-modal-input-text-color-dark);
+  --table-head-text-color: var(--table-head-text-color-dark);
+  --table-head-border-color: var(--table-head-border-color-dark);
   background-color: var(--color-secondary);
 }
 
@@ -148,7 +160,7 @@ body {
 .modal-window {
   position: absolute;
   width: 936px;
-  min-height: 550px;
+  height: max-content;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 300%);
@@ -162,6 +174,9 @@ body {
 }
 .modal-window.group.active {
   max-width: 645px;
+}
+.modal-window.table-width.active {
+  width: 1100px;
 }
 @media screen and (max-width: 1000px) {
   .modal-window {
@@ -1472,4 +1487,104 @@ body {
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
+}
+
+.call-modal__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  padding-bottom: 0;
+}
+.call-modal__controls select, .call-modal__controls input {
+  width: 160px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid var(--agent-call-modal-input-text-color);
+  color: var(--agent-call-modal-input-text-color);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  background-color: transparent;
+}
+.call-modal__controls--left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.call-modal__search {
+  width: 290px;
+  max-width: 50%;
+  height: 40px;
+  position: relative;
+}
+.call-modal__search input {
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  outline: none;
+}
+.call-modal__search input::placeholder {
+  color: var(--agent-call-modal-input-text-color);
+}
+.call-modal__search svg {
+  position: absolute;
+  left: 19px;
+  top: 10px;
+  width: 20px;
+  stroke: var(--agent-call-modal-input-text-color);
+}
+.call-modal__table-section {
+  width: 100%;
+  background-color: var(--modal-bg-color);
+  border-radius: 12px;
+  padding: 16px;
+  color: var(--color-text-main);
+}
+.call-modal__table {
+  width: 100%;
+}
+.call-modal__table thead {
+  height: 40px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--table-head-text-color);
+  border-bottom: 0.5px solid var(--table-head-text-color);
+}
+.call-modal__table thead th {
+  font-weight: 400;
+}
+.call-modal__table tr {
+  height: 40px;
+  border-bottom: 0.5px solid var(--table-head-border-color);
+}
+.call-modal__table tr td {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--color-text-main);
+}
+.call-modal__date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.call-modal__date span {
+  display: block;
+  color: #B8B8B8;
+}
+.call-modal__icons {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.call-modal__icons svg {
+  width: 20px;
+  height: 20px;
+  fill: #5590F5;
+  stroke: #5590F5;
 }
