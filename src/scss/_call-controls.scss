@@ -19,7 +19,7 @@
         align-items: center;
         height: 40px;
         width: 200px;
-        background-color: $color-secondary;
+        background-color: var(--call-btn-bg) ;
         padding: 5px;
         border-radius: 6px;
     }

@@ -2,7 +2,9 @@
 @import "main";
 
 
-@import "_loginPage";
+@import "layout";
+
+@import "loginPage";
 @import "switch";
 @import "dropdown";
 @import "call-controls-buttons";
@@ -12,7 +14,6 @@
 @import "scripts";
 @import "manual-dial";
 
-@import "layout";
 @import "call-controls";
 @import "sidebar";
 @import "working-area";

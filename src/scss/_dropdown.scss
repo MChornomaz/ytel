@@ -1,7 +1,7 @@
 .dropdown{
     width: 241px;
     height: 304px;
-    background-color: $color-main;
+    background-color: var(--color-main);
     border-radius: 8px;
     padding: 12px;
     box-shadow: $box-shadow;
@@ -23,7 +23,7 @@
         height: 100%;
         list-style: none;
         padding: 0;
-        background: $color-secondary-transparent;
+        background: rgba(var(--color-secondary), 0.12);
         border-radius: 4px;
     }
 
@@ -35,7 +35,8 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 24px;
-        border-bottom: 0.4px solid $color-secondary;
+        background-color: var(--color-secondary);
+        border-bottom: 0.4px solid var(--dropdown-border-color) ;
         
         p{
             cursor: pointer;

@@ -11,7 +11,7 @@ overflow-x: hidden;
     height: 4px;
     border-radius: 20px;
     position: relative;
-    background-color: $color-secondary;
+    background-color: var(--color-secondary) ;
     
 
     &__progress{

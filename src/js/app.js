@@ -31,6 +31,24 @@ document.addEventListener('click', () => {
 });
 
 
+//COLOR THEME CHANGE 
+const bodyElement = document.body;
+const changeThemeBtn = document.querySelector('#themeBtn');
+const currentTheme = document.querySelector('#themeName');
+
+changeThemeBtn.addEventListener('click', () => {
+    if(bodyElement.classList.contains('light')){
+        bodyElement.classList.remove('light')
+        bodyElement.classList.add('dark')
+        currentTheme.innerHTML = 'Dark'
+    } else if(bodyElement.classList.contains('dark')){
+        bodyElement.classList.remove('dark')
+        bodyElement.classList.add('light')
+        currentTheme.innerHTML = 'Light'
+    }
+})
+
+
 
 
 //MANUAL DIAL MODAL

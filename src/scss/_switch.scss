@@ -27,14 +27,14 @@
             left: 1px;
             width: 18px;
             height: 18px;
-            background: $color-main;
+            background: $color-white;
             border-radius: 10px;
             transition: 0.3s;
         }
     }
     
     &__checkbox:checked + .switch-box__label {
-        background: #2E9F28;
+        background: var(--switch-background);
     }
     
     &__checkbox:checked + .switch-box__label:after {

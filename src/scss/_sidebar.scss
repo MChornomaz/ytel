@@ -1,11 +1,12 @@
 .sidebar{
-    width: 260px;
+    width: 320px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 30px;
+    padding: 30px 25px;
+    background-color: var(--color-secondary) ;
 
     &__logo{
         width: 100%;
@@ -22,6 +23,12 @@
 
     &__select{
         margin-bottom: 20px;
+        
+        select{
+            background: var(--color-secondary);
+            color: var(--color-text-sidebar);
+            // border: var(--color-text-sidebar);
+        }
 
         h5{
             margin-bottom: 10px;
@@ -59,13 +66,15 @@
 
         svg{
             height: 100%;
+            fill: var(--color-text-sidebar);
+            stroke: var(--color-text-sidebar);
         }
 
         p{
             font-size: 16px;
             font-weight: 600;
             line-height: 24px;
-            color: $color-text-third;
+            color: var(--color-text-sidebar);
         }
     }
 
@@ -89,7 +98,7 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 24px;
-        color: $color-text-third;
+        color: var(--color-text-sidebar);
     }
 
     &__value{
@@ -109,6 +118,7 @@
         svg{
             width: 20px;
             height: 20px;
+            fill: var(--color-text-sidebar);
         }
     }
 
@@ -119,6 +129,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        svg{
+            fill: var(--color-text-sidebar);
+        }
     }
 
     &__user{

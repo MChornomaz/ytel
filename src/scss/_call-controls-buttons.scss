@@ -8,7 +8,7 @@
 
     border: none;
     border-radius: 8px;
-    color: $color-main;
+    color: $color-white;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -17,11 +17,11 @@
 
     svg{
         width: 18px;
-        fill: $color-main;
+        fill: $color-white;
     }
 
     &:disabled{
-        background: $color-secondary ;
+        background: var(--call-btn-bg) ;
         color: #B8B8B8;
 
         svg{

@@ -3,8 +3,9 @@
     align-items: center;
     justify-content: space-between;
     height: 36px; 
-    border-top: 0.6px solid $color-secondary;
+    border-top: 0.6px solid var(--dropdown-border-color) ;
     padding-left: 20px;
+    background-color: var(--color-secondary);
 
     &__text{
         font-size: 12px;
@@ -28,13 +29,13 @@
     }   
 
     &__record{
-        background-color: #F1F1F1;
+        background-color: var(--record-btn-color);
 
         &--white{
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background-color: #FFF4F4;
+            background-color: rgba(255, 244, 244, 1);
         }
 
         &--pink{
@@ -58,7 +59,7 @@
         svg{
             width: 16px;
             height: 16px;
-            fill: $color-main;
+            fill: $color-white;
         }
     }
 }

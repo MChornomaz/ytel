@@ -14,21 +14,21 @@ a{
     text-decoration: none;
 }
 
-
 body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    color: $color-text-main;
-    background: $color-main;
+    color: var(--color-text-main);
+    background: var(--color-main);
     max-height: 100vh;
     overflow: hidden;
 }
+
 
 .wrapper{
     width: 100vw;
     height: 100vh;
     max-height: 100vh;
-    background: $color-main;
+    background: var(--color-main);
     position: relative;
 }
 
@@ -48,7 +48,7 @@ body{
     height: 0;
     top: 0;
     left: 0;
-    background-color: $color-text-third;
+    background-color: $color-backdrop;
     opacity: 0.6;
     z-index: 110;
 
@@ -65,7 +65,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, 300%);
-    background-color: $color-main;
+    background-color: var(--color-main);
     border-radius: 12px;
     z-index: 999;
     transition: transform .4s ease-in-out;

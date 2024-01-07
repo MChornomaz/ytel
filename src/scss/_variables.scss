@@ -1,23 +1,109 @@
 // COLORS
-
-$color-main: #ffffff; 
-$color-secondary: rgb(215, 215, 215);
-$color-secondary-transparent: rgba(215, 215, 215, 0.12);
+$color-white: #ffffff; 
 $color-orange: #F26822;
 $color-red: #FF3535;
-$color-green: #00AE5B; 
 $color-blue: #5590F5; 
 $color-blue-secondary: #44BFFF;  
-
-$color-text-main: #000000;
 $color-text-secondary: #7A7A7A;
-$color-text-third: #3D3D3D;
-$color-text-input: #687175;
-
+$color-backdrop: #3D3D3D;
 
 $color-input-bg: #F2F2F2;
 
 $gradient-main: linear-gradient(to right, #5590F5, #44BFFF);
 
-
 $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
+
+
+:root{
+    //Light theme
+    --color-main-light: #ffffff;
+    --color-secondary-light: rgb(215, 215, 215);
+    --color-ternary-light: var(--color-main);
+    --color-input-bg-light: #F2F2F2;
+    --color-text-main-light: #000000;
+    --color-text-input-light: #687175;
+    --color-text-sidebar-light: #3D3D3D;
+    --dropdown-border-color-light: #D7D7D7;
+    --scripts-bg-color-light: rgba(32, 32, 32, 0.18);
+    --content-border-color-light: #9B9B9B;
+    --call-btn-bg-light: rgba(215, 215, 215, 0.36);
+    --record-btn-color-light: #F1F1F1;
+    --modal-bg-color-light: rgba(215, 215, 215, 0.12) ;
+    --dial-numbers-color-light: rgba(215, 215, 215, 0.5); 
+    --modal-input-color-light: #687175;
+    --switch-background-light: #00AE5B;
+
+    --skills-refresh-gradient-light: linear-gradient(to right, rgba(105, 105, 194, 1), rgba(147, 147, 236, 1));
+
+
+    //Dark theme
+    --color-main-dark: #000000;
+    --color-secondary-dark: #0C161E;
+    --color-ternary-dark: #243546;
+    --color-input-bg-dark: #0A1D32;
+    --color-text-main-dark: #ffffff;
+    --color-text-input-dark: #7A7A7A;
+    --color-text-sidebar-dark: #B8B8B8;
+    --dropdown-border-color-dark: #7A7A7A;
+    --scripts-bg-color-dark: rgba(255, 255, 255, 0.2) ;
+    --content-border-color-dark: #000000;
+    --call-btn-bg-dark: rgba(61, 61, 61, 1);
+    --record-btn-color-dark: #0A1D32;
+    --modal-bg-color-dark: #0A1D32;
+    --dial-numbers-color-dark: #0C161E;
+    --modal-input-color-dark: #B8B8B8;
+    --switch-background-dark: linear-gradient(to right, #5590F5, #44BFFF);;
+
+    --skills-refresh-gradient-dark: linear-gradient(to right, #5590F5, #44BFFF);
+
+}
+
+
+body{
+    
+
+    &.light{
+        --color-main: var(--color-main-light);
+        --color-secondary: var(--color-main);
+        --color-ternary: var(--color-main);
+        --color-input-bg: var(--color-input-bg-light);
+        --color-text-main: var(--color-text-main-light);
+        --color-text-input: var(--color-text-input-light);
+        --color-text-sidebar: var(--color-text-sidebar-light);
+        --dropdown-border-color: var(--dropdown-border-color-light);
+        --scripts-bg-color: var(--scripts-bg-color-light);
+        --content-border-color: var(--content-border-color-light);
+        --skills-refresh-gradient: var(--skills-refresh-gradient-light);
+        --call-btn-bg: var(--call-btn-bg-light);
+        --record-btn-color: var(--record-btn-color-light);
+        --modal-bg-color: var(--modal-bg-color-light);
+        --dial-numbers-color: var(--dial-numbers-color-light);
+        --modal-input-color: var(--modal-input-color-light);
+        --switch-background: var(--switch-background-light);
+        
+
+        background-color: var(--color-main);
+    }
+    
+    &.dark{
+        --color-main: var(--color-main-dark);
+        --color-secondary: var(--color-secondary-dark);
+        --color-ternary: var(--color-ternary-dark);
+        --color-input-bg: var(--color-input-bg-dark);
+        --color-text-main: var(--color-text-main-dark);
+        --color-text-input: var(--color-text-input-dark);
+        --color-text-sidebar: var(--color-text-sidebar-dark);
+        --dropdown-border-color: var(--dropdown-border-color-dark);
+        --scripts-bg-color: var(--scripts-bg-color-dark);
+        --content-border-color: var(--content-border-color-dark);
+        --skills-refresh-gradient: var(--skills-refresh-gradient-dark);
+        --call-btn-bg: var(--call-btn-bg-dark);
+        --record-btn-color: var(--record-btn-color-dark);
+        --modal-bg-color: var(--modal-bg-color-dark);
+        --dial-numbers-color: var(--dial-numbers-color-dark);
+        --modal-input-color: var(--modal-input-color-dark);
+        --switch-background: var(--switch-background-dark);
+
+        background-color: var(--color-secondary);
+    }
+}

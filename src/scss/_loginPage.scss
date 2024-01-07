@@ -5,7 +5,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 0.4px solid $color-secondary;
+    border: 0.4px solid var(--color-secondary);
     border-radius: 12px;
     padding: 40px;
     box-shadow: $box-shadow;
@@ -65,7 +65,7 @@
     &__icon{
         width: 16px;
         height: 16px;
-        fill: $color-text-input;
+        fill: var(--color-text-input);
         position: absolute;
         top: 50%;
         left: 15px;
@@ -80,13 +80,13 @@
         border-radius: 8px;
         border: none;
         outline: none;
-        color: $color-text-main;
+        color: var(--color-text-main);
         font-size: 14px;
 
 
         &::placeholder{
             font-size: 14px;
-            color: $color-text-input;
+            color:var(--color-text-input);
             line-height: 20px;
             font-family: inherit;
         }
@@ -106,7 +106,7 @@
         height: 44px;
         border-radius: 8px;
         border: none;
-        color: $color-main;
+        color: $color-white;
         font-weight: 600;
         font-size: 14px;
         line-height: 20px;
