@@ -8,6 +8,7 @@ $color-green: #00AE5B;
 $color-text-secondary: #7A7A7A;
 $color-backdrop: #3D3D3D;
 $color-lightgray: #D7D7D7;
+$color-darkgray: #B8B8B8;
 
 $color-input-bg: #F2F2F2;
 
@@ -42,6 +43,9 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --table-head-text-color-light: #3d3d3d;
     --table-head-border-color-light: #B8B8B8;
     --error-modal-text-color-light: #3F3D56;
+    --message-modal-search-bg-light: #F9F9F9;
+    --message-modal-active-dialog-bg-light: #F5F5F5;
+    --message-modal-active-dialog-text-light: #7A7A7A;
     
 
 
@@ -76,6 +80,9 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --table-head-border-color-dark: #3D3D3D;
     --error-modal-text-color-dark: #D7D7D7;
     --error-modal-border-color-dark: #EFEFEF;
+    --message-modal-search-bg-dark: #171717;
+    --message-modal-active-dialog-bg-dark: rgba(215, 215, 215, 0.12);
+    --message-modal-active-dialog-text-dark: #D7D7D7;
 
 
 
@@ -117,6 +124,9 @@ body{
         --table-head-border-color: var(--table-head-border-color-light);
         --error-modal-text-color: var(--error-modal-text-color-light);
         --error-modal-border-color: var(--error-modal-border-color-light);
+        --message-modal-search-bg: var(--message-modal-search-bg-light);
+        --message-modal-active-dialog-bg: var(--message-modal-active-dialog-bg-light);
+        --message-modal-active-dialog-text: var(--message-modal-active-dialog-text-light);
         
         
         
@@ -155,6 +165,9 @@ body{
         --table-head-border-color: var(--table-head-border-color-dark);
         --error-modal-text-color: var(--error-modal-text-color-dark);
         --error-modal-border-color: var(--error-modal-border-color-dark);
+        --message-modal-search-bg: var(--message-modal-search-bg-dark);
+        --message-modal-active-dialog-bg: var(--message-modal-active-dialog-bg-dark);
+        --message-modal-active-dialog-text: var(--message-modal-active-dialog-text-dark);
         
         
         

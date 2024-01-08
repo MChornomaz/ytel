@@ -61,8 +61,9 @@ body{
 .modal-window{
     position: absolute;
     width: 936px;
-    
+    overflow: auto;
     height: fit-content;
+    max-height: 95vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 300%);
@@ -88,6 +89,7 @@ body{
     &.error.active{
         width: 550px;
     }
+
 
     @media screen and (max-width: 1000px) {
         width: 80%;

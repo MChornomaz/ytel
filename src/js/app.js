@@ -74,6 +74,30 @@ if(manualDialModal && backdrop){
 
 
 
+// MESSAGE MODAL TABS
+const allTabBtn = document.querySelector('#allTabBtn');
+const unreadTabBtn = document.querySelector('#unreadTabBtn');
+
+const allTab = document.querySelector('#allTab');
+const unreadTab = document.querySelector('#unreadTab');
+
+allTabBtn.addEventListener('click', () => {
+    allTabBtn.classList.add('active');
+    allTab.classList.remove('hidden');
+    unreadTabBtn.classList.remove('active');
+    unreadTab.classList.add('hidden');
+})
+
+unreadTabBtn.addEventListener('click', () => {
+    allTabBtn.classList.remove('active');
+    allTab.classList.add('hidden');
+    unreadTabBtn.classList.add('active');
+    unreadTab.classList.remove('hidden');
+})
+
+
+
+
 
 
 
@@ -269,6 +293,24 @@ if(agentStatusModal && backdrop){
     
     closeAgentStatusModalBtn.addEventListener('click', () => {
         agentStatusModal.classList.remove('active')
+        backdrop.classList.remove('active')
+    })
+}
+
+
+// Message modal
+const messageModal = document.querySelector('#messageModal')
+const  closeMessageModalBtn = document.querySelector('#messageCloseBtn')
+
+
+if(messageModal && backdrop){
+    messageToolsBtn.addEventListener('click', () => {
+        messageModal.classList.add('active')
+        backdrop.classList.add('active')
+    })
+    
+    closeMessageModalBtn.addEventListener('click', () => {
+        messageModal.classList.remove('active')
         backdrop.classList.remove('active')
     })
 }
