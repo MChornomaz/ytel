@@ -133,6 +133,7 @@ const callChannelsErrorToolsBtn = document.querySelector('#button8');
 const connectionErrorToolsBtn = document.querySelector('#button9');
 const agentStatusToolsBtn = document.querySelector('#button10');
 const messageToolsBtn = document.querySelector('#button11');
+const latencyToolsBtn = document.querySelector('#button12');
 
 
 
@@ -311,6 +312,23 @@ if(messageModal && backdrop){
     
     closeMessageModalBtn.addEventListener('click', () => {
         messageModal.classList.remove('active')
+        backdrop.classList.remove('active')
+    })
+}
+
+
+// Latency modal
+const latencyModal = document.querySelector('#latencyModal')
+const  closeLatencyModalBtn = document.querySelector('#latencyModalCloseBtn')
+
+
+if(latencyModal){
+    latencyToolsBtn.addEventListener('click', () => {
+        latencyModal.classList.add('active')
+    })
+    
+    closeLatencyModalBtn.addEventListener('click', () => {
+        latencyModal.classList.remove('active')
         backdrop.classList.remove('active')
     })
 }

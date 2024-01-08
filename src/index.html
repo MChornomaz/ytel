@@ -1829,6 +1829,32 @@
             </div>
             <!-- MESSAGE MODAL ENDS  -->
 
+            <!-- LATENCY MODAL STARTS  -->
+        <div class="modal-window latency" id="latencyModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Browser Connection</h3>
+                <button id="latencyModalCloseBtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="latency-modal__wrapper">
+                <div class="latency-modal__content">
+                    <div class="latency-modal__image"></div>
+                    <p class="latency-modal__title">
+                        Latency:
+                        <span> High (450ms)</span>
+                    </p>
+                    <p class="latency-modal__average">Session Average: 309ms</p>
+                    <p class="latency-modal__text">Latency measures the time it takes for your browser to communicate with our servers. When latency is high, you may experience call quality issues. Contact your company manager if you are experiencing problems.</p>
+                </div>
+            </div>
+        </div>
+        <!-- LATENCY MODAL ENDS  -->
+
 
 
             <!-- MODALS ENDS  -->
@@ -1848,6 +1874,7 @@
                     <button id="button9">Connection Error</button>
                     <button id="button10">Agent Status</button>
                     <button id="button11">Message</button>
+                    <button id="button12">Latency</button>
                 </div>
                 <button class="tools__btn">TOOLS</button>
             </div>

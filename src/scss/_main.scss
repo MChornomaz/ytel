@@ -89,6 +89,21 @@ body{
     &.error.active{
         width: 550px;
     }
+    &.latency.active{
+        top: calc(100% - 421px - 30px);
+        left: calc(100% - 34px - 320px);
+        width: 320px;
+        height: 421px;
+        transform: translate(0);
+        box-shadow: $box-shadow;
+    }
+    &.latency{
+        width: 320px;
+        height: 421px;
+        top: calc(100% - 421px - 30px);
+        left: calc(100% - 34px - 320px);
+        transform: translate(-100%, 300%);
+    }
     &.message-modal.active{
         width: 1108px;
         max-width: 95vw;
