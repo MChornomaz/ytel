@@ -21,6 +21,8 @@
   --agent-call-modal-input-text-color-light: #7A7A7A;
   --table-head-text-color-light: #3d3d3d;
   --table-head-border-color-light: #B8B8B8;
+  --error-modal-text-color-light: #3F3D56;
+  --call-channels-error-modal-img-light: url("../img/asset_empty.png");
   --skills-refresh-gradient-light: linear-gradient(to right, rgba(105, 105, 194, 1), rgba(147, 147, 236, 1));
   --color-main-dark: #000000;
   --color-secondary-dark: #0C161E;
@@ -44,6 +46,9 @@
   --agent-call-modal-input-text-color-dark: #B8B8B8;
   --table-head-text-color-dark: #D7D7D7;
   --table-head-border-color-dark: #3D3D3D;
+  --error-modal-text-color-dark: #D7D7D7;
+  --error-modal-border-color-dark: #EFEFEF;
+  --call-channels-error-modal-img-dark: url("../img/asset_empty_dark.png");
   --skills-refresh-gradient-dark: linear-gradient(to right, #5590F5, #44BFFF);
 }
 
@@ -71,6 +76,9 @@ body.light {
   --agent-call-modal-input-text-color: var(--agent-call-modal-input-text-color-light);
   --table-head-text-color: var(--table-head-text-color-light);
   --table-head-border-color: var(--table-head-border-color-light);
+  --error-modal-text-color: var(--error-modal-text-color-light);
+  --error-modal-border-color: var(--error-modal-border-color-light);
+  --call-channels-error-modal-img: var(--call-channels-error-modal-img-light);
   background-color: var(--color-main);
 }
 body.dark {
@@ -97,6 +105,9 @@ body.dark {
   --agent-call-modal-input-text-color: var(--agent-call-modal-input-text-color-dark);
   --table-head-text-color: var(--table-head-text-color-dark);
   --table-head-border-color: var(--table-head-border-color-dark);
+  --error-modal-text-color: var(--error-modal-text-color-dark);
+  --error-modal-border-color: var(--error-modal-border-color-dark);
+  --call-channels-error-modal-img: var(--call-channels-error-modal-img-dark);
   background-color: var(--color-secondary);
 }
 
@@ -177,6 +188,9 @@ body {
 }
 .modal-window.table-width.active {
   width: 1100px;
+}
+.modal-window.error.active {
+  width: 550px;
 }
 @media screen and (max-width: 1000px) {
   .modal-window {
@@ -1664,4 +1678,33 @@ body {
 .call-actions__mute-btn.unmute svg {
   fill: #5590F5;
   stroke: #5590F5;
+}
+
+.error-modal__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error-modal__image {
+  width: 240px;
+  height: 180px;
+  background-image: var(--call-channels-error-modal-img);
+  margin-bottom: 24px;
+  border-bottom: 0.58px solid var(--error-modal-text-color);
+}
+.error-modal__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+}
+.error-modal__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  padding: 0 12px;
+  color: var(--error-modal-text-color);
 }

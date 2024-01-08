@@ -84,6 +84,10 @@ body{
         width: 1100px;
     }
 
+    &.error.active{
+        width: 550px;
+    }
+
     @media screen and (max-width: 1000px) {
         width: 80%;
         height: 95vh;

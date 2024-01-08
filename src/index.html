@@ -15,7 +15,7 @@
     <title>Ytel | Main</title>
 </head>
 
-<body class="light">
+<body class="dark">
     <main class="wrapper">
         <div class="page-content">
             <!-- SIDEBAR STARTS  -->
@@ -1290,7 +1290,7 @@
         <!-- CALLS IN QUEUE MODAL ENDS  -->
 
         <!-- CALL CHANNELS MODAL STARTS  -->
-        <div class="modal-window active" id="callChannelsModal">
+        <div class="modal-window" id="callChannelsModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Call Channels</h3>
                 <button id="callChannelsCloseBbtn">
@@ -1413,6 +1413,28 @@
             </div>
         </div>
         <!-- CALL CHANNELS MODAL ENDS  -->
+
+        <!-- CALL CHANNELS ERROR MODAL STARTS  -->
+        <div class="modal-window error active" id="callChannelsModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Call Channels</h3>
+                <button id="callChannelsCloseBbtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="error-modal__content">
+                    <div class="error-modal__image"></div>
+                    <h3 class="error-modal__title">Uh-Oh, Empty Zone!</h3>
+                    <p class="error-modal__text">It seems this space is feeling a bit lonely. The content you're after isn't here. Let's explore elsewhere.</p>
+                </div>
+            </div>
+        </div>
+        <!-- CALL CHANNELS ERROR MODAL ENDS  -->
 
 
 
