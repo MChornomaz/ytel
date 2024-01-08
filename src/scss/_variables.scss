@@ -45,6 +45,7 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
 
 
     --call-channels-error-modal-img-light: url('../img/asset_empty.png');
+    --connection-error-modal-img-light: url('../img/no-connection.png');
 
     --skills-refresh-gradient-light: linear-gradient(to right, rgba(105, 105, 194, 1), rgba(147, 147, 236, 1));
 
@@ -79,6 +80,7 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
 
 
     --call-channels-error-modal-img-dark: url('../img/asset_empty_dark.png');
+    --connection-error-modal-img-dark: url('../img/no-connection-dark.png');
 
     --skills-refresh-gradient-dark: linear-gradient(to right, #5590F5, #44BFFF);
 
@@ -120,6 +122,7 @@ body{
         
         
         --call-channels-error-modal-img: var(--call-channels-error-modal-img-light);
+        --connection-error-modal-img: var(--connection-error-modal-img-light);
         
 
         background-color: var(--color-main);
@@ -156,6 +159,7 @@ body{
         
         
         --call-channels-error-modal-img: var(--call-channels-error-modal-img-dark);
+        --connection-error-modal-img: var(--connection-error-modal-img-dark);
 
         background-color: var(--color-secondary);
     }

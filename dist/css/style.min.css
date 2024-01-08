@@ -23,6 +23,7 @@
   --table-head-border-color-light: #B8B8B8;
   --error-modal-text-color-light: #3F3D56;
   --call-channels-error-modal-img-light: url("../img/asset_empty.png");
+  --connection-error-modal-img-light: url("../img/no-connection.png");
   --skills-refresh-gradient-light: linear-gradient(to right, rgba(105, 105, 194, 1), rgba(147, 147, 236, 1));
   --color-main-dark: #000000;
   --color-secondary-dark: #0C161E;
@@ -49,6 +50,7 @@
   --error-modal-text-color-dark: #D7D7D7;
   --error-modal-border-color-dark: #EFEFEF;
   --call-channels-error-modal-img-dark: url("../img/asset_empty_dark.png");
+  --connection-error-modal-img-dark: url("../img/no-connection-dark.png");
   --skills-refresh-gradient-dark: linear-gradient(to right, #5590F5, #44BFFF);
 }
 
@@ -79,6 +81,7 @@ body.light {
   --error-modal-text-color: var(--error-modal-text-color-light);
   --error-modal-border-color: var(--error-modal-border-color-light);
   --call-channels-error-modal-img: var(--call-channels-error-modal-img-light);
+  --connection-error-modal-img: var(--connection-error-modal-img-light);
   background-color: var(--color-main);
 }
 body.dark {
@@ -108,6 +111,7 @@ body.dark {
   --error-modal-text-color: var(--error-modal-text-color-dark);
   --error-modal-border-color: var(--error-modal-border-color-dark);
   --call-channels-error-modal-img: var(--call-channels-error-modal-img-dark);
+  --connection-error-modal-img: var(--connection-error-modal-img-dark);
   background-color: var(--color-secondary);
 }
 
@@ -1707,4 +1711,37 @@ body {
   text-align: center;
   padding: 0 12px;
   color: var(--error-modal-text-color);
+}
+
+.connection-error-modal__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.connection-error-modal__image {
+  width: 280px;
+  height: 200px;
+  background-image: var(--connection-error-modal-img);
+  margin-bottom: 24px;
+}
+.connection-error-modal__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+  background-size: contain;
+}
+.connection-error-modal__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  padding: 0 12px;
+  color: var(--error-modal-text-color);
+}
+.connection-error-modal__btn {
+  width: 174px;
+  margin-top: 24px;
 }

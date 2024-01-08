@@ -15,7 +15,7 @@
     <title>Ytel | Main</title>
 </head>
 
-<body class="dark">
+<body class="light">
     <main class="wrapper">
         <div class="page-content">
             <!-- SIDEBAR STARTS  -->
@@ -1415,10 +1415,10 @@
         <!-- CALL CHANNELS MODAL ENDS  -->
 
         <!-- CALL CHANNELS ERROR MODAL STARTS  -->
-        <div class="modal-window error active" id="callChannelsModal">
+        <div class="modal-window error" id="callChannelsErrorModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Call Channels</h3>
-                <button id="callChannelsCloseBbtn">
+                <button id="callChannelsErrorCloseBtn">
                     <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-x">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1435,6 +1435,20 @@
             </div>
         </div>
         <!-- CALL CHANNELS ERROR MODAL ENDS  -->
+
+        <!-- NO CONNECTION ERROR MODAL STARTS  -->
+        <div class="modal-window error active" id="callChannelsErrorModal">
+            
+            <div class="modal-window__content">
+                <div class="connection-error-modal__content">
+                    <div class="connection-error-modal__image"></div>
+                    <h3 class="connection-error-modal__title">No Internet Connection</h3>
+                    <p class="connection-error-modal__text">Oh no! It seems like we've hit a snag. Looks like the internet is on vacation. Let's reconnect and try again.</p>
+                    <button class="blue-btn connection-error-modal__btn">Try Again!</button>
+                </div>
+            </div>
+        </div>
+        <!-- NO CONNECTION ERROR MODAL ENDS  -->
 
 
 
