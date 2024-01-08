@@ -1437,7 +1437,7 @@
         <!-- CALL CHANNELS ERROR MODAL ENDS  -->
 
         <!-- NO CONNECTION ERROR MODAL STARTS  -->
-        <div class="modal-window error active" id="callChannelsErrorModal">
+        <div class="modal-window error" id="callChannelsErrorModal">
             
             <div class="modal-window__content">
                 <div class="connection-error-modal__content">
@@ -1449,6 +1449,52 @@
             </div>
         </div>
         <!-- NO CONNECTION ERROR MODAL ENDS  -->
+
+        <!-- AGENT STATUS MODAL STARTS  -->
+        <div class="modal-window active agent-status" id="agentStatusModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Agents Status</h3>
+                <button id="agentStatusCloseBtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="agent-status__table-section">
+                    <table class="agent-status__table">
+                        <thead>
+                            <tr>
+                                <th class="px-2">#</th>
+                                <th class="ps-3">User</th>
+                                <th class="ps-3">Time</th>
+                                <th class="ps-4">Status</th>
+                                <th class="ps-4">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-2">1</td>
+                                <td class="ps-3">3860-QA YCC</td>
+                                <td class="ps-3">01:49</td>
+                                <td class="ps-4">
+                                    <div class="agent-status-modal__circle"></div>
+                                    <p>Paused</p>
+                                </td>
+                                <td class="agent-status__call-actions ps-4">
+                                    <button class="transparent-btn">Ready</button>
+                                    <button class="transparent-btn red">Pause</button>
+                                    <button class="transparent-btn green">In Call</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- AGENT STATUS MODAL ENDS  -->
 
 
 

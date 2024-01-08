@@ -1,0 +1,48 @@
+.agent-status{
+    width: 727px;
+    max-width: 90%;
+
+    &__table-section{
+        width: 100%;
+        background-color: var(--modal-bg-color);
+        border-radius: 12px;
+        padding: 16px;
+        color: var(--color-text-main);
+    }
+
+    &__table{
+        width: 100%;
+
+        thead{
+            height: 40px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            color: var(--table-head-text-color);
+            border-bottom: 0.5px solid var(--table-head-text-color);
+
+            th{
+                font-weight: 400;
+            }
+        }
+
+        tr{
+            height: 40px;
+            border-bottom: 0.5px solid var(--table-head-border-color);
+
+            td{
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 18px;
+                color: var(--color-text-main);
+            }
+        }
+    }
+
+    &__call-actions{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        height: 40px;
+    }
+}
