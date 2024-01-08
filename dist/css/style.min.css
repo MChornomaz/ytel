@@ -175,7 +175,7 @@ body {
 .modal-window {
   position: absolute;
   width: 936px;
-  height: max-content;
+  height: fit-content;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 300%);
@@ -189,6 +189,7 @@ body {
 }
 .modal-window.group.active {
   max-width: 645px;
+  min-height: 550px;
 }
 .modal-window.table-width.active {
   width: 1100px;
@@ -1807,4 +1808,34 @@ body {
   align-items: center;
   gap: 16px;
   height: 40px;
+}
+
+.tools {
+  position: absolute;
+  width: 200px;
+  right: 40px;
+  bottom: 160px;
+}
+.tools__list {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 20px;
+  border-radius: 10px;
+  gap: 5px;
+  border: 1px solid red;
+  padding: 10px;
+}
+.tools__list button {
+  font-size: 12px;
+}
+.tools__list.active {
+  display: grid;
+}
+.tools__btn {
+  color: red;
+  border: 1px solid red;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: transparent;
+  transform: translateX(100%);
 }

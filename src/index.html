@@ -461,7 +461,7 @@
 
 
         <!-- MODALS STARTS  -->
-        <div class="backdrop active"></div>
+        <div class="backdrop"></div>
         <!-- MANUAL DIAL MODAL STARTS  -->
         <div class="modal-window" id="manualDial">
             <div class="modal-window__heading">
@@ -579,7 +579,7 @@
         <div class="modal-window" id="dispoModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Dispo</h3>
-                <button id="mdialCloseBbtn">
+                <button id="dispoCloseBtn">
                     <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-x">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -715,7 +715,7 @@
         <div class="modal-window group " id="groupSelectionModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Group Selection</h3>
-                <button id="mdialCloseBbtn">
+                <button id="groupSelectionCloseBtn">
                     <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-x">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -929,7 +929,7 @@
         <div class="modal-window table-width" id="agentCallLogModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Agent Call Log</h3>
-                <button id="agentCallLogCloseBbtn">
+                <button id="agentCallLogCloseBtn">
                     <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-x">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1130,7 +1130,7 @@
         <div class="modal-window table-width " id="callsInQueueModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Calls in Queue</h3>
-                <button id="callsInQueueCloseBbtn">
+                <button id="callsInQueueCloseBtn">
                     <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-x">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1293,7 +1293,7 @@
         <div class="modal-window" id="callChannelsModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Call Channels</h3>
-                <button id="callChannelsCloseBbtn">
+                <button id="callChannelsCloseBtn">
                     <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-x">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1437,21 +1437,21 @@
         <!-- CALL CHANNELS ERROR MODAL ENDS  -->
 
         <!-- NO CONNECTION ERROR MODAL STARTS  -->
-        <div class="modal-window error" id="callChannelsErrorModal">
+        <div class="modal-window error" id="connectionErrorModal">
             
             <div class="modal-window__content">
                 <div class="connection-error-modal__content">
                     <div class="connection-error-modal__image"></div>
                     <h3 class="connection-error-modal__title">No Internet Connection</h3>
                     <p class="connection-error-modal__text">Oh no! It seems like we've hit a snag. Looks like the internet is on vacation. Let's reconnect and try again.</p>
-                    <button class="blue-btn connection-error-modal__btn">Try Again!</button>
+                    <button id="connectionErrorCloseBtn" class="blue-btn connection-error-modal__btn">Try Again!</button>
                 </div>
             </div>
         </div>
         <!-- NO CONNECTION ERROR MODAL ENDS  -->
 
         <!-- AGENT STATUS MODAL STARTS  -->
-        <div class="modal-window active agent-status" id="agentStatusModal">
+        <div class="modal-window agent-status" id="agentStatusModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Agents Status</h3>
                 <button id="agentStatusCloseBtn">
@@ -1499,6 +1499,29 @@
 
 
         <!-- MODALS ENDS  -->
+
+
+        <!-- TOOLS SECTION STARTS (NEED DELETION)  -->
+        <div class="tools">
+            <div class="tools__list">
+                <button id="button1">Manual Dial</button>
+                <button id="button2">Dispo</button>
+                <button id="button3">Group Selection</button>
+                <button id="button4">Transfer</button>
+                <button id="button5">Agent call log</button>
+                <button id="button6">Calls in Queue</button>
+                <button id="button7">Call Channels</button>
+                <button id="button8">Call Channels Error</button>
+                <button id="button9">Connection Error</button>
+                <button id="button10">Agent Status</button>
+                <button id="button11">Message</button>
+            </div>
+            <button class="tools__btn">TOOLS</button>
+        </div>
+
+        <!-- TOOLS SECTION ENDS (NEED DELETION)  -->
+
+
     </main>
 
 

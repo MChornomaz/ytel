@@ -61,8 +61,8 @@ body{
 .modal-window{
     position: absolute;
     width: 936px;
-    // min-height: 550px;
-    height: max-content;
+    
+    height: fit-content;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 300%);
@@ -78,6 +78,7 @@ body{
 
     &.group.active{
         max-width: 645px;
+        min-height: 550px;
     }
 
     &.table-width.active{
