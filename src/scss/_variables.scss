@@ -46,6 +46,9 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --message-modal-search-bg-light: #F9F9F9;
     --message-modal-active-dialog-bg-light: #F5F5F5;
     --message-modal-active-dialog-text-light: #7A7A7A;
+    --message-modal-separator-color-light: #B8B8B8;
+    --message-modal-send-message-color-light: #E8E8E8;
+    --message-modal-textarea-bg-color-light: #FFFFFF;
     
 
 
@@ -83,7 +86,9 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --message-modal-search-bg-dark: #171717;
     --message-modal-active-dialog-bg-dark: rgba(215, 215, 215, 0.12);
     --message-modal-active-dialog-text-dark: #D7D7D7;
-
+    --message-modal-separator-color-dark: #7A7A7A;
+    --message-modal-send-message-color-dark: #3D3D3D;
+    --message-modal-textarea-bg-color-dark: #171717;
 
 
 
@@ -127,6 +132,9 @@ body{
         --message-modal-search-bg: var(--message-modal-search-bg-light);
         --message-modal-active-dialog-bg: var(--message-modal-active-dialog-bg-light);
         --message-modal-active-dialog-text: var(--message-modal-active-dialog-text-light);
+        --message-modal-separator-color: var(--message-modal-separator-color-light);
+        --message-modal-send-message-color: var(--message-modal-send-message-color-light);
+        --message-modal-textarea-bg-color: var(--message-modal-textarea-bg-color-light);
         
         
         
@@ -168,6 +176,9 @@ body{
         --message-modal-search-bg: var(--message-modal-search-bg-dark);
         --message-modal-active-dialog-bg: var(--message-modal-active-dialog-bg-dark);
         --message-modal-active-dialog-text: var(--message-modal-active-dialog-text-dark);
+        --message-modal-separator-color: var(--message-modal-separator-color-dark);
+        --message-modal-send-message-color: var(--message-modal-send-message-color-dark);
+        --message-modal-textarea-bg-color: var(--message-modal-textarea-bg-color-dark);
         
         
         

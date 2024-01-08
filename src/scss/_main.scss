@@ -89,6 +89,12 @@ body{
     &.error.active{
         width: 550px;
     }
+    &.message-modal.active{
+        width: 1108px;
+        max-width: 95vw;
+        height: 825px;
+        max-height: 95vh;
+    }
 
 
     @media screen and (max-width: 1000px) {
