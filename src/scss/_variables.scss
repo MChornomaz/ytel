@@ -51,6 +51,12 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --message-modal-textarea-bg-color-light: #FFFFFF;
     --call-controls-bg-color-light: #F3F3F3; 
     --modal-sidebar-bg-light: #ffffff; 
+    --mdial-modal-2-border-color-light: #C7C7C7 ;
+    --mdial-modal-2-bg-color-light: #F0F0F0;
+    --mdial-modal-2-input-border-color-light: #E5E5E5;
+    --mdial-modal-2-input-number-bg-light: #ffffff;
+    --mdial-modal-2-bg-light: #ffffff;
+    --mdial-modal-2-call-btn-bg-light:  #009900;
     
 
 
@@ -94,7 +100,12 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --message-modal-textarea-bg-color-dark: #171717;
     --call-controls-bg-color-dark: #0C161E ;
     --modal-sidebar-bg-dark: #0C161E ;
-
+    --mdial-modal-2-border-color-dark: #535353 ;
+    --mdial-modal-2-bg-color-dark: #363640;
+    --mdial-modal-2-input-border-color-dark: #5F5F74;
+    --mdial-modal-2-input-number-bg-dark: #3D3D3D;
+    --mdial-modal-2-bg-dark: #23232d;
+    --mdial-modal-2-call-btn-bg-dark: linear-gradient(to right, #44BFFF ,#5590F5 );;
 
 
     --call-channels-error-modal-img-dark: url('../img/asset_empty_dark.png');
@@ -143,6 +154,12 @@ body{
         --message-modal-textarea-bg-color: var(--message-modal-textarea-bg-color-light);
         --call-controls-bg-color: var(--call-controls-bg-color-light);
         --modal-sidebar-bg: var(--modal-sidebar-bg-light);
+        --mdial-modal-2-border-color: var(--mdial-modal-2-border-color-light);
+        --mdial-modal-2-bg-color: var(--mdial-modal-2-bg-color-light);
+        --mdial-modal-2-input-border-color: var(--mdial-modal-2-input-border-color-light);
+        --mdial-modal-2-input-number-bg: var(--mdial-modal-2-input-number-bg-light);
+        --mdial-modal-2-bg: var(--mdial-modal-2-bg-light);
+        --mdial-modal-2-call-btn-bg: var(--mdial-modal-2-call-btn-bg-light);
         
         
         
@@ -190,6 +207,12 @@ body{
         --message-modal-textarea-bg-color: var(--message-modal-textarea-bg-color-dark);
         --call-controls-bg-color: var(--call-controls-bg-color-dark);
         --modal-sidebar-bg: var(--modal-sidebar-bg-dark);
+        --mdial-modal-2-border-color: var(--mdial-modal-2-border-color-dark);
+        --mdial-modal-2-bg-color: var(--mdial-modal-2-bg-color-dark);
+        --mdial-modal-2-input-border-color: var(--mdial-modal-2-input-border-color-dark);
+        --mdial-modal-2-input-number-bg: var(--mdial-modal-2-input-number-bg-dark);
+        --mdial-modal-2-bg: var(--mdial-modal-2-bg-dark);
+        --mdial-modal-2-call-btn-bg: var(--mdial-modal-2-call-btn-bg-dark);
         
         
         

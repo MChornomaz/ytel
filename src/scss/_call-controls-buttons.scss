@@ -64,6 +64,10 @@
     &:disabled{
         background: #D5D5D5;
     }
+
+    &.reversed{
+        background: $gradient-reversed;
+    }
 }
 
 .transparent-violet-btn{

@@ -165,6 +165,7 @@ const latencyToolsBtn = document.querySelector('#button12');
 const call1ToolsBtn = document.querySelector('#button13');
 const call2ToolsBtn = document.querySelector('#button14');
 const call3ToolsBtn = document.querySelector('#button15');
+const mDial2ToolsBtn = document.querySelector('#button16');
 
 
 
@@ -390,6 +391,29 @@ call3ToolsBtn.addEventListener('click', () => {
     activeCallSection.classList.add('hidden')
     pausedCallSection.classList.remove('hidden')
 })
+
+
+// mDial Approach 2  modal
+const mDial2Modal = document.querySelector('#mDial2Modal')
+const  closeMDial2ModalBtn = document.querySelector('#mDial2CloseBtn')
+
+
+if(mDial2Modal && backdrop){
+    mDial2ToolsBtn.addEventListener('click', () => {
+        mDial2Modal.classList.add('active')
+        backdrop.classList.add('active')
+    })
+    
+    closeMDial2ModalBtn.addEventListener('click', () => {
+        mDial2Modal.classList.remove('active')
+        backdrop.classList.remove('active')
+    })
+}
+
+
+
+
+
 
 
 
