@@ -1143,7 +1143,6 @@ body {
 }
 .call-controls__data {
   width: 135px;
-  height: 49px;
   display: flex;
   flex-direction: column;
   gap: 4px;
