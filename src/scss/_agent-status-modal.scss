@@ -1,9 +1,18 @@
+#agentStatusModal{
+    height: max-content;
+
+    & > .modal-window__content{
+        min-width: 700px;
+        width: max-content;
+    }
+
+}
+
 .agent-status{
-    width: 727px;
-    max-width: 90%;
 
     &__table-section{
         width: 100%;
+        min-width: 700px;
         background-color: var(--modal-bg-color);
         border-radius: 12px;
         padding: 16px;
@@ -11,7 +20,8 @@
     }
 
     &__table{
-        width: 100%;
+        width: 750px;
+        
 
         thead{
             height: 40px;
@@ -23,6 +33,7 @@
 
             th{
                 font-weight: 400;
+                white-space: nowrap;
             }
         }
 
@@ -35,6 +46,7 @@
                 font-weight: 600;
                 line-height: 18px;
                 color: var(--color-text-main);
+                white-space: nowrap;
             }
         }
     }

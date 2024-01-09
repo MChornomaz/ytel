@@ -21,7 +21,7 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
 :root{
     //Light theme
     --color-main-light: #ffffff;
-    --color-secondary-light: rgb(215, 215, 215);
+    --color-secondary-light: #d7d7d7;
     --color-ternary-light: var(--color-main);
     --color-input-bg-light: #F2F2F2;
     --color-text-main-light: #000000;
@@ -49,7 +49,8 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --message-modal-separator-color-light: #B8B8B8;
     --message-modal-send-message-color-light: #E8E8E8;
     --message-modal-textarea-bg-color-light: #FFFFFF;
-    --call-controls-bg-color-light: #F3F3F3;
+    --call-controls-bg-color-light: #F3F3F3; 
+    --modal-sidebar-bg-light: #ffffff; 
     
 
 
@@ -92,6 +93,7 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --message-modal-send-message-color-dark: #3D3D3D;
     --message-modal-textarea-bg-color-dark: #171717;
     --call-controls-bg-color-dark: #0C161E ;
+    --modal-sidebar-bg-dark: #0C161E ;
 
 
 
@@ -140,6 +142,7 @@ body{
         --message-modal-send-message-color: var(--message-modal-send-message-color-light);
         --message-modal-textarea-bg-color: var(--message-modal-textarea-bg-color-light);
         --call-controls-bg-color: var(--call-controls-bg-color-light);
+        --modal-sidebar-bg: var(--modal-sidebar-bg-light);
         
         
         
@@ -186,6 +189,7 @@ body{
         --message-modal-send-message-color: var(--message-modal-send-message-color-dark);
         --message-modal-textarea-bg-color: var(--message-modal-textarea-bg-color-dark);
         --call-controls-bg-color: var(--call-controls-bg-color-dark);
+        --modal-sidebar-bg: var(--modal-sidebar-bg-dark);
         
         
         

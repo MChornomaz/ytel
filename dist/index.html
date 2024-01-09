@@ -17,9 +17,15 @@
 
 <body class="light">
     <main class="wrapper">
+        <div class="navigation-burger">
+            <input type="checkbox" class="navigation-burger__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation-burger__button" id="burger-label">
+                <span class="navigation-burger__icon"></span>
+            </label>
+        </div>
         <div class="page-content">
             <!-- SIDEBAR STARTS  -->
-            <aside class="sidebar">
+            <aside class="sidebar" id="leftSidebar">
                 <div class="sidebar--top">
                     <div class="sidebar__logo">
                         <img src="./img/logo.png" alt="Ytel logo">
@@ -178,7 +184,7 @@
             <!-- SIDEBAR ENDS  -->
 
             <!-- CONTENT STARTS -->
-            <div class="content">
+            <div class="content" id="content">
 
                 <!-- CALL CONTROLS STARTS  -->
                 <div class="heading">
@@ -339,57 +345,62 @@
                 <!-- PAUSED CALL CONTROLS STARTS -->
 
                 <section class="call-controls extended hidden" id="pausedCallControls">
-                    <div class="call-controls--top" >
-                        <div class="call-controls__buttons">
-                            <button class="call-control-btn active-btn" disabled>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 18a6 6 0 0 0 6-6V6A6 6 0 0 0 6 6v6a6 6 0 0 0 6 6zM8 6a4 4 0 0 1 8 0v6a4 4 0 0 1-8 0z" />
-                                    <path
-                                        d="M21 12a1 1 0 0 0-2 0 7 7 0 0 1-14 0 1 1 0 0 0-2 0 9 9 0 0 0 8 8.94V22h-1a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2h-1v-1.06A9 9 0 0 0 21 12z" />
-                                </svg>
-                                <p>Active</p>
-                            </button>
-                            <button class="call-control-btn pause-btn" >
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <g data-name="pause circle">
+                    <div class="call-controls--top-extended" >
+                        <div class="call-controls__wrapper">
+                            <div class="call-controls__buttons">
+                                <button class="call-control-btn active-btn" disabled>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                         <path
-                                            d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z" />
+                                            d="M12 18a6 6 0 0 0 6-6V6A6 6 0 0 0 6 6v6a6 6 0 0 0 6 6zM8 6a4 4 0 0 1 8 0v6a4 4 0 0 1-8 0z" />
                                         <path
-                                            d="M14 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0zM8 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0z" />
-                                    </g>
-                                </svg>
-                                <p>Pause</p>
-                            </button>
+                                            d="M21 12a1 1 0 0 0-2 0 7 7 0 0 1-14 0 1 1 0 0 0-2 0 9 9 0 0 0 8 8.94V22h-1a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2h-1v-1.06A9 9 0 0 0 21 12z" />
+                                    </svg>
+                                    <p>Active</p>
+                                </button>
+                                <button class="call-control-btn pause-btn" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <g data-name="pause circle">
+                                            <path
+                                                d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z" />
+                                            <path
+                                                d="M14 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0zM8 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0z" />
+                                        </g>
+                                    </svg>
+                                    <p>Pause</p>
+                                </button>
+                            </div>
+                            <button class="transparent-blue-btn dial-btn">Dial Next Number</button>
+                            <div class="call-controls__data">
+                                <p class="call-controls__status paused" id="callStatus">Recording file</p>
+                                <p class="call-controls__file-name">1931-recordfile.mp3</p>
+                            </div>
                         </div>
-                        <button class="transparent-blue-btn dial-btn">Dial Next Number</button>
-                        <div class="call-controls__data">
-                            <p class="call-controls__status paused" id="callStatus">Recording file</p>
-                            <p class="call-controls__file-name">1931-recordfile.mp3</p>
-                        </div>
-                        <div class="call-controls__progress">
-                            <div class="progress-bar">
-                                <div class="progress-line ">
-                                    <div class="progress-line__progress paused" style="left: -40%">
-                                        <div class="progress-point paused"></div>
+                        <div class="call-controls__wrapper">
+
+                            <div class="call-controls__progress">
+                                <div class="progress-bar">
+                                    <div class="progress-line ">
+                                        <div class="progress-line__progress paused" style="left: -40%">
+                                            <div class="progress-point paused"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="call-controls__time-block">
+                                <p class="call-controls__time calling paused">00:00:12</p>
+                                <p class="call-controls__time-status">Call Time</p>
+                            </div>
+    
+                            <button class="call-controls__scale-btn call-controls__scale-btn--static" id="pausedCallControlsScaleBtn">
+                                        <svg version="1.1" viewBox="0 0 137.145 137.145" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 137.145 137.145">
+                                            <g>
+                                              <g>
+                                                <path d="M109.715,0H27.429C12.28,0,0,12.281,0,27.428v82.287c0,15.148,12.28,27.429,27.429,27.429h82.286    c15.148,0,27.429-12.281,27.429-27.429V27.428C137.144,12.281,124.864,0,109.715,0z M123.43,102.858    c0,11.361-9.21,20.572-20.571,20.572H61.715V61.715h61.715V102.858z M123.43,48H13.715v13.715h34.286v61.715H34.286    c-11.362,0-20.572-9.211-20.572-20.572V61.715h0V48h0V34.286c0-11.361,9.21-20.572,20.572-20.572h68.572    c11.361,0,20.571,9.211,20.571,20.572V48z"></path>
+                                              </g>
+                                            </g>
+                                        </svg>
+                            </button>
                         </div>
-                        <div class="call-controls__time-block">
-                            <p class="call-controls__time calling paused">00:00:12</p>
-                            <p class="call-controls__time-status">Call Time</p>
-                        </div>
-
-                        <button class="call-controls__scale-btn" id="pausedCallControlsScaleBtn">
-                                    <svg version="1.1" viewBox="0 0 137.145 137.145" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 137.145 137.145">
-                                        <g>
-                                          <g>
-                                            <path d="M109.715,0H27.429C12.28,0,0,12.281,0,27.428v82.287c0,15.148,12.28,27.429,27.429,27.429h82.286    c15.148,0,27.429-12.281,27.429-27.429V27.428C137.144,12.281,124.864,0,109.715,0z M123.43,102.858    c0,11.361-9.21,20.572-20.571,20.572H61.715V61.715h61.715V102.858z M123.43,48H13.715v13.715h34.286v61.715H34.286    c-11.362,0-20.572-9.211-20.572-20.572V61.715h0V48h0V34.286c0-11.361,9.21-20.572,20.572-20.572h68.572    c11.361,0,20.571,9.211,20.571,20.572V48z"></path>
-                                          </g>
-                                        </g>
-                                    </svg>
-                        </button>
                     </div>
 
                     <div class="call-controls--bottom" id="callBottom2">
@@ -1147,7 +1158,7 @@
                     <input type="search" name="search" id="log-search" placeholder="Search name or number">
                 </div>
             </div>
-            <div class="modal-window__content">
+            <div class="modal-window__content scrollable">
                 <div class="call-modal__table-section">
                     <table class="call-modal__table">
                         <thead>
@@ -1476,7 +1487,7 @@
         <!-- CALLS IN QUEUE MODAL ENDS  -->
 
         <!-- CALL CHANNELS MODAL STARTS  -->
-        <div class="modal-window" id="callChannelsModal">
+        <div class="modal-window table-width" id="callChannelsModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Call Channels</h3>
                 <button id="callChannelsCloseBtn">
@@ -1640,7 +1651,7 @@
         <!-- NO CONNECTION ERROR MODAL ENDS  -->
 
         <!-- AGENT STATUS MODAL STARTS  -->
-        <div class="modal-window agent-status" id="agentStatusModal">
+        <div class="modal-window  table-width" id="agentStatusModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Agents Status</h3>
                 <button id="agentStatusCloseBtn">
@@ -1651,7 +1662,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="modal-window__content">
+            <div class="modal-window__content  scrollable">
                 <div class="agent-status__table-section">
                     <table class="agent-status__table">
                         <thead>
@@ -1699,7 +1710,14 @@
             </div>
             <div class=" message-modal__wrapper">
                 <div class="message-modal__content">
-                    <div class="modal-sidebar">
+                    <div class="navigation-burger">
+                        <input type="checkbox" class="navigation-burger__checkbox" id="message-toggle">
+                        <label for="message-toggle" class="navigation-burger__button" id="message-burger-label">
+                            <span class="navigation-burger__icon"></span>
+                        </label>
+                    </div>
+                    <div class="modal-sidebar" id="messagesSidebar">
+                        
                         <button class="modal-sidebar__button">
                             <p>Create Message</p>
                             <svg data-name="Layer 1" viewBox="0 0 24 24" id="edit">

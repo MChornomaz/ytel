@@ -1,0 +1,85 @@
+.navigation-burger {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+
+    @media only screen and (max-width: 900px) {
+        display: block;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: transparent;
+        height: 40px;
+        width: 40px;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        border-radius: 50%;
+        z-index: 2000;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 35px;
+
+        &,
+        &::before,
+        &::after {
+            width: 30px;
+            height: 2px;
+            background-color: var(--color-text-main);
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+
+        }
+
+        &::before {
+            top: -10px;
+        }
+
+        &::after {
+            top: 10px;
+        }
+
+    }
+
+    &__button:hover &__icon::before {
+        top: -10px;
+    }
+
+    &__button:hover &__icon::after {
+        top: 10px;
+    }
+
+
+    &__checkbox:checked+&__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked+&__button &__icon::before {
+        top: 0;
+        background-color: var(--color-text-main);
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+        top: 0;
+        background-color: var(--color-text-main);
+        transform: rotate(-135deg);
+    }
+}

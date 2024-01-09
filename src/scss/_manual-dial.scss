@@ -36,7 +36,8 @@
 
         @media screen and (max-width: 1000px) {
             flex-direction: column;
-            overflow-y: scroll;
+            overflow-y: auto;
+            overflow-x: auto;
             align-items: center;
         }
     }
@@ -61,6 +62,10 @@
         @media screen and (max-width: 1000px) {
             width: 70%;
         }
+
+        @media screen and (max-width: 750px) {
+            width: 100%;
+        }
     }
 
     &__inputs{
@@ -78,6 +83,10 @@
 
         .code-field{
             width: 30%;
+
+            @media screen and (max-width: 750px) {
+                width: 50%;
+            }
         }
     }
 
@@ -153,6 +162,10 @@
         @media screen and (max-width: 1000px) {
             width: 70%;
         }
+
+        @media screen and (max-width: 750px) {
+            width: 100%;
+        }
     }
 
     &__log-heading{
@@ -180,6 +193,16 @@
             .plus{
                 font-size: 24px;
                 font-weight: 400;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            h4{
+                font-size: 16px;
+            }
+
+            p{
+                font-size: 12px;
             }
         }
     }
@@ -240,6 +263,12 @@
             font-size: 12px;
             font-weight: 400;
             line-height: 18px;
+        }
+
+        @media screen and (max-width: 500px) {
+            h6{
+                font-size: 14px;
+            }
         }
     }
 

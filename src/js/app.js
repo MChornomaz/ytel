@@ -48,22 +48,18 @@ changeThemeBtn.addEventListener('click', () => {
     }
 })
 
+//SIDEBAR BURGER 
 
-//Call Section Expand
-const activeScaleBtn = document.querySelector('#callControlsScaleBtn')
-const pausedScaleBtn = document.querySelector('#pausedCallControlsScaleBtn')
-const activeCallBottomSection = document.querySelector('#callBottom1')
-const pausedCallBottomSection = document.querySelector('#callBottom2')
-const workingAreaElement = document.querySelector('.working-area')
+const sidebarBurgerIcon = document.querySelector('#navi-toggle');
+const sidebarElement = document.querySelector('#leftSidebar');
 
-activeScaleBtn.addEventListener('click', () => {
-    activeCallBottomSection.classList.toggle('active')
-    workingAreaElement.classList.toggle('small')
-})
 
-pausedScaleBtn.addEventListener('click', () => {
-    pausedCallBottomSection.classList.toggle('active')
-    workingAreaElement.classList.toggle('small')
+sidebarBurgerIcon.addEventListener('click', () => {
+    if(sidebarBurgerIcon.checked){
+        sidebarElement.classList.add('active')
+    } else {
+        sidebarElement.classList.remove('active')
+    }
 })
 
 
@@ -113,6 +109,21 @@ unreadTabBtn.addEventListener('click', () => {
 })
 
 
+//MESSAGE MODAL BURGER
+
+
+
+const messageBurgerIcon = document.querySelector('#message-toggle');
+const messageSidebarElement = document.querySelector('#messagesSidebar');
+
+
+messageBurgerIcon.addEventListener('click', () => {
+    if(messageBurgerIcon.checked){
+        messageSidebarElement.classList.add('active')
+    } else {
+        messageSidebarElement.classList.remove('active')
+    }
+})
 
 
 

@@ -9,7 +9,12 @@
         width: 100%;
         height: 100%;
         display: flex;
+        position: relative;
 
+
+        .navigation-burger__button{
+            top: 75px;
+        }
     }
 }
 
@@ -21,6 +26,18 @@
     padding-top: 20px;
     padding-bottom: 20px;
     overflow-y: auto;
+    background-color: var(--modal-sidebar-bg);
+
+    @media screen and (max-width: 800px) {
+        position: absolute;
+        padding-top: 60px;
+        transform: translateX(-300px);
+
+        &.active{
+            transform: translateX(0);
+            z-index: 50;
+        }
+    }
 
     &__button {
         width: 100%;
@@ -315,6 +332,10 @@
     width: 70%;
     height: 100%;
 
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
+
     &__heading{
         height: 78px;
         display: flex;
@@ -329,6 +350,10 @@
         display: flex;
         align-items: center;
         gap: 12px;
+
+        @media screen and (max-width: 800px) {
+            margin-left: 30px;
+        }
     }
 
     &__avatar{
@@ -380,6 +405,8 @@
             width: 24px;
             fill: var(--color-text-main);
         }
+
+        
     }
 
 
@@ -451,6 +478,10 @@
         display: flex;
         align-items: center;
         gap: 16px;
+
+        @media screen and (max-width: 800px) {
+            bottom: 0;
+        }
     }
 
     &__icon-container{

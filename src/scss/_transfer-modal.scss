@@ -44,6 +44,10 @@
         align-items: center;
         gap: 16px;
         border-bottom: 0.6px solid $color-lightgray;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
     }
 
     &__row{
@@ -81,6 +85,10 @@
         padding-bottom: 16px;
         border-bottom: 0.6px solid $color-lightgray;
         margin-bottom: 16px;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
     }
 
     &__list{

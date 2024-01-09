@@ -1,6 +1,5 @@
 .call-controls{
     width: 100%;
-    max-height: 145px;
     margin-bottom: 20px; 
     padding-left: 12px;
     padding-right: 20px;
@@ -9,7 +8,9 @@
     &.extended {
         background-color: var(--call-controls-bg-color);
     }
+
     
+
     &--top{
         display: flex;
         align-items: center;
@@ -17,6 +18,48 @@
         gap: 20px;
         padding-bottom: 16px;
         padding-top: 16px;
+        position: relative;
+
+        
+
+        @media screen and (max-width: 650px) {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            padding-right: 20px;
+        }
+
+        @media screen and (max-width: 550px) {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            padding-right: 20px;
+        }
+    }
+
+    &--top-extended{
+        display: flex;
+        align-items: center;
+
+
+        @media screen and (max-width: 1150px) {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 40%;
+
+        @media screen and (max-width: 1150px) {
+            width: 100%;
+            gap: 30px;
+        }
+
+        @media screen and (max-width: 700px) {
+            gap: 10px;
+        }
     }
 
 
@@ -28,10 +71,37 @@
         background-color: var(--call-btn-bg) ;
         padding: 5px;
         border-radius: 6px;
+
+        @media screen and (max-width: 470px) {
+                width: 100%;
+            button{
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            button{
+                font-size: 12px;
+
+
+                svg{
+                    width: 12px;
+                }
+            }
+        }
     }
 
     .dial-btn{
         width: 156px;
+
+        @media screen and (max-width: 700px) {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        @media screen and (max-width: 650px) {
+            font-size: 12px;
+        }
     }
 
     &__data{
@@ -40,12 +110,33 @@
         display: flex;
         flex-direction: column;
         gap: 4px;
+
+        @media screen and (max-width: 800px) {
+            height: max-content;
+        }
+
+        @media screen and (max-width: 650px) {
+            width: 100%;
+        }
+
     }
 
     &__status{
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
+
+        @media screen and (max-width: 800px) {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 650px) {
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 12px;
+        }
 
         &.paused{
             color: #E30808;
@@ -66,6 +157,10 @@
         justify-content: space-between;
         width: 100%;
         height: 21px;
+
+        @media screen and (max-width: 650px) {
+            width: 100px;
+        }
 
         span{
             display: block;
@@ -95,11 +190,21 @@
     }
 
     &__progress{
-        width: calc(100% - 200px - 240px - 200px );
+        // width: calc(100% - 200px - 240px - 200px );
+        width: 100%;
+        min-width: 100px;
         height: 49px;
+
+        @media screen and (max-width: 800px) {
+            width: 100%;
+        }
 
         &.long{
             width: calc(100% - 200px - 135px - 200px );
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+            }
         }
     }
 
@@ -112,6 +217,10 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
+
+        @media screen and (max-width: 650px) {
+            font-size: 12px;
+        }
 
         &.calling{
             color: $color-blue;
@@ -135,10 +244,20 @@
         border: none;
         background-color: transparent;
 
+        @media screen and (max-width: 650px) {
+            position: absolute;
+            top: 20px;
+            right: -10px;
+        }
+
 
         svg{
             width: 24px;
             fill: $color-text-secondary;
+        }
+
+        &--static{
+            position: static;
         }
     }
 
@@ -148,15 +267,20 @@
 
     &--bottom{
         width: 100%;
-        display: none;
+        display: flex;
         border-top: 0.4px solid  var(--table-head-border-color);
         align-items: center;
         justify-content: space-between; 
         gap: 20px;
         padding: 16px 0;
 
-        &.active{
-            display: flex;
+        @media only screen and (max-width: 1250px) {
+            gap: 10px;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            flex-direction: column;
+            gap: 8px;
         }
     }
 
@@ -165,11 +289,22 @@
         align-items: center;
         gap: 12px;
 
+        @media only screen and (max-width: 1250px) {
+            flex-direction: column;
+            gap: 2px;
+            width: max-content;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            flex-direction: row;
+        }
+
         p{
             font-size: 14px;
             font-weight: 400;
             line-height: 20px;
             color: var(--table-head-text-color);
+            width: max-content;
         }
 
         .call-number{
@@ -186,6 +321,11 @@
         display: flex;
         align-items: center;
         gap: 32px;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
     &__info-row{
@@ -204,6 +344,14 @@
             font-weight: 400;
             line-height: 20px;
             color: var(--table-head-text-color);
+            
+            @media only screen and (max-width: 1250px) {
+                width: 50px;
+            }
+
+            @media screen and (max-width: 700px) {
+                width: max-content;
+            }
         }
 
     }
@@ -227,8 +375,21 @@
         align-items: center;
         gap: 16px;
 
+        @media screen and (max-width: 500px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
         button{
             width: 92px;
+
+            @media only screen and (max-width: 1250px) {
+                font-size: 14px;
+            }
+
+            @media screen and (max-width: 500px) {
+                width: 100%;
+            }
         }
 
         select{
@@ -236,6 +397,14 @@
             background-color: transparent;
             color: $color-blue-secondary;
             border: 1px solid $color-blue-secondary;
+
+            @media only screen and (max-width: 1250px) {
+                font-size: 14px;
+            }
+
+            @media screen and (max-width: 500px) {
+                width: 100%;
+            }
         }
     }
 }
