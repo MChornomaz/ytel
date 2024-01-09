@@ -181,8 +181,11 @@
             <div class="content">
 
                 <!-- CALL CONTROLS STARTS  -->
-                <section class="call-controls">
-                    <div class="call-controls--top">
+                <div class="heading">
+                    
+                <!-- INITIAL CALL CONTROLS STARTS -->
+                <section class="call-controls" id="initialCallControls">
+                    <div class="call-controls--top" >
                         <div class="call-controls__buttons">
                             <button class="call-control-btn active-btn" disabled>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -218,7 +221,7 @@
                                 <span></span>
                             </div>
                         </div>
-                        <div class="call-controls__progress">
+                        <div class="call-controls__progress long">
                             <div class="progress-bar">
                                 <div class="progress-line">
                                     <div class="progress-line__progress paused">
@@ -230,21 +233,199 @@
                             <p class="call-controls__time">00:00:12</p>
                             <p class="call-controls__time-status">Time Paused</p>
                         </div>
+                    </div>
+                </section>
+                <!-- INITIAL CALL CONTROLS ENDS -->
 
+                <!-- ACTIVE CALL CONTROLS STARTS -->
 
-                        <!-- <button class="call-controls__scale-btn" id="callControlsScaleBtn">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.145 137.145" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 137.145 137.145">
-                                    <g>
-                                      <g>
-                                        <path d="M109.715,0H27.429C12.28,0,0,12.281,0,27.428v82.287c0,15.148,12.28,27.429,27.429,27.429h82.286    c15.148,0,27.429-12.281,27.429-27.429V27.428C137.144,12.281,124.864,0,109.715,0z M123.43,102.858    c0,11.361-9.21,20.572-20.571,20.572H61.715V61.715h61.715V102.858z M123.43,48H13.715v13.715h34.286v61.715H34.286    c-11.362,0-20.572-9.211-20.572-20.572V61.715h0V48h0V34.286c0-11.361,9.21-20.572,20.572-20.572h68.572    c11.361,0,20.571,9.211,20.571,20.572V48z"></path>
-                                      </g>
+                <section class="call-controls extended hidden" id="activeCallControls">
+                    <div class="call-controls--top" >
+                        <div class="call-controls__buttons">
+                            <button class="call-control-btn active-btn" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 18a6 6 0 0 0 6-6V6A6 6 0 0 0 6 6v6a6 6 0 0 0 6 6zM8 6a4 4 0 0 1 8 0v6a4 4 0 0 1-8 0z" />
+                                    <path
+                                        d="M21 12a1 1 0 0 0-2 0 7 7 0 0 1-14 0 1 1 0 0 0-2 0 9 9 0 0 0 8 8.94V22h-1a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2h-1v-1.06A9 9 0 0 0 21 12z" />
+                                </svg>
+                                <p>Active</p>
+                            </button>
+                            <button class="call-control-btn pause-btn" disabled>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g data-name="pause circle">
+                                        <path
+                                            d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z" />
+                                        <path
+                                            d="M14 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0zM8 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0z" />
                                     </g>
-                                  </svg>
-                            </button> -->
+                                </svg>
+                                <p>Pause</p>
+                            </button>
+                        </div>
+                        <div class="call-controls__data">
+                            <p class="call-controls__status" id="callStatus">Locating Contact</p>
+                            <div class="call-controls__loading calling">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="call-controls__progress">
+                            <div class="progress-bar">
+                                <div class="progress-line">
+                                    <div class="progress-line__progress calling">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="call-controls__time-block">
+                            <p class="call-controls__time calling">00:00:12</p>
+                            <p class="call-controls__time-status">Call Time</p>
+                        </div>
+
+
+                        <button class="call-controls__scale-btn" id="callControlsScaleBtn">
+                            
+                                    <svg version="1.1" viewBox="0 0 137.145 137.145" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 137.145 137.145">
+                                        <g>
+                                          <g>
+                                            <path d="M109.715,0H27.429C12.28,0,0,12.281,0,27.428v82.287c0,15.148,12.28,27.429,27.429,27.429h82.286    c15.148,0,27.429-12.281,27.429-27.429V27.428C137.144,12.281,124.864,0,109.715,0z M123.43,102.858    c0,11.361-9.21,20.572-20.571,20.572H61.715V61.715h61.715V102.858z M123.43,48H13.715v13.715h34.286v61.715H34.286    c-11.362,0-20.572-9.211-20.572-20.572V61.715h0V48h0V34.286c0-11.361,9.21-20.572,20.572-20.572h68.572    c11.361,0,20.571,9.211,20.571,20.572V48z"></path>
+                                          </g>
+                                        </g>
+                                    </svg>
+
+                        </button>
                     </div>
 
-                    <div class="call-controls--bottom"></div>
+                    <div class="call-controls--bottom" id="callBottom1">
+                        <div class="call-controls__call-info">
+                            <p>Called</p>
+                            <p class="call-number">(9193) 4141 411</p>
+                        </div>
+                        <div class="call-controls__controls">
+                            <div class="call-controls__info-row">
+                                <div class="call-controls__calls-data-row">
+                                    <p>Dialable Leads</p>
+                                    <span class="call-controls__ammount">0</span>
+                                </div>
+                                <div class="call-controls__calls-data-row">
+                                    <p>Calls in Queue</p>
+                                    <span class="call-controls__ammount">0</span>
+                                </div>
+                            </div>
+                            <div class="call-controls__control-buttons">
+                                <button class="transparent-blue-btn">Hold</button>
+                                <select class="form-select">
+                                    <option value="0" selected>Transfer</option>
+                                    <option value="1" selected>Transfer 1</option>
+                                    <option value="2" selected>Transfer 2</option>
+                                    <option value="3" selected>Transfer 3</option>
+                                </select>
+                                <button class="transparent-blue-btn">Voice Mail</button>
+                                <button class="red-btn">Hangup</button>
+                            </div>
+                        </div> 
+                    </div>
                 </section>
+                <!-- ACTIVE CALL CONTROLS ENDS -->
+
+
+                <!-- PAUSED CALL CONTROLS STARTS -->
+
+                <section class="call-controls extended hidden" id="pausedCallControls">
+                    <div class="call-controls--top" >
+                        <div class="call-controls__buttons">
+                            <button class="call-control-btn active-btn" disabled>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 18a6 6 0 0 0 6-6V6A6 6 0 0 0 6 6v6a6 6 0 0 0 6 6zM8 6a4 4 0 0 1 8 0v6a4 4 0 0 1-8 0z" />
+                                    <path
+                                        d="M21 12a1 1 0 0 0-2 0 7 7 0 0 1-14 0 1 1 0 0 0-2 0 9 9 0 0 0 8 8.94V22h-1a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2h-1v-1.06A9 9 0 0 0 21 12z" />
+                                </svg>
+                                <p>Active</p>
+                            </button>
+                            <button class="call-control-btn pause-btn" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g data-name="pause circle">
+                                        <path
+                                            d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z" />
+                                        <path
+                                            d="M14 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0zM8 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0z" />
+                                    </g>
+                                </svg>
+                                <p>Pause</p>
+                            </button>
+                        </div>
+                        <button class="transparent-blue-btn dial-btn">Dial Next Number</button>
+                        <div class="call-controls__data">
+                            <p class="call-controls__status paused" id="callStatus">Recording file</p>
+                            <p class="call-controls__file-name">1931-recordfile.mp3</p>
+                        </div>
+                        <div class="call-controls__progress">
+                            <div class="progress-bar">
+                                <div class="progress-line ">
+                                    <div class="progress-line__progress paused" style="left: -40%">
+                                        <div class="progress-point paused"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="call-controls__time-block">
+                            <p class="call-controls__time calling paused">00:00:12</p>
+                            <p class="call-controls__time-status">Call Time</p>
+                        </div>
+
+                        <button class="call-controls__scale-btn" id="pausedCallControlsScaleBtn">
+                                    <svg version="1.1" viewBox="0 0 137.145 137.145" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 137.145 137.145">
+                                        <g>
+                                          <g>
+                                            <path d="M109.715,0H27.429C12.28,0,0,12.281,0,27.428v82.287c0,15.148,12.28,27.429,27.429,27.429h82.286    c15.148,0,27.429-12.281,27.429-27.429V27.428C137.144,12.281,124.864,0,109.715,0z M123.43,102.858    c0,11.361-9.21,20.572-20.571,20.572H61.715V61.715h61.715V102.858z M123.43,48H13.715v13.715h34.286v61.715H34.286    c-11.362,0-20.572-9.211-20.572-20.572V61.715h0V48h0V34.286c0-11.361,9.21-20.572,20.572-20.572h68.572    c11.361,0,20.571,9.211,20.571,20.572V48z"></path>
+                                          </g>
+                                        </g>
+                                    </svg>
+                        </button>
+                    </div>
+
+                    <div class="call-controls--bottom" id="callBottom2">
+                        <div class="call-controls__call-info">
+                            <p>Called</p>
+                            <p class="call-number">(9193) 4141 411</p>
+                        </div>
+                        <div class="call-controls__controls">
+                            <div class="call-controls__info-row">
+                                <div class="call-controls__calls-data-row">
+                                    <p>Dialable Leads</p>
+                                    <span class="call-controls__ammount">0</span>
+                                </div>
+                                <div class="call-controls__calls-data-row">
+                                    <p>Calls in Queue</p>
+                                    <span class="call-controls__ammount">0</span>
+                                </div>
+                            </div>
+                            <div class="call-controls__control-buttons">
+                                <button class="transparent-blue-btn">Hold</button>
+                                <select class="form-select">
+                                    <option value="0" selected>Transfer</option>
+                                    <option value="1" selected>Transfer 1</option>
+                                    <option value="2" selected>Transfer 2</option>
+                                    <option value="3" selected>Transfer 3</option>
+                                </select>
+                                <button class="transparent-blue-btn">Voice Mail</button>
+                                <button class="red-btn">Hangup</button>
+                            </div>
+                        </div> 
+                    </div>
+                </section>
+                <!-- PAUSED CALL CONTROLS ENDS -->
+                </div>
+
+
                 <!-- CALL CONTROLS ENDS  -->
 
                 <!-- WORKING AREA STARTS  -->
@@ -1875,6 +2056,9 @@
                     <button id="button10">Agent Status</button>
                     <button id="button11">Message</button>
                     <button id="button12">Latency</button>
+                    <button id="button13">Call1</button>
+                    <button id="button14">Call2</button>
+                    <button id="button15">Call3</button>
                 </div>
                 <button class="tools__btn">TOOLS</button>
             </div>

@@ -16,8 +16,13 @@
     border-top: 0.4px solid var(--content-border-color);
     border-radius: 24px 0 0 0;
     padding-top: 30px;
+    padding-right: 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--color-main);
+} 
+
+.heading{
+    padding-left: 32px;
 }

@@ -49,6 +49,23 @@ changeThemeBtn.addEventListener('click', () => {
 })
 
 
+//Call Section Expand
+const activeScaleBtn = document.querySelector('#callControlsScaleBtn')
+const pausedScaleBtn = document.querySelector('#pausedCallControlsScaleBtn')
+const activeCallBottomSection = document.querySelector('#callBottom1')
+const pausedCallBottomSection = document.querySelector('#callBottom2')
+const workingAreaElement = document.querySelector('.working-area')
+
+activeScaleBtn.addEventListener('click', () => {
+    activeCallBottomSection.classList.toggle('active')
+    workingAreaElement.classList.toggle('small')
+})
+
+pausedScaleBtn.addEventListener('click', () => {
+    pausedCallBottomSection.classList.toggle('active')
+    workingAreaElement.classList.toggle('small')
+})
+
 
 
 //MANUAL DIAL MODAL
@@ -134,6 +151,9 @@ const connectionErrorToolsBtn = document.querySelector('#button9');
 const agentStatusToolsBtn = document.querySelector('#button10');
 const messageToolsBtn = document.querySelector('#button11');
 const latencyToolsBtn = document.querySelector('#button12');
+const call1ToolsBtn = document.querySelector('#button13');
+const call2ToolsBtn = document.querySelector('#button14');
+const call3ToolsBtn = document.querySelector('#button15');
 
 
 
@@ -334,6 +354,31 @@ if(latencyModal){
 }
 
 
+//Call section state change 
+
+
+const initialCallSection = document.querySelector('#initialCallControls')
+const activeCallSection = document.querySelector('#activeCallControls')
+const pausedCallSection = document.querySelector('#pausedCallControls')
+
+
+call1ToolsBtn.addEventListener('click', () => {
+    initialCallSection.classList.remove('hidden');
+    activeCallSection.classList.add('hidden')
+    pausedCallSection.classList.add('hidden')
+})
+
+call2ToolsBtn.addEventListener('click', () => {
+    initialCallSection.classList.add('hidden');
+    activeCallSection.classList.remove('hidden')
+    pausedCallSection.classList.add('hidden')
+})
+
+call3ToolsBtn.addEventListener('click', () => {
+    initialCallSection.classList.add('hidden');
+    activeCallSection.classList.add('hidden')
+    pausedCallSection.classList.remove('hidden')
+})
 
 
 

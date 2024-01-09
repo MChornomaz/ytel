@@ -27,8 +27,10 @@ overflow-x: hidden;
         }
     
         &.calling{
-            background: $gradient-main;
+            background: $gradient-reversed
         }
+
+        
     }
 }
 

@@ -28,6 +28,7 @@
   --message-modal-separator-color-light: #B8B8B8;
   --message-modal-send-message-color-light: #E8E8E8;
   --message-modal-textarea-bg-color-light: #FFFFFF;
+  --call-controls-bg-color-light: #F3F3F3;
   --call-channels-error-modal-img-light: url("../img/asset_empty.png");
   --connection-error-modal-img-light: url("../img/no-connection.png");
   --latency-modal-img-light: url("../img/diagram-white.png");
@@ -62,6 +63,7 @@
   --message-modal-separator-color-dark: #7A7A7A;
   --message-modal-send-message-color-dark: #3D3D3D;
   --message-modal-textarea-bg-color-dark: #171717;
+  --call-controls-bg-color-dark: #0C161E ;
   --call-channels-error-modal-img-dark: url("../img/asset_empty_dark.png");
   --connection-error-modal-img-dark: url("../img/no-connection-dark.png");
   --latency-modal-img-dark: url("../img/diagram.png");
@@ -100,6 +102,7 @@ body.light {
   --message-modal-separator-color: var(--message-modal-separator-color-light);
   --message-modal-send-message-color: var(--message-modal-send-message-color-light);
   --message-modal-textarea-bg-color: var(--message-modal-textarea-bg-color-light);
+  --call-controls-bg-color: var(--call-controls-bg-color-light);
   --call-channels-error-modal-img: var(--call-channels-error-modal-img-light);
   --connection-error-modal-img: var(--connection-error-modal-img-light);
   --latency-modal-img: var(--latency-modal-img-light);
@@ -137,6 +140,7 @@ body.dark {
   --message-modal-separator-color: var(--message-modal-separator-color-dark);
   --message-modal-send-message-color: var(--message-modal-send-message-color-dark);
   --message-modal-textarea-bg-color: var(--message-modal-textarea-bg-color-dark);
+  --call-controls-bg-color: var(--call-controls-bg-color-dark);
   --call-channels-error-modal-img: var(--call-channels-error-modal-img-dark);
   --connection-error-modal-img: var(--connection-error-modal-img-dark);
   --latency-modal-img: var(--latency-modal-img-dark);
@@ -198,6 +202,10 @@ body {
 .backdrop.active {
   width: 100vw;
   height: 100vh;
+}
+
+.hidden {
+  display: none;
 }
 
 .modal-window {
@@ -276,10 +284,15 @@ body {
   border-top: 0.4px solid var(--content-border-color);
   border-radius: 24px 0 0 0;
   padding-top: 30px;
+  padding-right: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--color-main);
+}
+
+.heading {
+  padding-left: 32px;
 }
 
 .login {
@@ -628,7 +641,7 @@ body {
   background: #F26822;
 }
 .progress-line__progress.calling {
-  background: linear-gradient(to right, #5590F5, #44BFFF);
+  background: linear-gradient(to right, #44BFFF, #5590F5);
 }
 
 .progress-point {
@@ -954,17 +967,22 @@ body {
 
 .call-controls {
   width: 100%;
-  height: 50px;
   max-height: 145px;
   margin-bottom: 20px;
-  padding-left: 20px;
+  padding-left: 12px;
   padding-right: 20px;
+  border-radius: 8px;
+}
+.call-controls.extended {
+  background-color: var(--call-controls-bg-color);
 }
 .call-controls--top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  padding-bottom: 16px;
+  padding-top: 16px;
 }
 .call-controls__buttons {
   display: flex;
@@ -974,6 +992,9 @@ body {
   background-color: var(--call-btn-bg);
   padding: 5px;
   border-radius: 6px;
+}
+.call-controls .dial-btn {
+  width: 156px;
 }
 .call-controls__data {
   width: 135px;
@@ -986,6 +1007,15 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
+}
+.call-controls__status.paused {
+  color: #E30808;
+}
+.call-controls__file-name {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #7A7A7A;
 }
 .call-controls__loading {
   display: flex;
@@ -1005,9 +1035,18 @@ body {
   background-color: #F26822;
   height: 100%;
 }
+.call-controls__loading.calling span {
+  background-color: #80C1F1;
+}
+.call-controls__loading.calling span:first-of-type {
+  background-color: #1CA9F9;
+}
 .call-controls__progress {
-  width: calc(100% - 200px - 135px - 200px);
+  width: calc(100% - 200px - 240px - 200px);
   height: 49px;
+}
+.call-controls__progress.long {
+  width: calc(100% - 200px - 135px - 200px);
 }
 .call-controls__time-block {
   display: flex;
@@ -1018,11 +1057,107 @@ body {
   font-weight: 700;
   line-height: 24px;
 }
+.call-controls__time.calling {
+  color: #5590F5;
+}
+.call-controls__time.paused {
+  color: #F26822;
+}
 .call-controls__time-status {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   color: #7A7A7A;
+}
+.call-controls__scale-btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+}
+.call-controls__scale-btn svg {
+  width: 24px;
+  fill: #7A7A7A;
+}
+.call-controls__checkbox {
+  display: none;
+}
+.call-controls--bottom {
+  width: 100%;
+  display: none;
+  border-top: 0.4px solid var(--table-head-border-color);
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 0;
+}
+.call-controls--bottom.active {
+  display: flex;
+}
+.call-controls__call-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.call-controls__call-info p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--table-head-text-color);
+}
+.call-controls__call-info .call-number {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #5590F5;
+}
+.call-controls__controls {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.call-controls__info-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.call-controls__calls-data-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.call-controls__calls-data-row p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--table-head-text-color);
+}
+.call-controls__ammount {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #D0E8DD;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #00AE5B;
+}
+.call-controls__control-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.call-controls__control-buttons button {
+  width: 92px;
+}
+.call-controls__control-buttons select {
+  max-width: 125px;
+  background-color: transparent;
+  color: #44BFFF;
+  border: 1px solid #44BFFF;
 }
 
 .sidebar {
@@ -1161,11 +1296,15 @@ body {
 .working-area {
   width: 100%;
   height: 100%;
-  max-height: calc(100vh - 150px);
+  max-height: calc(100vh - 200px);
   display: flex;
   flex-direction: row;
   gap: 32px;
-  padding: 0 20px 40px 20px;
+  padding-bottom: 40px;
+  padding-left: 32px;
+}
+.working-area.small {
+  max-height: calc(100vh - 260px);
 }
 @media screen and (max-width: 900px) {
   .working-area {
