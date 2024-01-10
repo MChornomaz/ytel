@@ -31,10 +31,43 @@ document.addEventListener('click', () => {
 });
 
 
+//VERTICAL MENU DROPDOWN
+
+const verticalMenuBtn = document.querySelector('#verticalMenuBtn');
+const verticalMenuDropdown = document.querySelector('#menuDropdownVertical');
+const verticalMenuItems = document.querySelectorAll('.dropdown__item')
+
+
+
+let verticalMenuIsShown = false;
+
+verticalMenuBtn.addEventListener('click', (event) => {
+    verticalMenuDropdown.classList.toggle('active');
+    verticalMenuIsShown = verticalMenuDropdown.classList.contains('active');
+    event.stopPropagation();
+    
+});
+
+verticalMenuItems.forEach(el => el.addEventListener('click', (event) => {
+    verticalMenuDropdown.classList.toggle('active');
+    verticalMenuIsShown = verticalMenuDropdown.classList.contains('active');
+    event.stopPropagation();
+}));
+
+document.addEventListener('click', () => {
+    if (verticalMenuIsShown) {
+        verticalMenuDropdown.classList.remove('active');
+        verticalMenuIsShown = true;
+    }
+});
+
+
 //COLOR THEME CHANGE 
 const bodyElement = document.body;
 const changeThemeBtn = document.querySelector('#themeBtn');
+const changeThemeBtn2 = document.querySelector('#themeBtn2');
 const currentTheme = document.querySelector('#themeName');
+const currentTheme2 = document.querySelector('#themeName2');
 
 changeThemeBtn.addEventListener('click', () => {
     if(bodyElement.classList.contains('light')){
@@ -45,6 +78,18 @@ changeThemeBtn.addEventListener('click', () => {
         bodyElement.classList.remove('dark')
         bodyElement.classList.add('light')
         currentTheme.innerHTML = 'Light'
+    }
+})
+
+changeThemeBtn2.addEventListener('click', () => {
+    if(bodyElement.classList.contains('light')){
+        bodyElement.classList.remove('light')
+        bodyElement.classList.add('dark')
+        currentTheme2.innerHTML = 'Dark'
+    } else if(bodyElement.classList.contains('dark')){
+        bodyElement.classList.remove('dark')
+        bodyElement.classList.add('light')
+        currentTheme2.innerHTML = 'Light'
     }
 })
 
@@ -166,6 +211,7 @@ const call1ToolsBtn = document.querySelector('#button13');
 const call2ToolsBtn = document.querySelector('#button14');
 const call3ToolsBtn = document.querySelector('#button15');
 const mDial2ToolsBtn = document.querySelector('#button16');
+const toggleSidebarToolsBtn = document.querySelector('#button17');
 
 
 
@@ -411,6 +457,42 @@ if(mDial2Modal && backdrop){
 }
 
 
+// TOGGLE SIDEBAR LOGIC 
+const verticalSidebar = document.querySelector('#verticalSidebar');
+const pageContentElement = document.querySelector('.page-content');
+const contentElement = document.querySelector('#content');
+const workingAreaElement = document.querySelector('#workingArea');
+
+
+
+let verticalSidebarShown = verticalSidebar.classList.contains('active');
+
+toggleSidebarToolsBtn.addEventListener('click', () => {
+
+    if(!verticalSidebarShown){
+        verticalSidebar.classList.add('active')
+        sidebarElement.classList.add('hidden');
+        pageContentElement.classList.add('column')
+        contentElement.classList.add('no-border')
+        workingAreaElement.classList.add('small')
+        verticalSidebarShown = !verticalSidebarShown
+    } else  {
+        sidebarElement.classList.remove('hidden');
+        pageContentElement.classList.remove('column')
+        contentElement.classList.remove('no-border')
+        verticalSidebar.classList.remove('active')
+        workingAreaElement.classList.remove('small')
+        verticalSidebarShown = !verticalSidebarShown
+    }
+
+   
+
+    
+    console.log(verticalSidebarShown)
+    
+    
+})
+console.log(verticalSidebarShown, 'render')
 
 
 
