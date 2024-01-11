@@ -1,6 +1,9 @@
 import * as flsFunctions from "./modules/functions.js";
 
 
+
+
+
 flsFunctions.isWebp();
 
 //MENU DROPDOWN
@@ -172,6 +175,224 @@ messageBurgerIcon.addEventListener('click', () => {
 
 
 
+// WINDOWS CONTROLS
+
+//customer info elements
+const customerInfoElement = document.querySelector('#customerWindow')
+const trayCustomerInfoBtn = document.querySelector('#unlockCustomer')
+const expendCustomerInfoBtn = document.querySelector('#expendCustomer')
+const minimizeCustomerInfoBtn  = document.querySelector('#minimizeCustomer')
+const customerInfoExpectBtn = document.querySelector('#customerInfoExpectBtn')
+const customerTrayElement = document.querySelector('#customerInfoTray')
+const customerInfoDragContainer = document.querySelector('#customerInfoDragContainer')
+
+
+
+
+//scripts elements
+const scriptsElement = document.querySelector('#scriptsElement')
+const trayScriptsBtn = document.querySelector('#unlockScripts')
+const expendScriptsBtn = document.querySelector('#expendScripts')
+const minimizeScriptsBtn = document.querySelector('#minimizeScripts')
+const closeScriptsBtn = document.querySelector('#closeScripts')
+const scriptsTrayElement = document.querySelector('#scriptsTray')
+const scriptsExpectBtn = document.querySelector('#scriptsExpectBtn')
+const sidebarScriptsBtn = document.querySelector('#scriptBtn')
+const scriptDragContainer = document.querySelector('#scriptDragContainer')
+
+let scriptsAreActive = !scriptDragContainer.classList.contains('hidden')
+
+
+
+
+
+const workingAreaElement = document.querySelector('#workingArea');
+const trayElement = document.querySelector('#tray');
+const trayItems = trayElement.querySelectorAll('.tray__item');
+
+
+let customerTrayActive = false;
+let scriptsTrayActive = false;
+
+
+// call script element
+
+sidebarScriptsBtn.addEventListener('click', () => {
+    scriptDragContainer.classList.remove('hidden')
+    scriptsAreActive = true;
+})
+
+
+//tray Customer Window
+
+trayCustomerInfoBtn.addEventListener('click', () => {
+    trayElement.classList.add('active')
+    customerTrayElement.classList.add('active');
+    customerInfoDragContainer.classList.add('hidden')
+    customerInfoDragContainer.classList.remove('expended')
+
+    customerTrayActive = true;
+})
+
+//expect customer info
+
+customerInfoExpectBtn.addEventListener('click', () => {
+    customerTrayElement.classList.remove('active');
+    customerInfoDragContainer.classList.remove('hidden')
+    scriptDragContainer.classList.remove('expended')
+
+    if(!customerTrayActive || !scriptsTrayActive){
+        trayElement.classList.remove('active')
+    }
+
+    customerTrayActive = false
+})
+
+//expend customer info
+
+expendCustomerInfoBtn.addEventListener('click', () => {
+    if(!customerInfoDragContainer.classList.contains('expended')){
+        scriptDragContainer.classList.add('hidden')
+        customerInfoDragContainer.classList.add('expended')
+        trayElement.classList.add('active')
+        if(scriptsAreActive){
+            scriptsTrayElement.classList.add('active')
+        }
+        scriptsTrayActive = true;
+    } else {
+        customerInfoDragContainer.classList.remove('expended')
+        customerTrayActive = false;
+
+        if(!scriptsTrayActive){
+            trayElement.classList.remove('active')
+        }
+    }
+})
+
+
+
+
+//expend scripts
+
+expendScriptsBtn.addEventListener('click', () => {
+    if(!scriptDragContainer.classList.contains('expended')){
+        customerInfoDragContainer.classList.add('hidden')
+        scriptDragContainer.classList.add('expended')
+        scriptsElement.style.width = '100%';
+        scriptsElement.style.transform = 'translate(0px, 0px)';
+        scriptsElement.style.transform = 'translate(0px, 0px)';
+        scriptsElement.style.height = '100%';
+
+        trayElement.classList.add('active')
+        customerTrayElement.classList.add('active')
+        customerTrayActive = true;
+    } else {
+        scriptDragContainer.classList.remove('expended')
+        let storedData = localStorage.getItem('scriptsElementPositionAndSize');
+        if (storedData) {
+            let { height, width, x, y } = JSON.parse(storedData);
+            scriptsElement.style.height = height;
+            scriptsElement.style.width = width;
+            scriptsElement.style.top = y;
+            scriptsElement.style.left = x;
+        }else {
+            scriptsElement.style.width = '100%';
+            scriptsElement.style.height = '100%';
+        } 
+        scriptsTrayActive = false;
+
+        if(!customerTrayActive){
+            trayElement.classList.remove('active')
+        }
+    }
+    
+
+})
+
+
+//close scripts
+closeScriptsBtn.addEventListener('click', () => {
+    scriptDragContainer.classList.add('hidden')
+    scriptDragContainer.classList.remove('expended')
+    scriptsAreActive = false;
+})
+
+
+//tray Scripts Window
+
+trayScriptsBtn.addEventListener('click', () => {
+    trayElement.classList.add('active')
+    scriptsTrayElement.classList.add('active');
+    scriptDragContainer.classList.add('hidden')
+    scriptDragContainer.classList.remove('expended')
+
+    scriptsTrayActive = true;
+})
+
+//expect scripts
+scriptsExpectBtn.addEventListener('click', () => {
+    scriptsTrayElement.classList.remove('active');
+    scriptDragContainer.classList.remove('hidden')
+    customerInfoDragContainer.classList.remove('expended')
+
+    if(!customerTrayActive || !scriptsTrayActive){
+        trayElement.classList.remove('active')
+    }
+
+    scriptsTrayActive = false
+})
+
+//minimize Customer Info
+
+let customerInfoMinimized = false;
+
+minimizeCustomerInfoBtn.addEventListener('click', () => {
+    if(!customerInfoMinimized){
+        customerInfoDragContainer.classList.toggle('minimized')
+        customerInfoElement.style.height = '60px'
+        customerInfoElement.style.minHeight = '60px'
+        customerInfoMinimized = true;
+    } else{
+
+        let storedData = localStorage.getItem('customerInfoElementPositionAndSize');
+        customerInfoDragContainer.classList.toggle('minimized')
+
+        if (storedData) {
+        let { height } = JSON.parse(storedData);
+        customerInfoElement.style.height = height;
+        console.log(height)
+        } else {
+            customerInfoElement.style.height = '100%';
+        }   
+        customerInfoElement.style.minHeight = '600px'
+        customerInfoMinimized = false;
+    }
+})
+
+//minimize SCRIPTS
+let scriptsMinimized = false;
+
+minimizeScriptsBtn.addEventListener('click', () => {
+    if(!scriptsMinimized){
+        scriptDragContainer.classList.toggle('minimized')
+        scriptsElement.style.height = '60px'
+        scriptsElement.style.minHeight = '60px'
+        scriptsMinimized = true;
+    } else{
+
+        let storedData = localStorage.getItem('scriptsElementPositionAndSize');
+        scriptDragContainer.classList.toggle('minimized')
+
+        if (storedData) {
+        let { height } = JSON.parse(storedData);
+        scriptsElement.style.height = height;
+        } else {
+            scriptsElement.style.height = '100%';
+        }   
+        scriptsElement.style.minHeight = '600px'
+        scriptsMinimized = false;
+    }
+})
 
 
 
@@ -461,7 +682,7 @@ if(mDial2Modal && backdrop){
 const verticalSidebar = document.querySelector('#verticalSidebar');
 const pageContentElement = document.querySelector('.page-content');
 const contentElement = document.querySelector('#content');
-const workingAreaElement = document.querySelector('#workingArea');
+
 
 
 
@@ -484,19 +705,300 @@ toggleSidebarToolsBtn.addEventListener('click', () => {
         workingAreaElement.classList.remove('small')
         verticalSidebarShown = !verticalSidebarShown
     }
-
-   
-
-    
-    console.log(verticalSidebarShown)
-    
-    
 })
-console.log(verticalSidebarShown, 'render')
 
 
 
 
 
+// DRAG AND DROP CUSTOMER INFO
+const dragCustomerInfo = () => {
 
-////////////////////////////////////////////////////////////////////////
+    gsap.registerPlugin(Observer);
+    let root = document.documentElement;
+    let item = document.getElementById('customerWindow');
+    let storageKey = 'customerInfoElementPositionAndSize';
+    
+    let setItem = gsap.quickSetter(item, 'css');
+    let isPressed = false;
+    let edgeSize = Observer.isTouch ? 40 : 20;
+    let edgeX = '';
+    let edgeY = '';
+    
+    let cursors = {
+        default: 'grab',
+        dragging: 'grabbing',
+        top: 'ns-resize',
+        left: 'ew-resize',
+        bottom: 'ns-resize',
+        right: 'ew-resize',
+        topleft: 'nwse-resize',
+        bottomright: 'nwse-resize',
+        topright: 'nesw-resize',
+        bottomleft: 'nesw-resize',
+    };
+    
+    function onDragEnd() {
+        isPressed = false;
+        updateCursor();
+    
+        let bounds = item.getBoundingClientRect();
+        let dataToStore = { x: bounds.left, y: bounds.top, width: bounds.width, height: bounds.height };
+        localStorage.setItem(storageKey, JSON.stringify(dataToStore));
+    }
+    
+    let observer;
+    function initializeObserver() {
+        observer = Observer.create({
+            type: 'touch,pointer',
+            target: item,
+            onPress(self) {
+                onMove(self);
+                isPressed = true;
+                updateCursor();
+            },
+            onRelease() {
+                isPressed = false;
+                updateCursor();
+            },
+            onMove,
+            onRelease: onDragEnd,
+            onDragEnd: onDragEnd,
+            onDrag(self) {
+                if (!edgeX && !edgeY) {
+                    return setItem({
+                        x: `+=${self.deltaX}`,
+                        y: `+=${self.deltaY}`,
+                    });
+                }
+    
+                let css = {};
+                let bounds = item.getBoundingClientRect();
+    
+                if (edgeX === 'right' && self.x < bounds.left) {
+                    edgeX = 'left';
+                } else if (edgeX === 'left' && self.x > bounds.right) {
+                    edgeX = 'right';
+                }
+    
+                if (edgeY === 'bottom' && self.y < bounds.top) {
+                    edgeY = 'top';
+                } else if (edgeY === 'top' && self.y > bounds.bottom) {
+                    edgeY = 'bottom';
+                }
+    
+                let deltaX = self.x - (edgeX === 'left' ? bounds.left : bounds.right);
+                let deltaY = self.y - (edgeY === 'top' ? bounds.top : bounds.bottom);
+    
+                if (edgeX === 'right') {
+                    css.width = `+=${deltaX}`;
+                } else if (edgeX === 'left') {
+                    css.width = `+=${-deltaX}`;
+                    css.x = `+=${deltaX}`;
+                }
+    
+                if (edgeY === 'bottom') {
+                    css.height = `+=${deltaY}`;
+                } else if (edgeY === 'top') {
+                    css.height = `+=${-deltaY}`;
+                    css.y = `+=${deltaY}`;
+                }
+    
+                setItem(css);
+            },
+        });
+    }
+    
+    function onMove(self) {
+        if (isPressed) return;
+    
+        let bounds = item.getBoundingClientRect();
+        let x = self.x - bounds.left;
+        let y = self.y - bounds.top;
+    
+        edgeX = '';
+        edgeY = '';
+    
+        if (x <= edgeSize) {
+            edgeX = 'left';
+        } else if (bounds.width - x <= edgeSize) {
+            edgeX = 'right';
+        }
+    
+        if (y <= edgeSize) {
+            edgeY = 'top';
+        } else if (bounds.height - y <= edgeSize) {
+            edgeY = 'bottom';
+        }
+    
+        updateCursor();
+    }
+    
+    function updateCursor() {
+        let currentEdge = edgeY + edgeX;
+        let cursor = cursors[currentEdge ? currentEdge : (isPressed ? 'dragging' : 'default')];
+    
+        item.style.cursor = cursor;
+        root.style.cursor = isPressed ? cursor : 'unset';
+    }
+    
+    let storedData = localStorage.getItem(storageKey);
+    if (storedData) {
+        let { x, y, width, height } = JSON.parse(storedData);
+        setItem({ x: x - item.getBoundingClientRect().left, y: y - item.getBoundingClientRect().top, width, height });
+    }
+    
+    initializeObserver()
+    
+    
+    }
+
+    dragCustomerInfo()
+
+
+
+    //SCRIPTS DRAG AND DROP 
+
+    const dragScripts = () => {
+
+        gsap.registerPlugin(Observer);
+        let root = document.documentElement;
+        let item = document.getElementById('scriptsElement');
+        let storageKey = 'scriptsElementPositionAndSize';
+        
+        let setItem = gsap.quickSetter(item, 'css');
+        let isPressed = false;
+        let edgeSize = Observer.isTouch ? 40 : 20;
+        let edgeX = '';
+        let edgeY = '';
+        
+        let cursors = {
+            default: 'grab',
+            dragging: 'grabbing',
+            top: 'ns-resize',
+            left: 'ew-resize',
+            bottom: 'ns-resize',
+            right: 'ew-resize',
+            topleft: 'nwse-resize',
+            bottomright: 'nwse-resize',
+            topright: 'nesw-resize',
+            bottomleft: 'nesw-resize',
+        };
+        
+        function onDragEnd() {
+            isPressed = false;
+            updateCursor();
+        
+            let bounds = item.getBoundingClientRect();
+            let dataToStore = { x: bounds.left, y: bounds.top, width: bounds.width, height: bounds.height };
+            localStorage.setItem(storageKey, JSON.stringify(dataToStore));
+        }
+        
+        let observer;
+        function initializeObserver() {
+            observer = Observer.create({
+                type: 'touch,pointer',
+                target: item,
+                onPress(self) {
+                    onMove(self);
+                    isPressed = true;
+                    updateCursor();
+                },
+                onRelease() {
+                    isPressed = false;
+                    updateCursor();
+                },
+                onMove,
+                onRelease: onDragEnd,
+                onDragEnd: onDragEnd,
+                onDrag(self) {
+                    if (!edgeX && !edgeY) {
+                        return setItem({
+                            x: `+=${self.deltaX}`,
+                            y: `+=${self.deltaY}`,
+                            'z-index': '300'
+                        });
+                    }
+        
+                    let css = {};
+                    let bounds = item.getBoundingClientRect();
+        
+                    if (edgeX === 'right' && self.x < bounds.left) {
+                        edgeX = 'left';
+                    } else if (edgeX === 'left' && self.x > bounds.right) {
+                        edgeX = 'right';
+                    }
+        
+                    if (edgeY === 'bottom' && self.y < bounds.top) {
+                        edgeY = 'top';
+                    } else if (edgeY === 'top' && self.y > bounds.bottom) {
+                        edgeY = 'bottom';
+                    }
+        
+                    let deltaX = self.x - (edgeX === 'left' ? bounds.left : bounds.right);
+                    let deltaY = self.y - (edgeY === 'top' ? bounds.top : bounds.bottom);
+        
+                    if (edgeX === 'right') {
+                        css.width = `+=${deltaX}`;
+                    } else if (edgeX === 'left') {
+                        css.width = `+=${-deltaX}`;
+                        css.x = `+=${deltaX}`;
+                    }
+        
+                    if (edgeY === 'bottom') {
+                        css.height = `+=${deltaY}`;
+                    } else if (edgeY === 'top') {
+                        css.height = `+=${-deltaY}`;
+                        css.y = `+=${deltaY}`;
+                    }
+        
+                    setItem(css);
+                },
+            });
+        }
+        
+        function onMove(self) {
+            if (isPressed) return;
+        
+            let bounds = item.getBoundingClientRect();
+            let x = self.x - bounds.left;
+            let y = self.y - bounds.top;
+        
+            edgeX = '';
+            edgeY = '';
+        
+            if (x <= edgeSize) {
+                edgeX = 'left';
+            } else if (bounds.width - x <= edgeSize) {
+                edgeX = 'right';
+            }
+        
+            if (y <= edgeSize) {
+                edgeY = 'top';
+            } else if (bounds.height - y <= edgeSize) {
+                edgeY = 'bottom';
+            }
+        
+            updateCursor();
+        }
+        
+        function updateCursor() {
+            let currentEdge = edgeY + edgeX;
+            let cursor = cursors[currentEdge ? currentEdge : (isPressed ? 'dragging' : 'default')];
+        
+            item.style.cursor = cursor;
+            root.style.cursor = isPressed ? cursor : 'unset';
+        }
+        
+        let storedData = localStorage.getItem(storageKey);
+        if (storedData) {
+            let { x, y, width, height } = JSON.parse(storedData);
+            setItem({ x: x - item.getBoundingClientRect().left, y: y - item.getBoundingClientRect().top, width, height });
+        }
+        
+        initializeObserver()
+        
+        
+        }
+    
+        dragScripts()
