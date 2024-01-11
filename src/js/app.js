@@ -177,6 +177,7 @@ messageBurgerIcon.addEventListener('click', () => {
 //SELECT 
 
 const selectElements = document.querySelectorAll('.select');
+let selectIsShown = false;
 
 selectElements.forEach(el => {
     const selectField = el.firstElementChild;
@@ -185,13 +186,29 @@ selectElements.forEach(el => {
     const selectBtnText = selectField.querySelector('.select__text')
     const options = selectDropdown.querySelectorAll('.select__option')
 
-    selectField.addEventListener('click', () => {
-        selectArrow.classList.toggle('active')
-        selectDropdown.classList.toggle('active')
-    })
-    
-    options.forEach(option => {
-        option.addEventListener('click', () => {
+    selectField.addEventListener('click', (event) => {
+    try {
+        event.stopPropagation();
+        selectArrow.classList.toggle('active');
+        selectDropdown.classList.toggle('active');
+        selectIsShown = !selectIsShown;
+    } catch (error) {
+        console.error('Error in selectField click event:', error);
+    }
+});
+
+selectDropdown.addEventListener('click', (event) => {
+    try {
+        event.stopPropagation();
+    } catch (error) {
+        console.error('Error in selectDropdown click event:', error);
+    }
+});
+
+options.forEach(option => {
+    option.addEventListener('click', (event) => {
+        try {
+            event.stopPropagation();
             const optionLabel = option.querySelector('.select__option-label').innerHTML
             const optionValue = option.querySelector('.select__option-value').innerHTML
 
@@ -200,12 +217,27 @@ selectElements.forEach(el => {
 
             selectBtnText.innerText = optionLabel
             el.setAttribute('data-value', optionValue);
-            
-
-        })
+            selectIsShown = false
+        } catch (error) {
+            console.error('Error in option click event:', error);
+        }
     })
+})
 
 })
+
+document.addEventListener('click', () => {
+    if (selectIsShown) {
+        const selectDropdowns = document.querySelectorAll('.select__dropdown');
+        selectDropdowns.forEach(el => {
+            el.classList.remove('active');
+        });
+
+        const selectArrows = document.querySelectorAll('.select__icon');
+        selectArrows.forEach(el => el.classList.remove('active'));
+        selectIsShown = false;
+    }
+});
 
 
 // WINDOWS CONTROLS
@@ -241,7 +273,6 @@ let scriptsAreActive = !scriptDragContainer.classList.contains('hidden')
 
 const workingAreaElement = document.querySelector('#workingArea');
 const trayElement = document.querySelector('#tray');
-const trayItems = trayElement.querySelectorAll('.tray__item');
 
 
 let customerTrayActive = false;
