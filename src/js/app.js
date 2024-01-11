@@ -254,13 +254,27 @@ expendCustomerInfoBtn.addEventListener('click', () => {
     if(!customerInfoDragContainer.classList.contains('expended')){
         scriptDragContainer.classList.add('hidden')
         customerInfoDragContainer.classList.add('expended')
+        customerInfoElement.style.width = '100%';
+        customerInfoElement.style.height = '100%';
+        customerInfoElement.style.transform = 'translate(0px, 0px)';
+
         trayElement.classList.add('active')
-        if(scriptsAreActive){
-            scriptsTrayElement.classList.add('active')
-        }
+        scriptsTrayElement.classList.add('active')
         scriptsTrayActive = true;
     } else {
         customerInfoDragContainer.classList.remove('expended')
+        let storedData = localStorage.getItem('customerInfoElementPositionAndSize');
+        if (storedData) {
+            let { height, width, x, y } = JSON.parse(storedData);
+            customerInfoElement.style.height = height;
+            customerInfoElement.style.width = width;
+            customerInfoElement.style.top = y;
+            customerInfoElement.style.left = x;
+        }else {
+            customerInfoElement.style.width = '100%';
+            customerInfoElement.style.height = '100%';
+        } 
+        scriptDragContainer.classList.remove('expended')
         customerTrayActive = false;
 
         if(!scriptsTrayActive){
@@ -279,9 +293,8 @@ expendScriptsBtn.addEventListener('click', () => {
         customerInfoDragContainer.classList.add('hidden')
         scriptDragContainer.classList.add('expended')
         scriptsElement.style.width = '100%';
-        scriptsElement.style.transform = 'translate(0px, 0px)';
-        scriptsElement.style.transform = 'translate(0px, 0px)';
         scriptsElement.style.height = '100%';
+        scriptsElement.style.transform = 'translate(0px, 0px)';
 
         trayElement.classList.add('active')
         customerTrayElement.classList.add('active')
@@ -299,14 +312,13 @@ expendScriptsBtn.addEventListener('click', () => {
             scriptsElement.style.width = '100%';
             scriptsElement.style.height = '100%';
         } 
+        scriptDragContainer.classList.remove('expended')
         scriptsTrayActive = false;
 
         if(!customerTrayActive){
             trayElement.classList.remove('active')
         }
     }
-    
-
 })
 
 
