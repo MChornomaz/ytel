@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicons  -->
+    <link rel="icon" href="./img/logo.png">
+
+    <!-- CSS  -->
     <!-- BOOTSTRAP CSS  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?_v=20240111152127" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20240111152127">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Ytel | Main</title>
 </head>
 
@@ -28,15 +32,33 @@
             <aside class="sidebar" id="leftSidebar">
                 <div class="sidebar--top">
                     <div class="sidebar__logo">
-                        <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="Ytel logo"></picture>
+                        <img src="./img/logo.png" alt="Ytel logo">
                     </div>
                     <div class="sidebar__select">
                         <h5 class="sidebar__title">Select Campaign</h5>
-                        <select class="form-select">
-                            <option selected value="1">Campaign 1 | Testing</option>
-                            <option value="2">Campaign 2 | Testing</option>
-                            <option value="3">Campaign 3 | Testing</option>
-                        </select>
+                        <div class="select" data-value="0">
+                            <button class="select__btn">
+                                <p class="select__text">Campaign 1 | Testing</p>
+                                <div class="select__icon">
+                                    <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                </div>
+                            </button>
+                            <ul class="select__dropdown">
+                                <li class="select__option">
+                                    <p class="select__option-label">Campaign 1 | Testing</p>
+                                    <span class="select__option-value">0</span>
+                                </li>
+                                <li class="select__option">
+                                    <p class="select__option-label">Campaign 2 | Testing</p>
+                                    <span class="select__option-value">1</span>
+                                </li>
+                                <li class="select__option">
+                                    <p class="select__option-label">Campaign 3 | Testing</p>
+                                    <span class="select__option-value">2</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
                     </div>
 
                     <h5 class="sidebar__title">Tools</h5>
@@ -136,7 +158,7 @@
                     <div class="sidebar__controls">
                         <div class="sidebar__user">
                             <div class="sidebar__avatar">
-                                <picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.png" alt="User photo"></picture>
+                                <img src="./img/avatar.png" alt="User photo">
                                 <p class="sidebar__key">Arip S.</p>
                             </div>
                             <div class="sidebar__menu-icon" id="menuBtn">
@@ -187,7 +209,7 @@
             <aside class="vertical-sidebar" id="verticalSidebar">
                 <div class="vertical-sidebar--left">
                     <div class="vertical-sidebar__logo">
-                        <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="Ytel logo"></picture>
+                        <img src="./img/logo.png" alt="Ytel logo">
                     </div>
 
                     <ul class="vertical-sidebar__tools-list">
@@ -280,7 +302,7 @@
                     <div class="vertical-sidebar__controls">
                         <div class="vertical-sidebar__user">
                             <div class="vertical-sidebar__avatar">
-                                <picture><source srcset="./img/avatar.webp" type="image/webp"><img src="./img/avatar.png" alt="User photo"></picture>
+                                <img src="./img/avatar.png" alt="User photo">
                                 <p class="vertical-sidebar__key">Arip S.</p>
                             </div>
                             <div class="vertical-sidebar__menu-icon" id="verticalMenuBtn">
@@ -475,12 +497,29 @@
                                 </div>
                                 <div class="call-controls__control-buttons">
                                     <button class="transparent-blue-btn">Hold</button>
-                                    <select class="form-select">
-                                        <option value="0" selected>Transfer</option>
-                                        <option value="1" selected>Transfer 1</option>
-                                        <option value="2" selected>Transfer 2</option>
-                                        <option value="3" selected>Transfer 3</option>
-                                    </select>
+                                    <div class="select call-select" data-value="+1">
+                                        <button class="select__btn">
+                                            <p class="select__text">Transfer</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown call-select">
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 1</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 2</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 3</p>
+                                                <span class="select__option-value">3</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
                                     <button class="transparent-blue-btn">Voice Mail</button>
                                     <button class="red-btn">Hangup</button>
                                 </div>
@@ -574,12 +613,28 @@
                                 </div>
                                 <div class="call-controls__control-buttons">
                                     <button class="transparent-blue-btn">Hold</button>
-                                    <select class="form-select">
-                                        <option value="0" selected>Transfer</option>
-                                        <option value="1" selected>Transfer 1</option>
-                                        <option value="2" selected>Transfer 2</option>
-                                        <option value="3" selected>Transfer 3</option>
-                                    </select>
+                                    <div class="select call-select" data-value="+1">
+                                        <button class="select__btn">
+                                            <p class="select__text">Transfer</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown call-select">
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 1</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 2</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 3</p>
+                                                <span class="select__option-value">3</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <button class="transparent-blue-btn">Voice Mail</button>
                                     <button class="red-btn">Hangup</button>
                                 </div>
@@ -672,33 +727,82 @@
                             </div>
                             <div class="customer-form__row">
                                 <div class="input-field">
-                                    <label for="city">City</label>
-                                    <select class="form-select" type="text" id="city">
-                                        <option value="0">Choose city</option>
-                                        <option value="1">City 1</option>
-                                        <option value="2">City 2</option>
-                                        <option value="3">City 3</option>
-                                    </select>
+                                    <label>City</label>
+                                    <div class="select customer-form__select" data-value="0">
+                                        <button class="select__btn">
+                                            <p class="select__text">Choose city</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown">
+                                            <li class="select__option">
+                                                <p class="select__option-label">City 1</p>
+                                                <span class="select__option-value">0</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">City 2</p>
+                                                <span class="select__option-value">1</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">City 3</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
                                 </div>
                                 <div class="input-field">
                                     <label for="state">State</label>
-                                    <select class="form-select" type="text" id="state">
-                                        <option value="0">Choose state</option>
-                                        <option value="1">State 1</option>
-                                        <option value="2">State 2</option>
-                                        <option value="3">State 3</option>
-                                    </select>
+                                    <div class="select customer-form__select" data-value="0">
+                                        <button class="select__btn">
+                                            <p class="select__text">Choose state</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown">
+                                            <li class="select__option">
+                                                <p class="select__option-label">State 1</p>
+                                                <span class="select__option-value">0</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">State 2</p>
+                                                <span class="select__option-value">1</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">State 3</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="customer-form__row">
                                 <div class="input-field">
                                     <label for="province">Province</label>
-                                    <select class="form-select" type="text" id="province">
-                                        <option value="0">Choose province</option>
-                                        <option value="1">Province 1</option>
-                                        <option value="2">Province 2</option>
-                                        <option value="3">Province 3</option>
-                                    </select>
+                                    <div class="select customer-form__select" data-value="0">
+                                        <button class="select__btn">
+                                            <p class="select__text">Choose province</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown">
+                                            <li class="select__option">
+                                                <p class="select__option-label">Province 1</p>
+                                                <span class="select__option-value">0</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Province 2</p>
+                                                <span class="select__option-value">1</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Province 3</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="input-field">
                                     <label for="postCode">Post Code</label>
@@ -813,10 +917,10 @@
                     <p class="tray__name">Calls in Queue</p>
                     <div class="tray__icons">
                         <button class="tray__icon" id="calsInQueueExpectBtn">
-                            <picture><source srcset="./img/icons/expect.webp" type="image/webp"><img src="./img/icons/expect.png" alt="expect icon"></picture>
+                            <img src="./img/icons/expect.png" alt="expect icon">
                         </button>
                         <button class="tray__icon">
-                            <picture><source srcset="./img/icons/link.webp" type="image/webp"><img src="./img/icons/link.png" alt="link icon"></picture>
+                            <img src="./img/icons/link.png" alt="link icon">
                         </button>
                     </div>
                 </div>
@@ -824,10 +928,10 @@
                     <p class="tray__name">Customer Info</p>
                     <div class="tray__icons"> 
                         <button class="tray__icon" id="customerInfoExpectBtn">
-                            <picture><source srcset="./img/icons/expect.webp" type="image/webp"><img src="./img/icons/expect.png" alt="expect icon"></picture>
+                            <img src="./img/icons/expect.png" alt="expect icon">
                         </button>
                         <button class="tray__icon">
-                            <picture><source srcset="./img/icons/link.webp" type="image/webp"><img src="./img/icons/link.png" alt="link icon"></picture>
+                            <img src="./img/icons/link.png" alt="link icon">
                         </button>
                     </div>
                 </div>
@@ -835,10 +939,10 @@
                     <p class="tray__name">Scripts</p>
                     <div class="tray__icons"> 
                         <button class="tray__icon" id="scriptsExpectBtn">
-                            <picture><source srcset="./img/icons/expect.webp" type="image/webp"><img src="./img/icons/expect.png" alt="expect icon"></picture>
+                            <img src="./img/icons/expect.png" alt="expect icon">
                         </button>
                         <button class="tray__icon">
-                            <picture><source srcset="./img/icons/link.webp" type="image/webp"><img src="./img/icons/link.png" alt="link icon"></picture>
+                            <img src="./img/icons/link.png" alt="link icon">
                         </button>
                     </div>
                 </div>
@@ -872,13 +976,30 @@
             <div class="modal-window__content">
                 <div class="modal-window__dial">
                     <div class="customer-form__row modal-window__inputs">
+
                         <div class=" code-field">
-                            <select class="form-select modal-window__input" id="code">
-                                <option value="0">+1</option>
-                                <option value="1">+2</option>
-                                <option value="2">+3</option>
-                                <option value="3">+4</option>
-                            </select>
+                            <div class="select m-select" data-value="+1">
+                                        <button class="select__btn">
+                                            <p class="select__text">+1</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown">
+                                            <li class="select__option">
+                                                <p class="select__option-label">+2</p>
+                                                <span class="select__option-value">+2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">+3</p>
+                                                <span class="select__option-value">+3</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">+4</p>
+                                                <span class="select__option-value">+4</span>
+                                            </li>
+                                        </ul>
+                            </div>
                         </div>
                         <input class="modal-window__input" type="text" placeholder="eg. 18391913" id="call-number">
                     </div>
@@ -1964,7 +2085,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar avatar-icon">
-                                                <picture><source srcset="./img/Emoji.webp" type="image/webp"><img src="./img/Emoji.png" alt="user avatar"></picture>
+                                                <img src="./img/Emoji.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info">
                                                 <p class="modal-sidebar__person-name">Group-1213</p>
@@ -1975,7 +2096,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar avatar-icon">
-                                                <picture><source srcset="./img/Emoji2.webp" type="image/webp"><img src="./img/Emoji2.png" alt="user avatar"></picture>
+                                                <img src="./img/Emoji2.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info">
                                                 <p class="modal-sidebar__person-name">Group-1192</p>
@@ -2003,7 +2124,7 @@
                                     <li class="modal-sidebar__list-item active">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <picture><source srcset="./img/avatar-2.webp" type="image/webp"><img src="./img/avatar-2.png" alt="user avatar"></picture>
+                                                <img src="./img/avatar-2.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info">
                                                 <p class="modal-sidebar__person-name">Danny Sanchez</p>
@@ -2015,7 +2136,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <picture><source srcset="./img/avatar-3.webp" type="image/webp"><img src="./img/avatar-3.png" alt="user avatar"></picture>
+                                                <img src="./img/avatar-3.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info--channel">
                                                 <p class="modal-sidebar__person-name">Della Sicitra <span
@@ -2028,7 +2149,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <picture><source srcset="./img/avatar-4.webp" type="image/webp"><img src="./img/avatar-4.png" alt="user avatar"></picture>
+                                                <img src="./img/avatar-4.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info--channel">
                                                 <p class="modal-sidebar__person-name">Viola Junyla <span
@@ -2060,7 +2181,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar avatar-icon">
-                                                <picture><source srcset="./img/Emoji2.webp" type="image/webp"><img src="./img/Emoji2.png" alt="user avatar"></picture>
+                                                <img src="./img/Emoji2.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info--channel">
                                                 <p class="modal-sidebar__person-name">Group-1192</p>
@@ -2088,7 +2209,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <picture><source srcset="./img/avatar-4.webp" type="image/webp"><img src="./img/avatar-4.png" alt="user avatar"></picture>
+                                                <img src="./img/avatar-4.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info--personal">
                                                 <p class="modal-sidebar__person-name">Viola Junyla <span
@@ -2124,7 +2245,7 @@
                         <div class="modal-message__heading">
                             <div class="modal-message__person">
                                 <div class="modal-message__avatar">
-                                    <picture><source srcset="./img/avatar-2.webp" type="image/webp"><img src="./img/avatar-2.png" alt="user avatar"></picture>
+                                    <img src="./img/avatar-2.png" alt="user avatar">
                                 </div>
                                 <div class="modal-message__person-data">
                                     <p class="modal-message__username">Danny Sanchez</p>
@@ -2168,7 +2289,7 @@
                                         <div class="incoming-message__heading">
                                             <div class="incoming-message__user-data">
                                                 <div class="incoming-message__avatar">
-                                                    <picture><source srcset="./img/avatar-2.webp" type="image/webp"><img src="./img/avatar-2.png" alt="user avatar"></picture>
+                                                    <img src="./img/avatar-2.png" alt="user avatar">
                                                 </div>
                                                 <p class="incoming-message__username">Danny Sanchez</p>
                                             </div>
@@ -2206,7 +2327,7 @@
                                         <div class="incoming-message__heading">
                                             <div class="incoming-message__user-data">
                                                 <div class="incoming-message__avatar">
-                                                    <picture><source srcset="./img/avatar-2.webp" type="image/webp"><img src="./img/avatar-2.png" alt="user avatar"></picture>
+                                                    <img src="./img/avatar-2.png" alt="user avatar">
                                                 </div>
                                                 <p class="incoming-message__username">Danny Sanchez</p>
                                             </div>
@@ -2224,17 +2345,17 @@
                                 <textarea name="message" placeholder="Write message here..."></textarea>
                                 <div class="modal-message__input-icons">
                                     <div class="modal-message__icon-container">
-                                        <picture><source srcset="./img/icons/smile.webp" type="image/webp"><img src="./img/icons/smile.png" alt="smile"></picture>
+                                        <img src="./img/icons/smile.png" alt="smile">
                                     </div>
                                     <div class="modal-message__icon-container">
-                                        <picture><source srcset="./img/icons/image.webp" type="image/webp"><img src="./img/icons/image.png" alt="image icon"></picture>
+                                        <img src="./img/icons/image.png" alt="image icon">
                                     </div>
                                     <div class="modal-message__icon-container">
-                                        <picture><source srcset="./img/icons/attechment.webp" type="image/webp"><img src="./img/icons/attechment.png" alt="image icon"></picture>
+                                        <img src="./img/icons/attechment.png" alt="image icon">
                                     </div>
                                     <button class="modal-message__btn">
                                         <p>Send</p>
-                                        <picture><source srcset="./img/icons/send.webp" type="image/webp"><img src="./img/icons/send.png" alt="send icon "></picture>
+                                        <img src="./img/icons/send.png" alt="send icon ">
                                     </button>
 
                                 </div>
@@ -2412,20 +2533,17 @@
 
     </main>
 
-
-
-
     <!-- BOOTSTRAP JS  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js?_v=20240111152127"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
     <!-- GSAP JS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js?_v=20240111152127"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/Observer.min.js?_v=20240111152127"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/Observer.min.js"></script>
 
     <!-- CUSTOM SCRIPTS -->
-    <script defer src="js/app.min.js?_v=20240111152127"></script>
+    <script defer src="js/app.min.js"></script>
 </body>
 
 </html>

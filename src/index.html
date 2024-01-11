@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicons  -->
+    <link rel="icon" href="./img/logo.png">
+
+    <!-- CSS  -->
     <!-- BOOTSTRAP CSS  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -32,11 +36,29 @@
                     </div>
                     <div class="sidebar__select">
                         <h5 class="sidebar__title">Select Campaign</h5>
-                        <select class="form-select">
-                            <option selected value="1">Campaign 1 | Testing</option>
-                            <option value="2">Campaign 2 | Testing</option>
-                            <option value="3">Campaign 3 | Testing</option>
-                        </select>
+                        <div class="select" data-value="0">
+                            <button class="select__btn">
+                                <p class="select__text">Campaign 1 | Testing</p>
+                                <div class="select__icon">
+                                    <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                </div>
+                            </button>
+                            <ul class="select__dropdown">
+                                <li class="select__option">
+                                    <p class="select__option-label">Campaign 1 | Testing</p>
+                                    <span class="select__option-value">0</span>
+                                </li>
+                                <li class="select__option">
+                                    <p class="select__option-label">Campaign 2 | Testing</p>
+                                    <span class="select__option-value">1</span>
+                                </li>
+                                <li class="select__option">
+                                    <p class="select__option-label">Campaign 3 | Testing</p>
+                                    <span class="select__option-value">2</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
                     </div>
 
                     <h5 class="sidebar__title">Tools</h5>
@@ -475,12 +497,29 @@
                                 </div>
                                 <div class="call-controls__control-buttons">
                                     <button class="transparent-blue-btn">Hold</button>
-                                    <select class="form-select">
-                                        <option value="0" selected>Transfer</option>
-                                        <option value="1" selected>Transfer 1</option>
-                                        <option value="2" selected>Transfer 2</option>
-                                        <option value="3" selected>Transfer 3</option>
-                                    </select>
+                                    <div class="select call-select" data-value="+1">
+                                        <button class="select__btn">
+                                            <p class="select__text">Transfer</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown call-select">
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 1</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 2</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 3</p>
+                                                <span class="select__option-value">3</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
                                     <button class="transparent-blue-btn">Voice Mail</button>
                                     <button class="red-btn">Hangup</button>
                                 </div>
@@ -574,12 +613,28 @@
                                 </div>
                                 <div class="call-controls__control-buttons">
                                     <button class="transparent-blue-btn">Hold</button>
-                                    <select class="form-select">
-                                        <option value="0" selected>Transfer</option>
-                                        <option value="1" selected>Transfer 1</option>
-                                        <option value="2" selected>Transfer 2</option>
-                                        <option value="3" selected>Transfer 3</option>
-                                    </select>
+                                    <div class="select call-select" data-value="+1">
+                                        <button class="select__btn">
+                                            <p class="select__text">Transfer</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown call-select">
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 1</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 2</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 3</p>
+                                                <span class="select__option-value">3</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <button class="transparent-blue-btn">Voice Mail</button>
                                     <button class="red-btn">Hangup</button>
                                 </div>
@@ -672,33 +727,82 @@
                             </div>
                             <div class="customer-form__row">
                                 <div class="input-field">
-                                    <label for="city">City</label>
-                                    <select class="form-select" type="text" id="city">
-                                        <option value="0">Choose city</option>
-                                        <option value="1">City 1</option>
-                                        <option value="2">City 2</option>
-                                        <option value="3">City 3</option>
-                                    </select>
+                                    <label>City</label>
+                                    <div class="select customer-form__select" data-value="0">
+                                        <button class="select__btn">
+                                            <p class="select__text">Choose city</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown">
+                                            <li class="select__option">
+                                                <p class="select__option-label">City 1</p>
+                                                <span class="select__option-value">0</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">City 2</p>
+                                                <span class="select__option-value">1</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">City 3</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
                                 </div>
                                 <div class="input-field">
                                     <label for="state">State</label>
-                                    <select class="form-select" type="text" id="state">
-                                        <option value="0">Choose state</option>
-                                        <option value="1">State 1</option>
-                                        <option value="2">State 2</option>
-                                        <option value="3">State 3</option>
-                                    </select>
+                                    <div class="select customer-form__select" data-value="0">
+                                        <button class="select__btn">
+                                            <p class="select__text">Choose state</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown">
+                                            <li class="select__option">
+                                                <p class="select__option-label">State 1</p>
+                                                <span class="select__option-value">0</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">State 2</p>
+                                                <span class="select__option-value">1</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">State 3</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="customer-form__row">
                                 <div class="input-field">
                                     <label for="province">Province</label>
-                                    <select class="form-select" type="text" id="province">
-                                        <option value="0">Choose province</option>
-                                        <option value="1">Province 1</option>
-                                        <option value="2">Province 2</option>
-                                        <option value="3">Province 3</option>
-                                    </select>
+                                    <div class="select customer-form__select" data-value="0">
+                                        <button class="select__btn">
+                                            <p class="select__text">Choose province</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown">
+                                            <li class="select__option">
+                                                <p class="select__option-label">Province 1</p>
+                                                <span class="select__option-value">0</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Province 2</p>
+                                                <span class="select__option-value">1</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Province 3</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="input-field">
                                     <label for="postCode">Post Code</label>
@@ -872,13 +976,30 @@
             <div class="modal-window__content">
                 <div class="modal-window__dial">
                     <div class="customer-form__row modal-window__inputs">
+
                         <div class=" code-field">
-                            <select class="form-select modal-window__input" id="code">
-                                <option value="0">+1</option>
-                                <option value="1">+2</option>
-                                <option value="2">+3</option>
-                                <option value="3">+4</option>
-                            </select>
+                            <div class="select m-select" data-value="+1">
+                                        <button class="select__btn">
+                                            <p class="select__text">+1</p>
+                                            <div class="select__icon">
+                                                <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"></path></svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown">
+                                            <li class="select__option">
+                                                <p class="select__option-label">+2</p>
+                                                <span class="select__option-value">+2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">+3</p>
+                                                <span class="select__option-value">+3</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">+4</p>
+                                                <span class="select__option-value">+4</span>
+                                            </li>
+                                        </ul>
+                            </div>
                         </div>
                         <input class="modal-window__input" type="text" placeholder="eg. 18391913" id="call-number">
                     </div>
@@ -2411,9 +2532,6 @@
 
 
     </main>
-
-
-
 
     <!-- BOOTSTRAP JS  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"

@@ -174,6 +174,39 @@ messageBurgerIcon.addEventListener('click', () => {
 })
 
 
+//SELECT 
+
+const selectElements = document.querySelectorAll('.select');
+
+selectElements.forEach(el => {
+    const selectField = el.firstElementChild;
+    const selectDropdown = selectField.nextElementSibling
+    const selectArrow = selectField.querySelector('.select__icon')
+    const selectBtnText = selectField.querySelector('.select__text')
+    const options = selectDropdown.querySelectorAll('.select__option')
+
+    selectField.addEventListener('click', () => {
+        selectArrow.classList.toggle('active')
+        selectDropdown.classList.toggle('active')
+    })
+    
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            const optionLabel = option.querySelector('.select__option-label').innerHTML
+            const optionValue = option.querySelector('.select__option-value').innerHTML
+
+            selectArrow.classList.toggle('active')
+            selectDropdown.classList.toggle('active')
+
+            selectBtnText.innerText = optionLabel
+            el.setAttribute('data-value', optionValue);
+            
+
+        })
+    })
+
+})
+
 
 // WINDOWS CONTROLS
 
