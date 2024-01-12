@@ -33,6 +33,17 @@
         right: 30px;
         bottom: 30px;
         background: var(--skills-refresh-gradient);
+        transition: transform .23s ease-in;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        &:active{
+            transform: scale(0.98);
+        }
+
+
 
         svg{
             width: 16px;

@@ -58,12 +58,6 @@
     &__select{
         margin-bottom: 20px;
         
-        select{
-            background: var(--color-secondary);
-            color: var(--color-text-sidebar);
-            // border: var(--color-text-sidebar);
-        }
-
         h5{
             margin-bottom: 10px;
         }
@@ -90,6 +84,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        
     }
 
     &__tool-item{
@@ -109,6 +105,12 @@
             font-weight: 600;
             line-height: 24px;
             color: var(--color-text-sidebar);
+            transition: 0.4s;
+            
+            &:hover{
+                color: $color-blue-secondary;
+            }
+            
         }
     }
 
@@ -135,6 +137,11 @@
         font-weight: 600;
         line-height: 24px;
         color: var(--color-text-sidebar);
+        cursor: pointer;
+
+        &:hover{
+            color: rgb(165, 178, 196);
+        }
     }
 
     &__value{
@@ -177,6 +184,9 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
+        cursor: pointer;
+        
+
         
     }
 

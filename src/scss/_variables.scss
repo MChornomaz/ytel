@@ -59,6 +59,7 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --mdial-modal-2-call-btn-bg-light:  #009900;
     --select-hover-bg-light:  #e5e5e549;
     --select-dropdown-bg-light:  #ffffff;
+    --card-border-color-light:  #D7D7D7;
     
 
 
@@ -109,6 +110,7 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --mdial-modal-2-bg-dark: #23232d;
     --select-hover-bg-dark: #5F5F74;
     --select-dropdown-bg-dark: #0A1D32;
+    --card-border-color-dark: transparent;
     
     --mdial-modal-2-call-btn-bg-dark: linear-gradient(to right, #44BFFF ,#5590F5 );;
 
@@ -167,6 +169,7 @@ body{
         --mdial-modal-2-call-btn-bg: var(--mdial-modal-2-call-btn-bg-light);
         --select-hover-bg: var(--select-hover-bg-light);
         --select-dropdown-bg: var(--select-dropdown-bg-light);
+        --card-border-color: var(--card-border-color-light);
         
         
         
@@ -222,6 +225,7 @@ body{
         --mdial-modal-2-call-btn-bg: var(--mdial-modal-2-call-btn-bg-dark);
         --select-hover-bg: var(--select-hover-bg-dark);
         --select-dropdown-bg: var(--select-dropdown-bg-dark);
+        --card-border-color: var(--card-border-color-dark);
         
         
         
