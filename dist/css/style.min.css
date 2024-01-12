@@ -43,6 +43,16 @@
   --connection-error-modal-img-light: url("../img/no-connection.png");
   --latency-modal-img-light: url("../img/diagram-white.png");
   --skills-refresh-gradient-light: linear-gradient(to right, rgba(105, 105, 194, 1), rgba(147, 147, 236, 1));
+  --sidebar-dialpad-icon-light: url("../img//icons/dialpad-light.png");
+  --sidebar-file-icon-light: url("../img//icons/file-light.png");
+  --sidebar-message-icon-light: url("../img//icons/message-light.png");
+  --sidebar-forms-icon-light: url("../img/icons/file-check-light.png");
+  --transfer-modal-users-icon-light: url("../img/icons/users-profiles-light.png");
+  --transfer-modal-user-icon-light: url("../img/icons/user-light.png");
+  --transfer-modal-dial-icon-light: url("../img/icons/phone-outgoing-light.png");
+  --transfer-modal-microphone-icon-light: url("../img/icons/microphone-light.png");
+  --call-channels-modal-volume-plus-icon-light: url("../img/icons/volume-plus-light.png");
+  --call-channels-modal-volume-minus-icon-light: url("../img/icons/volume-minus-light.png");
   --color-main-dark: #000000;
   --color-secondary-dark: #0C161E;
   --color-ternary-dark: #243546;
@@ -88,6 +98,16 @@
   --connection-error-modal-img-dark: url("../img/no-connection-dark.png");
   --latency-modal-img-dark: url("../img/diagram.png");
   --skills-refresh-gradient-dark: linear-gradient(to right, #5590F5, #44BFFF);
+  --sidebar-dialpad-icon-dark: url("../img//icons/dialpad-dark.png");
+  --sidebar-file-icon-dark: url("../img//icons/file-dark.png");
+  --sidebar-message-icon-dark: url("../img//icons/message-dark.png");
+  --sidebar-forms-icon-dark: url("../img//icons/file-check-dark.png");
+  --transfer-modal-users-icon-dark: url("../img/icons/users-profiles-dark.png");
+  --transfer-modal-user-icon-dark: url("../img/icons/user-dark.png");
+  --transfer-modal-dial-icon-dark: url("../img/icons/phone-outgoing-dark.png");
+  --transfer-modal-microphone-icon-dark: url("../img/icons/microphone-dark.png");
+  --call-channels-modal-volume-plus-icon-dark: url("../img/icons/volume-plus-dark.png");
+  --call-channels-modal-volume-minus-icon-dark: url("../img/icons/volume-minus-dark.png");
 }
 
 body.light {
@@ -136,6 +156,16 @@ body.light {
   --call-channels-error-modal-img: var(--call-channels-error-modal-img-light);
   --connection-error-modal-img: var(--connection-error-modal-img-light);
   --latency-modal-img: var(--latency-modal-img-light);
+  --sidebar-dialpad-icon: var(--sidebar-dialpad-icon-light);
+  --sidebar-file-icon: var(--sidebar-file-icon-light);
+  --sidebar-message-icon: var(--sidebar-message-icon-light);
+  --sidebar-forms-icon: var(--sidebar-forms-icon-light);
+  --transfer-modal-users-icon: var(--transfer-modal-users-icon-light);
+  --transfer-modal-user-icon: var(--transfer-modal-user-icon-light);
+  --transfer-modal-dial-icon: var(--transfer-modal-dial-icon-light);
+  --transfer-modal-microphone-icon: var(--transfer-modal-microphone-icon-light);
+  --call-channels-modal-volume-plus-icon: var(--call-channels-modal-volume-plus-icon-light);
+  --call-channels-modal-volume-minus-icon: var(--call-channels-modal-volume-minus-icon-light);
   background-color: var(--color-main);
 }
 body.dark {
@@ -184,6 +214,16 @@ body.dark {
   --call-channels-error-modal-img: var(--call-channels-error-modal-img-dark);
   --connection-error-modal-img: var(--connection-error-modal-img-dark);
   --latency-modal-img: var(--latency-modal-img-dark);
+  --sidebar-dialpad-icon: var(--sidebar-dialpad-icon-dark);
+  --sidebar-file-icon: var(--sidebar-file-icon-dark);
+  --sidebar-message-icon: var(--sidebar-message-icon-dark);
+  --sidebar-forms-icon: var(--sidebar-forms-icon-dark);
+  --transfer-modal-users-icon: var(--transfer-modal-users-icon-dark);
+  --transfer-modal-user-icon: var(--transfer-modal-user-icon-dark);
+  --transfer-modal-dial-icon: var(--transfer-modal-dial-icon-dark);
+  --transfer-modal-microphone-icon: var(--transfer-modal-microphone-icon-dark);
+  --call-channels-modal-volume-plus-icon: var(--call-channels-modal-volume-plus-icon-dark);
+  --call-channels-modal-volume-minus-icon: var(--call-channels-modal-volume-minus-icon-dark);
   background-color: var(--color-secondary);
 }
 
@@ -1842,11 +1882,6 @@ body {
   gap: 12px;
   cursor: pointer;
 }
-.sidebar__tool-item svg {
-  height: 100%;
-  fill: var(--color-text-sidebar);
-  stroke: var(--color-text-sidebar);
-}
 .sidebar__tool-item p {
   font-size: 16px;
   font-weight: 600;
@@ -2169,19 +2204,21 @@ body {
   gap: 20px;
 }
 .working-area__icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   outline: none;
   background-color: transparent;
+  padding: 2px;
 }
 .working-area__icon svg {
   width: 16px;
   height: 16px;
-  fill: #7A7A7A;
+  fill: var(--color-text-main);
+  stroke: var(--color-text-main);
 }
 
 .footer {
@@ -2439,6 +2476,72 @@ body {
 }
 .radio:checked ~ .radio__mark {
   display: block;
+}
+
+#sidebar-dial-pad-icon {
+  background: var(--sidebar-dialpad-icon);
+}
+
+#sidebar2-dial-pad-icon {
+  background: var(--sidebar-dialpad-icon);
+}
+
+#sidebar-file-icon {
+  background: var(--sidebar-file-icon);
+}
+
+#sidebar2-file-icon {
+  background: var(--sidebar-file-icon);
+}
+
+#sidebar-message-icon {
+  background: var(--sidebar-message-icon);
+}
+
+#sidebar2-message-icon {
+  background: var(--sidebar-message-icon);
+}
+
+#sidebar-forms-icon {
+  background: var(--sidebar-forms-icon);
+}
+
+#sidebar2-forms-icon {
+  background: var(--sidebar-forms-icon);
+}
+
+#transfer-modal-users-icon {
+  background: var(--transfer-modal-users-icon);
+}
+
+#transfer-modal-user-icon {
+  background: var(--transfer-modal-user-icon);
+}
+
+#transfer-modal-dial-icon {
+  background: var(--transfer-modal-dial-icon);
+}
+
+#transfer-modal-microphone-icon {
+  background: var(--transfer-modal-microphone-icon);
+}
+
+#sidebar-dial-pad-icon,
+#sidebar2-dial-pad-icon,
+#sidebar-file-icon,
+#sidebar2-file-icon,
+#sidebar-message-icon,
+#sidebar2-message-icon,
+#sidebar-forms-icon,
+#sidebar2-forms-icon,
+#transfer-modal-users-icon,
+#transfer-modal-user-icon,
+#transfer-modal-dial-icon,
+#transfer-modal-microphone-icon {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .rate-section {
@@ -2914,11 +3017,9 @@ body {
   justify-content: center;
   gap: 16px;
 }
-.call-modal__icons svg {
+.call-modal__icons img {
   width: 20px;
   height: 20px;
-  fill: #5590F5;
-  stroke: #5590F5;
   cursor: pointer;
 }
 
@@ -2937,10 +3038,21 @@ body {
   align-items: center;
   gap: 12px;
 }
-.call-actions__sound svg {
+.call-actions__sound > .call-channels-volume-minus-icon {
   width: 20px;
+  height: 20px;
   cursor: pointer;
-  fill: var(--color-text-main);
+  background: var(--call-channels-modal-volume-minus-icon);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.call-actions__sound > .call-channels-volume-plus-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: var(--call-channels-modal-volume-plus-icon);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .call-actions__volume-container {
   width: 80px;
@@ -2988,19 +3100,50 @@ body {
   padding: 4px 12px;
   border: 0.6px solid #FF3535;
   color: #FF3535;
+  opacity: 1;
+  transition: all 0.3s ease-in;
+  opacity: 1;
+  transition: all 0.3s ease-in;
 }
-.call-actions__mute-btn svg {
+.call-actions__mute-btn:disabled {
+  background: #D5D5D5;
+}
+.call-actions__mute-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.07);
+}
+.call-actions__mute-btn:active {
+  transform: scale(0.99);
+}
+.call-actions__mute-btn > .call-channels-mute-icon {
   width: 16px;
-  fill: #FF3535;
-  stroke: #FF3535;
+  height: 16px;
+  background: url("../img/icons/mute.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.call-actions__mute-btn:disabled {
+  background: #D5D5D5;
+}
+.call-actions__mute-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.07);
+}
+.call-actions__mute-btn:active {
+  transform: scale(0.99);
 }
 .call-actions__mute-btn.unmute {
   border: 0.6px solid #5590F5;
   color: #5590F5;
+  opacity: 1;
+  transition: all 0.3s ease-in;
 }
-.call-actions__mute-btn.unmute svg {
-  fill: #5590F5;
-  stroke: #5590F5;
+.call-actions__mute-btn.unmute > .call-channels-volume-turn-on-icon {
+  width: 16px;
+  height: 16px;
+  background: url("../img/icons/turn-on-sound.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .error-modal__content {

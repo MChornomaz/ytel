@@ -13,12 +13,28 @@
         align-items: center;
         gap: 12px;
 
-        svg{
+        & > .call-channels-volume-minus-icon{
             width: 20px;
+            height: 20px;
             cursor: pointer;
-            fill: var(--color-text-main);
+            background: var(--call-channels-modal-volume-minus-icon);
+            background-repeat: no-repeat;
+            background-size: contain;
         }
+
+        & > .call-channels-volume-plus-icon{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            background: var(--call-channels-modal-volume-plus-icon);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        
     }
+
+    
 
     &__volume-container{
         width: 80px;
@@ -70,22 +86,61 @@
         padding: 4px 12px;
         border: 0.6px solid $color-red;
         color: $color-red;
+        opacity: 1;
+        transition: all .3s ease-in;
 
-        svg{
+        &:disabled{
+            background: #D5D5D5;
+        }
+
+        &:hover{
+            opacity: 0.9;
+            transform: scale(1.07);
+        }
+
+        &:active{
+            transform: scale(0.99);
+        }
+
+        & > .call-channels-mute-icon{
             width: 16px;
-            fill: $color-red;
-            stroke: $color-red;
+            height: 16px;
+            background: url('../img/icons/mute.png');
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
+        opacity: 1;
+        transition: all .3s ease-in;
 
-        &.unmute{
-            border: 0.6px solid $color-blue;
-            color: $color-blue;
-
-            svg{
-                fill: $color-blue;
-                stroke: $color-blue;
-            }
+        &:disabled{
+            background: #D5D5D5;
         }
+
+        &:hover{
+            opacity: 0.9;
+            transform: scale(1.07);
+        }
+
+        &:active{
+            transform: scale(0.99);
+        }
+            
+
+
+
+    &.unmute{
+        border: 0.6px solid $color-blue;
+        color: $color-blue;
+        opacity: 1;
+        transition: all .3s ease-in;
+
+        & > .call-channels-volume-turn-on-icon{
+            width: 16px;
+            height: 16px;
+            background: url('../img/icons/turn-on-sound.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }}
     }
 }

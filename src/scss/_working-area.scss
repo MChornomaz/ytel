@@ -92,20 +92,22 @@
     }
 
     &__icon{
-        width: 16px;
-        height: 16px;
+        width: 20px;
+        height: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         border: none;
         outline: none;
         background-color: transparent;
+        padding: 2px;
 
 
         svg{
             width: 16px;
             height: 16px;
-            fill: $color-text-secondary;
+            fill: var(--color-text-main);
+            stroke: var(--color-text-main);
         }
     }
 }

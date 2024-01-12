@@ -63,12 +63,35 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     
 
 
+    // Background Images
     --call-channels-error-modal-img-light: url('../img/asset_empty.png');
     --connection-error-modal-img-light: url('../img/no-connection.png');
     --latency-modal-img-light: url('../img/diagram-white.png');
 
+    //Gradients
+
     --skills-refresh-gradient-light: linear-gradient(to right, rgba(105, 105, 194, 1), rgba(147, 147, 236, 1));
 
+
+    //Icons////////////////////////////////////////////////
+
+    //sidebar
+    --sidebar-dialpad-icon-light: url('../img//icons/dialpad-light.png');
+    --sidebar-file-icon-light: url('../img//icons/file-light.png');
+    --sidebar-message-icon-light: url('../img//icons/message-light.png');
+    --sidebar-forms-icon-light: url('../img/icons/file-check-light.png');
+
+    //transfer modal
+    --transfer-modal-users-icon-light: url('../img/icons/users-profiles-light.png');
+    --transfer-modal-user-icon-light: url('../img/icons/user-light.png');
+    --transfer-modal-dial-icon-light: url('../img/icons/phone-outgoing-light.png');
+    --transfer-modal-microphone-icon-light: url('../img/icons/microphone-light.png');
+
+    //call channels modal
+    --call-channels-modal-volume-plus-icon-light: url('../img/icons/volume-plus-light.png');
+    --call-channels-modal-volume-minus-icon-light: url('../img/icons/volume-minus-light.png');
+
+    ///////////////////////////////////////////////////////
 
     //Dark theme
     --color-main-dark: #000000;
@@ -112,14 +135,35 @@ $box-shadow: 0px 10px 30px 0px rgba(29,73,113, 0.1);
     --select-dropdown-bg-dark: #0A1D32;
     --card-border-color-dark: transparent;
     
-    --mdial-modal-2-call-btn-bg-dark: linear-gradient(to right, #44BFFF ,#5590F5 );;
+    --mdial-modal-2-call-btn-bg-dark: linear-gradient(to right, #44BFFF ,#5590F5 );
 
 
+    //Background images
     --call-channels-error-modal-img-dark: url('../img/asset_empty_dark.png');
     --connection-error-modal-img-dark: url('../img/no-connection-dark.png');
     --latency-modal-img-dark: url('../img/diagram.png');
 
+
+    //Gradients
     --skills-refresh-gradient-dark: linear-gradient(to right, #5590F5, #44BFFF);
+
+
+    //Icons
+    //sidebar
+    --sidebar-dialpad-icon-dark: url('../img//icons/dialpad-dark.png');
+    --sidebar-file-icon-dark: url('../img//icons/file-dark.png');
+    --sidebar-message-icon-dark: url('../img//icons/message-dark.png');
+    --sidebar-forms-icon-dark: url('../img//icons/file-check-dark.png');
+
+    //transfer modal
+    --transfer-modal-users-icon-dark: url('../img/icons/users-profiles-dark.png');
+    --transfer-modal-user-icon-dark: url('../img/icons/user-dark.png');
+    --transfer-modal-dial-icon-dark: url('../img/icons/phone-outgoing-dark.png');
+    --transfer-modal-microphone-icon-dark: url('../img/icons/microphone-dark.png');
+
+    //call channels modal
+    --call-channels-modal-volume-plus-icon-dark: url('../img/icons/volume-plus-dark.png');
+    --call-channels-modal-volume-minus-icon-dark: url('../img/icons/volume-minus-dark.png');
 
 }
 
@@ -178,6 +222,23 @@ body{
         --call-channels-error-modal-img: var(--call-channels-error-modal-img-light);
         --connection-error-modal-img: var(--connection-error-modal-img-light);
         --latency-modal-img: var(--latency-modal-img-light);
+
+        //ICONS
+        //sidebar
+        --sidebar-dialpad-icon: var(--sidebar-dialpad-icon-light);
+        --sidebar-file-icon: var(--sidebar-file-icon-light);
+        --sidebar-message-icon: var(--sidebar-message-icon-light);
+        --sidebar-forms-icon: var(--sidebar-forms-icon-light);
+
+        //transfer modal
+        --transfer-modal-users-icon: var(--transfer-modal-users-icon-light);
+        --transfer-modal-user-icon: var(--transfer-modal-user-icon-light);
+        --transfer-modal-dial-icon: var(--transfer-modal-dial-icon-light);
+        --transfer-modal-microphone-icon: var(--transfer-modal-microphone-icon-light);
+
+        //call channels modal
+        --call-channels-modal-volume-plus-icon: var(--call-channels-modal-volume-plus-icon-light);
+        --call-channels-modal-volume-minus-icon: var(--call-channels-modal-volume-minus-icon-light);
         
 
         background-color: var(--color-main);
@@ -233,6 +294,23 @@ body{
         --call-channels-error-modal-img: var(--call-channels-error-modal-img-dark);
         --connection-error-modal-img: var(--connection-error-modal-img-dark);
         --latency-modal-img: var(--latency-modal-img-dark);
+
+        //ICONS
+        //sidebar
+        --sidebar-dialpad-icon: var(--sidebar-dialpad-icon-dark);
+        --sidebar-file-icon: var(--sidebar-file-icon-dark);
+        --sidebar-message-icon: var(--sidebar-message-icon-dark);
+        --sidebar-forms-icon: var(--sidebar-forms-icon-dark);
+
+        //transfer modal
+        --transfer-modal-users-icon: var(--transfer-modal-users-icon-dark);
+        --transfer-modal-user-icon: var(--transfer-modal-user-icon-dark);
+        --transfer-modal-dial-icon: var(--transfer-modal-dial-icon-dark);
+        --transfer-modal-microphone-icon: var(--transfer-modal-microphone-icon-dark);
+
+        //call channels modal
+        --call-channels-modal-volume-plus-icon: var(--call-channels-modal-volume-plus-icon-dark);
+        --call-channels-modal-volume-minus-icon: var(--call-channels-modal-volume-minus-icon-dark);
 
         background-color: var(--color-secondary);
     }

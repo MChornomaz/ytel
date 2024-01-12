@@ -1,0 +1,71 @@
+//sidebar
+
+
+#sidebar-dial-pad-icon{
+    background: var(--sidebar-dialpad-icon);
+}
+#sidebar2-dial-pad-icon{
+    background: var(--sidebar-dialpad-icon);
+}
+
+#sidebar-file-icon{
+    background: var(--sidebar-file-icon);
+}
+#sidebar2-file-icon{
+    background: var(--sidebar-file-icon);
+}
+
+#sidebar-message-icon{
+    background: var(--sidebar-message-icon);
+}
+#sidebar2-message-icon{
+    background: var(--sidebar-message-icon);
+}
+
+#sidebar-forms-icon{
+    background: var(--sidebar-forms-icon);
+}
+#sidebar2-forms-icon{
+    background: var(--sidebar-forms-icon);
+}
+
+
+
+//transfer modal
+
+#transfer-modal-users-icon{
+    background: var(--transfer-modal-users-icon);
+}
+
+#transfer-modal-user-icon{
+    background: var(--transfer-modal-user-icon);
+}
+
+#transfer-modal-dial-icon{
+    background: var(--transfer-modal-dial-icon);
+}
+
+#transfer-modal-microphone-icon{
+    background: var(--transfer-modal-microphone-icon);
+}
+
+#sidebar-dial-pad-icon,
+#sidebar2-dial-pad-icon,
+#sidebar-file-icon,
+#sidebar2-file-icon,
+#sidebar-message-icon,
+#sidebar2-message-icon,
+#sidebar-forms-icon,
+#sidebar2-forms-icon,
+#transfer-modal-users-icon,
+#transfer-modal-user-icon,
+#transfer-modal-dial-icon,
+#transfer-modal-microphone-icon
+{
+    
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
