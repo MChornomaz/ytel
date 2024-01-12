@@ -1,0 +1,96 @@
+.modal-window{
+    position: absolute;
+    display: none;
+    width: 936px;
+    overflow: auto;
+    height: fit-content;
+    max-height: 95vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 1300%);
+    background-color: var(--color-main);
+    border-radius: 12px;
+    z-index: 999;
+    transition: all .4s ease-in-out;
+
+
+    &.active{
+        transform: translate(-50%, -50%);
+        display: block;
+
+        @media screen and (max-width: 1000px) {
+            width: 80%;
+            height: 95vh;
+    
+            top: 10px;
+            transform: translate(-50%, 2.5vh);
+            overflow-y: scroll;
+        }
+    }
+
+    &.group.active{
+        max-width: 645px;
+        height: 560px;
+
+        @media screen and (max-width: 1000px) {
+            max-width: 80%;
+            max-height: 95vh;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &.table-width.active{
+        width: 1100px;
+        max-width: 80vw;
+        overflow-y: auto;
+        overflow-x: scroll;
+        max-height: 550px;
+
+        @media screen and (max-width: 1000px) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &.error.active{
+        width: 550px;
+
+        @media screen and (max-width: 1000px) {
+            max-width: 90vw;
+            max-height: 500px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &.latency.active{
+        top: calc(100% - 421px - 30px);
+        left: calc(100% - 34px - 320px);
+        width: 320px;
+        height: 421px;
+        transform: translate(0);
+        box-shadow: $box-shadow;
+    }
+    &.latency{
+        width: 320px;
+        height: 421px;
+        top: calc(100% - 421px - 30px);
+        left: calc(100% - 34px - 320px);
+        transform: translate(-100%, 300%);
+    }
+    &.message-modal.active{
+        width: 1108px;
+        max-width: 95vw;
+        height: 825px;
+        max-height: 95vh;
+
+        @media screen and (max-width: 1000px) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

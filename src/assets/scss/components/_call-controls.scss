@@ -1,0 +1,397 @@
+.call-controls{
+    width: 100%;
+    margin-bottom: 20px; 
+    padding-left: 12px;
+    padding-right: 20px;
+    border-radius: 8px;
+    background-color: var(--modal-sidebar-bg);
+
+    &.extended {
+        background-color: var(--call-controls-bg-color);
+    }
+
+    &--top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        gap: 20px;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        position: relative;
+
+        @media screen and (max-width: 650px) {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            padding-right: 20px;
+        }
+
+        @media screen and (max-width: 550px) {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            padding-right: 20px;
+        }
+    }
+
+    &--top-extended{
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 1150px) {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 40%;
+
+        @media screen and (max-width: 1150px) {
+            width: 100%;
+            gap: 30px;
+        }
+
+        @media screen and (max-width: 700px) {
+            gap: 10px;
+        }
+    }
+
+
+    &__buttons{
+        display: flex;
+        align-items: center;
+        height: 40px;
+        width: 200px;
+        background-color: var(--call-btn-bg) ;
+        padding: 5px;
+        border-radius: 6px;
+
+        @media screen and (max-width: 470px) {
+                width: 100%;
+            button{
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            button{
+                font-size: 12px;
+
+                svg{
+                    width: 12px;
+                }
+            }
+        }
+    }
+
+    .dial-btn{
+        width: 156px;
+
+        @media screen and (max-width: 700px) {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        @media screen and (max-width: 650px) {
+            font-size: 12px;
+        }
+    }
+
+    &__data{
+        width: 135px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        @media screen and (max-width: 800px) {
+            height: max-content;
+        }
+
+        @media screen and (max-width: 650px) {
+            width: 100%;
+        }
+    }
+
+    &__status{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+
+        @media screen and (max-width: 800px) {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 650px) {
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 12px;
+        }
+
+        &.paused{
+            color: #E30808;
+        }
+    }
+
+    &__file-name{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $color-text-secondary;
+    }
+
+    &__loading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 21px;
+
+        @media screen and (max-width: 650px) {
+            width: 100px;
+        }
+
+        span{
+            display: block;
+            width: 2px;
+            height: 12.6px;
+            background-color: #FFDECE;
+            border-radius: 10px;
+
+            &:first-of-type{
+                background-color: $color-orange;
+                height: 100%;
+            }
+        }
+
+        &.calling {
+
+            span{
+                background-color: #80C1F1;
+
+                &:first-of-type{
+                    background-color: #1CA9F9;
+                }
+            }
+        }
+    }
+
+    &__progress{
+        width: 100%;
+        min-width: 100px;
+        height: 49px;
+
+        @media screen and (max-width: 800px) {
+            width: 100%;
+        }
+
+        &.long{
+            width: calc(100% - 200px - 135px - 200px );
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__time-block{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__time{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+
+        @media screen and (max-width: 650px) {
+            font-size: 12px;
+        }
+
+        &.calling{
+            color: $color-blue;
+        } 
+
+        &.paused{
+            color: $color-orange;
+        }     
+    }
+
+    &__time-status{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $color-text-secondary;
+    }
+
+    &__scale-btn{
+        width: 24px;
+        height: 24px;
+        border: none;
+        background-color: transparent;
+
+        @media screen and (max-width: 650px) {
+            position: absolute;
+            top: 20px;
+            right: -10px;
+        }
+
+
+        svg{
+            width: 24px;
+            fill: $color-text-secondary;
+        }
+
+        &--static{
+            position: static;
+        }
+    }
+
+    &__checkbox{
+        display: none;
+    }
+
+    &--bottom{
+        width: 100%;
+        display: flex;
+        border-top: 0.4px solid  var(--table-head-border-color);
+        align-items: center;
+        justify-content: space-between; 
+        gap: 20px;
+        padding: 16px 0;
+
+        @media only screen and (max-width: 1250px) {
+            gap: 10px;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    &__call-info{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        @media only screen and (max-width: 1250px) {
+            flex-direction: column;
+            gap: 2px;
+            width: max-content;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            flex-direction: row;
+        }
+
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: var(--table-head-text-color);
+            width: max-content;
+        }
+
+        .call-number{
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            color: $color-blue;
+        }
+    }
+    
+    &__controls{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__info-row{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__calls-data-row{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: var(--table-head-text-color);
+            
+            @media only screen and (max-width: 1250px) {
+                width: 50px;
+            }
+
+            @media screen and (max-width: 700px) {
+                width: max-content;
+            }
+        }
+
+    }
+
+    &__ammount{
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        background-color: #D0E8DD;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        color: $color-green;
+    }
+
+    &__control-buttons{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @media screen and (max-width: 500px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        button{
+            width: 92px;
+
+            @media only screen and (max-width: 1250px) {
+                font-size: 14px;
+            }
+
+            @media screen and (max-width: 500px) {
+                width: 100%;
+            }
+        }
+
+        select{
+            max-width: 125px;
+            background-color: transparent;
+            color: $color-blue-secondary;
+            border: 1px solid $color-blue-secondary;
+
+            @media only screen and (max-width: 1250px) {
+                font-size: 14px;
+            }
+
+            @media screen and (max-width: 500px) {
+                width: 100%;
+            }
+        }
+    }
+}

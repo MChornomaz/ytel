@@ -1,0 +1,60 @@
+@import "variables";
+
+
+//general
+@import "main";
+@import "layout";
+@import "icons";
+@import "tools";   // DELETE IN THE END
+
+//login page
+@import "loginPage";
+
+//elements
+@import "./elements/switch";
+@import "./elements/dropdown";
+@import "./elements/buttons";
+@import "./elements/progress-bar";
+@import "./elements/input";
+@import "./elements/select";
+@import "./elements/burger";
+@import "./elements/checkbox";
+@import "./elements/radio-btn";
+@import "./elements/modal";
+
+//components
+@import "./components/customer-form";
+@import "./components/scripts";
+@import "./components/call-controls";
+@import "./components/sidebar";
+@import "./components/vertical-sidebar";
+@import "./components/working-area";
+@import "./components/footer";
+@import "./components/tray";
+
+//modals
+@import "./components/manual-dial";
+@import "./components/mdial-modal-2";
+@import "./components/dispo-modal";
+@import "./components/group-selection-modal";
+@import "./components/transfer-modal";
+@import "./components/agent-call-log-modal";
+@import "./components/call-channels-modal";
+@import "./components/call-channels-error-modal";
+@import "./components/connection-error-modal";
+@import "./components/agent-status-modal";
+@import "./components/message-modal";
+@import "./components/latency-modal";
+
+
+
+
+
+
+
+
+
+
+
+
+

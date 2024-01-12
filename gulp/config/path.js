@@ -7,32 +7,32 @@ const srcFolder = `./src`;
 
 export const path = {
     build: {
-        js: `${buildFolder}/js/`,
-        css: `${buildFolder}/css/`,
+        js: `${buildFolder}/assets/js/`,
+        css: `${buildFolder}/assets/css/`,
         html: `${buildFolder}/`,
-        images: `${buildFolder}/img/`,
-        fonts: `${buildFolder}/fonts/`,
-        files: `${buildFolder}/files/`
+        images: `${buildFolder}/assets/img/`,
+        fonts: `${buildFolder}/assets/fonts/`,
+        files: `${buildFolder}/assets/files/`
     },
     src: {
-        js: `${srcFolder}/js/app.js`,
-        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-        fonts: `${srcFolder}/fonts/`,
-        svg: `${srcFolder}/img/**/*.svg`,
-        scss: `${srcFolder}/scss/style.scss`,
+        js: `${srcFolder}/assets/js/app.js`,
+        images: `${srcFolder}/assets/img/**/*.{jpg,jpeg,png,gif,webp}`,
+        fonts: `${srcFolder}/assets/fonts/`,
+        svg: `${srcFolder}/assets/img/**/*.svg`,
+        scss: `${srcFolder}/assets/scss/style.scss`,
         html: `${srcFolder}/*.html`,
-        files: `${srcFolder}/files/**/*.*`,
-        svgicons: `${srcFolder}/svgicons/*.svg`,
+        files: `${srcFolder}/assets/files/**/*.*`,
+        svgicons: `${srcFolder}/assets/svgicons/*.svg`,
     },
     watch: {
-        js: `${srcFolder}/js/**/*.js`,
-        scss: `${srcFolder}/scss/**/*.scss`,
+        js: `${srcFolder}/assets/js/**/*.js`,
+        scss: `${srcFolder}/assets/scss/**/*.scss`,
         html: `${srcFolder}/**/*.html`,
-        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,svg,ico,webp}`,
-        files: `${srcFolder}/files/**/*.*`
+        images: `${srcFolder}/assets/img/**/*.{jpg,jpeg,png,gif,svg,ico,webp}`,
+        files: `${srcFolder}/assets/files/**/*.*`
     },
     clean: buildFolder,
     srcFolder: srcFolder,
     rootFolder: rootFolder,
-    ftp: ``  // имя папки которую создадим на сервере, куда поместим проект
+    ftp: ``  
 }
