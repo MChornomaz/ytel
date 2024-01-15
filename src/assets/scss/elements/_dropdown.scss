@@ -1,14 +1,16 @@
 .dropdown{
-    width: 241px;
-    height: 344px;
+    width: 15.0625rem;
+    height: 20.5rem;
+    min-height: 330px;
+    max-height: 370px;
     background-color: var(--color-main);
     border-radius: 8px;
-    padding: 12px;
+    padding: 0.75rem;
     box-shadow: $box-shadow;
     position: fixed;
     bottom: 0;
     left: 0px;
-    transform: translate(-400px, -45px);
+    transform: translate(-25rem, -2.81rem);
     opacity: 0;
     z-index: 600;
     transition: transform .2s ease-in, opacity .2s ease-in;
@@ -16,13 +18,13 @@
     
 
     &.active{
-        transform: translate(97%, -45px);
+        transform: translate(97%, -2.81rem);
         opacity: 1;
     }
 
     &.minimized{
         &.active{
-            transform: translate(50%, -45px);
+            transform: translate(50%, -2.81rem);
             opacity: 1;
         }
     }
@@ -32,10 +34,10 @@
         right: 0;
         opacity: 1;
         top: 67px;
-        transform: translate(-265px, -500px);
+        transform: translate(-16.5625rem, -31.25rem);
 
         &.active{
-            transform: translate(-265px, 30px);
+            transform: translate(-16.5625rem, 1.9rem);
         }
     }
 
@@ -50,11 +52,11 @@
     &__item{
         display: flex;
         align-items: center;
-        padding: 10px 15px;
+        padding: 0/625rem 0.9375rem;
         height: 40px;
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 600;
-        line-height: 24px;
+        line-height: 1.5rem;
         background-color: var(--color-secondary);
         border-bottom: 0.4px solid var(--dropdown-border-color) ;
         
@@ -72,8 +74,8 @@
     }
 
     &__item-value{
-        font-size: 12px;
-        line-height: 18px;
+        font-size: 0.75rem;
+        line-height: 1,125rem;
         font-weight: 400;
         color: $color-text-secondary;
     }

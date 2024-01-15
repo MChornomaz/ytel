@@ -2,9 +2,9 @@
     display: none;
 
     &__field{
-        width: 16px;
-        height: 16px;
-        min-width: 16px;
+        width: 1rem;
+        height: 1rem;
+        min-width: 1rem;
         border-radius: 50%;
         border: 1px solid $color-darkgray;
         background-color: rgba(215, 215, 215, 0.4);
@@ -15,9 +15,9 @@
     }
 
     &__mark{
-        width: 17px;    
-        height: 17px;
-        min-width: 18px;
+        width: 1.0625rem;    
+        height: 1.0625rem;
+        min-width: 1.125rem;
         background-color: transparent;
         border: 3.5px solid #1C64F2;
         border-radius: 50%;

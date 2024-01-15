@@ -1,75 +1,75 @@
-.group{
+.group {
 
-    &__section{
+    &__section {
         width: 100%;
         background-color: var(--modal-bg-color);
         border-radius: 12px;
-        padding: 24px;
+        padding: 1.5rem; 
         color: var(--color-text-main);
     }
 
-    &__heading{
+    &__heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 32px;
+        margin-bottom: 2rem; 
 
-        h4{
-            font-size: 20px;
+        h4 {
+            font-size: 1.25rem; 
             font-weight: 700;
-            line-height: 30px;
+            line-height: 1.875rem; 
         }
     }
 
-    &__select-all-btn{
+    &__select-all-btn {
         border: none;
         outline: none;
         background-color: transparent;
-        font-size: 18px;
+        font-size: 1.125rem; 
         font-weight: 600;
-        line-height: 28px;
+        line-height: 1.75rem; 
         color: #6969C2;
     }
 
-    &__row{
+    &__row {
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem; 
     }
 
-    &__checkbox{
+    &__checkbox {
         width: 100%;
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 0.75rem; 
 
-        input{
-            width: 16px;
-            height: 16px;
+        input {
+            width: 1rem;
+            height: 1rem; 
         }
 
-        label{
-            font-size: 16px;
+        label {
+            font-size: 1rem; 
             font-weight: 600;
-            line-height: 24px;
+            line-height: 1.5rem; 
         }
     }
 }
 
-.group-modal{
+.group-modal {
 
-    &__footer{
-        height: 44px;
+    &__footer {
+        height: 2.75rem; 
         border-top: 0.4px solid $color-lightgray;
     }
 
-    &__footer-content{
+    &__footer-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px;
+        padding: 1.25rem;
 
-        button{
-            width: 174px;
+        button {
+            width: 10.875rem; 
         }
 
         @media screen and (max-width: 450px) {
@@ -77,9 +77,9 @@
         }
     }
 
-    &__switch{
+    &__switch {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 0.75rem; 
     }
 }

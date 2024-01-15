@@ -13,6 +13,7 @@ const toggleSidebarWidth = () => {
     }
 
     logo.addEventListener('click', () => {
+        let sidebarMinimized = JSON.parse(localStorage.getItem('sidebarMinimized')) || false;
         if(!sidebarMinimized){
             localStorage.setItem('sidebarMinimized', true)
             sidebar.classList.add('minimized')

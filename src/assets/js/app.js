@@ -14,6 +14,7 @@ import {resetInterface} from './modules/reset-interface.js'
 import {modalsControls} from './modules/modals-controls.js';
 import {toggleSidebar} from './modules/toggle-sidebar.js';
 import {toggleSidebarWidth} from './modules/toggle-sidebar-width.js';
+import {changeScale} from './modules/change-scale.js';
 
 
 flsFunctions.isWebp()
@@ -50,6 +51,10 @@ toggleSidebar()
 
 toggleSidebarWidth()
 
+changeScale()
+
+
+//Working windows position logic
 const workingWindows = document.querySelectorAll('.working-area__item');
 workingWindows.forEach(el => el.style.zIndex = 10)
 

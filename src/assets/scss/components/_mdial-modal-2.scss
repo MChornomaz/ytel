@@ -1,7 +1,7 @@
-.mdial{
+.mdial {
     max-width: 90vw;
     height: 655px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -1300%);
@@ -11,6 +11,9 @@
     gap: 88px;
     transition: all .4s ease-in-out;
     overflow-y: auto;
+    z-index: 999;
+    
+
 
     @media screen and (max-width: 820px) {
         flex-direction: column;
@@ -23,7 +26,7 @@
         min-width: 95vw;
     }
 
-    &.active{
+    &.active {
         transform: translate(-50%, -50%);
 
         @media screen and (max-width: 820px) {
@@ -32,7 +35,7 @@
     }
 }
 
-.mdial-log{
+.mdial-log {
     width: 770px;
     height: 100%;
     background-color: var(--mdial-modal-2-bg);
@@ -50,7 +53,7 @@
         height: 68px;
         background-color: var(--mdial-modal-2-border-color);
         position: absolute;
-        bottom:50%;
+        bottom: 50%;
         right: -59px;
         transform: translateY(50%);
         clip-path: polygon(0 0, 0 100%, 100% 50%);
@@ -63,41 +66,41 @@
             transform: rotate(90deg) translate(3px, -50%);
         }
 
-        &::after{
+        &::after {
             content: '';
             display: block;
-        width: 60px;
-        height: 66px;
-        background-color: var(--mdial-modal-2-bg);
-        position: relative;
-        top:50%;
-        right: 0px;
-        transform: translateY(-50%);
-        clip-path: inherit;
-        border-left: none;
-        z-index: -1;
+            width: 60px;
+            height: 66px;
+            background-color: var(--mdial-modal-2-bg);
+            position: relative;
+            top: 50%;
+            right: 0px;
+            transform: translateY(-50%);
+            clip-path: inherit;
+            border-left: none;
+            z-index: -1;
         }
     }
 
-    &__content{
+    &__content {
         display: flex;
         flex-direction: column;
         gap: 25px;
     }
 
-    &__heading{
+    &__heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
-        h3{
+
+        h3 {
             font-size: 24px;
             line-height: 32px;
             font-weight: 700;
             color: var(--color-text-main);
         }
 
-        p{
+        p {
             font-size: 16px;
             line-height: 24px;
             font-weight: 600;
@@ -107,7 +110,7 @@
         }
     }
 
-    &__data{
+    &__data {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -120,26 +123,26 @@
         font-weight: 600;
         line-height: 30px;
 
-        &--top{
+        &--top {
             width: 100%;
             height: 46px;
             border-bottom: 1px solid var(--mdial-modal-2-border-color);
-            
+
         }
 
-        &--bottom{
+        &--bottom {
             width: 100%;
             height: 46px;
         }
     }
 
-    &__container{
+    &__container {
         display: flex;
         width: 100%;
         min-height: 90px;
     }
 
-    &__quick-dial{
+    &__quick-dial {
         background-color: var(--mdial-modal-2-bg-color);
         display: flex;
         align-items: center;
@@ -155,16 +158,16 @@
         }
     }
 
-    &__info{
+    &__info {
 
-        h4{
+        h4 {
             font-size: 18px;
             line-height: 28px;
             font-weight: 700;
             color: var(--color-text-main);
         }
 
-        p{
+        p {
             font-size: 14px;
             font-weight: 400;
             line-height: 20px;
@@ -172,19 +175,19 @@
         }
     }
 
-    &__button{
+    &__button {
         min-width: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        button{
+        button {
             width: 100%;
         }
     }
 }
 
-.mdial-keyboard{
+.mdial-keyboard {
     width: 322px;
     height: 100%;
     background-color: var(--mdial-modal-2-bg);
@@ -196,20 +199,20 @@
         height: max-content;
     }
 
-    &__heading{
+    &__heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-bottom: 0.4px solid var(--mdial-modal-2-input-border-color);
         padding-bottom: 24px;
 
-        button{
+        button {
             border: none;
             background: transparent;
             outline: none;
             width: 24px;
 
-            svg{
+            svg {
                 width: 24px;
                 fill: $color-text-secondary;
                 cursor: pointer;
@@ -217,52 +220,51 @@
         }
     }
 
-    &__form{
+    &__form {
         display: flex;
         align-items: center;
         gap: 24px;
         width: 100%;
         margin: 24px 0;
-        background-color: var(--mdial-modal-2-bg) ;
-        
-        input{
+        background-color: var(--mdial-modal-2-bg);
+
+        input {
             background-color: var(--mdial-modal-2-bg);
             color: var(--color-text-main);
             border: 1px solid var(--mdial-modal-2-input-border-color);
             height: 54px;
             padding: 13px 16px 14px 16px;
-
-            &::placeholder{
-                color: var(--color-text-main )
+            &::placeholder {
+                color: var(--color-text-main);
             }
         }
     }
-
-    &__code{
+    
+    &__code {
         width: 54px;
     }
-
-    &__input{
+    
+    &__input {
         width: calc(100% - 54px);
     }
-
-    &__keyboard{
+    
+    &__keyboard {
         width: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;
         gap: 27px;
     }
-
-    &__key-row{
+    
+    &__key-row {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 34px;
     }
-
-    &__number-wrapper{
+    
+    &__number-wrapper {
         width: 66px;
         height: 66px;
         box-shadow: $box-shadow;
@@ -271,8 +273,8 @@
         align-items: center;
         justify-content: center;
     }
-
-    &__number{
+    
+    &__number {
         width: 57px;
         height: 57px;
         border-radius: 50%;
@@ -284,18 +286,18 @@
         line-height: 30px;
         font-weight: 500;
         color: var(--color-text-main);
-        background-color: var(--mdial-modal-2-input-number-bg  );
-
-        &.star{
+        background-color: var(--mdial-modal-2-input-number-bg);
+    
+        &.star {
             font-size: 40px;
-
-            p{
+    
+            p {
                 transform: translateY(8px);
             }
         }
     }
-
-    &__actions{
+    
+    &__actions {
         width: 100%;
         display: flex;
         align-items: center;
@@ -303,8 +305,8 @@
         gap: 36px;
         padding-right: 10px;
     }
-
-    &__call-btn{
+    
+    &__call-btn {
         width: 70px;
         height: 70px;
         border: none;
@@ -315,8 +317,8 @@
         justify-content: center;
         box-shadow: $box-shadow;
     }
-
-    &__call-btn-wrapper{
+    
+    &__call-btn-wrapper {
         width: 60px;
         height: 60px;
         background-color: transparent;
@@ -325,14 +327,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        svg{
+    
+        svg {
             width: 30px;
             fill: $color-white;
         }
     }
-
-    &__delete-btn{
+    
+    &__delete-btn {
         width: 49px;
         height: 25px;
         border: none;
@@ -345,4 +347,4 @@
         padding-right: 13px;
         box-shadow: $box-shadow;
     }
-}
+}    

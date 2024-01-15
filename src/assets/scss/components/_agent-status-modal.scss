@@ -1,58 +1,57 @@
-#agentStatusModal{
+#agentStatusModal {
     height: max-content;
 
-    & > .modal-window__content{
-        min-width: 700px;
+    & > .modal-window__content {
+        min-width: 43.75rem; /* 700px / 16px = 43.75rem */
         width: max-content;
     }
 }
 
-.agent-status{
-
-    &__table-section{
+.agent-status {
+    &__table-section {
         width: 100%;
-        min-width: 700px;
+        min-width: 43.75rem; 
         background-color: var(--modal-bg-color);
-        border-radius: 12px;
-        padding: 16px;
+        border-radius: 0.75rem; 
+        padding: 1rem; 
         color: var(--color-text-main);
     }
 
-    &__table{
-        width: 750px;
-        
-        thead{
-            height: 40px;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 18px;
-            color: var(--table-head-text-color);
-            border-bottom: 0.5px solid var(--table-head-text-color);
+    &__table {
+        width: 46.875rem; 
 
-            th{
+        thead {
+            height: 2.5rem; 
+            font-size: 0.75rem; 
+            font-weight: 400;
+            line-height: 1.125rem; 
+            color: var(--table-head-text-color);
+            border-bottom: 0.03125rem solid var(--table-head-text-color); 
+
+            th {
                 font-weight: 400;
                 white-space: nowrap;
             }
         }
 
-        tr{
-            height: 40px;
-            border-bottom: 0.5px solid var(--table-head-border-color);
+        tr {
+            height: 2.5rem; 
+            border-bottom: 0.03125rem solid var(--table-head-border-color); 
 
-            td{
-                font-size: 12px;
+            td {
+                font-size: 0.75rem; 
                 font-weight: 600;
-                line-height: 18px;
+                line-height: 1.125rem;
                 color: var(--color-text-main);
                 white-space: nowrap;
             }
         }
     }
 
-    &__call-actions{
+    &__call-actions {
         display: flex;
         align-items: center;
-        gap: 16px;
-        height: 40px;
+        gap: 1rem; 
+        height: 2.5rem; 
     }
 }

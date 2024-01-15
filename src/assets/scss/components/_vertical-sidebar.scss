@@ -1,4 +1,4 @@
-.vertical-sidebar{
+.vertical-sidebar {
     width: 100vw;
     height: 96px;
     display: none;
@@ -10,15 +10,15 @@
     position: relative;
     z-index: 50;
 
-    &.active{
+    &.active {
         display: flex;
-        
+
         @media screen and (max-width: 900px) {
             display: none;
         }
     }
 
-    &--left{
+    &--left {
         width: 50%;
         display: flex;
         align-items: center;
@@ -29,7 +29,7 @@
         }
     }
 
-    &__logo{
+    &__logo {
         width: 66px;
         min-width: 66px;
         display: flex;
@@ -37,13 +37,13 @@
         justify-content: center;
         height: 40px;
 
-        img{
+        img {
             height: 100%;
             width: 100%;
         }
     }
 
-    &__tools-list{
+    &__tools-list {
         list-style: none;
         padding: 0;
         display: flex;
@@ -52,7 +52,7 @@
         margin: 0;
     }
 
-    &__icon-container{
+    &__icon-container {
         width: 24px;
         height: 24px;
         display: flex;
@@ -60,7 +60,7 @@
         justify-content: center;
     }
 
-    &__tool-item{
+    &__tool-item {
         display: flex;
         align-items: center;
         gap: 12px;
@@ -70,13 +70,13 @@
             gap: 6px;
         }
 
-        svg{
+        svg {
             height: 100%;
             fill: var(--color-text-sidebar);
             stroke: var(--color-text-sidebar);
         }
 
-        p{
+        p {
             font-size: 16px;
             font-weight: 600;
             line-height: 24px;
@@ -87,13 +87,13 @@
                 font-size: 14px;
             }
 
-            &:hover{
+            &:hover {
                 color: $color-blue-secondary;
             }
         }
     }
 
-    &--right{
+    &--right {
         display: flex;
         align-items: center;
         justify-content: end;
@@ -103,37 +103,38 @@
         gap: 20px;
     }
 
-    &__controls{
+    &__controls {
         width: max-content;
         display: flex;
         align-items: center;
         gap: 36px;
     }
 
-    &__key{
+    &__key {
         font-size: 16px;
         font-weight: 600;
         line-height: 24px;
         color: var(--color-text-sidebar);
+        white-space: nowrap;
 
         @media screen and (max-width: 1000px) {
             font-size: 14px;
         }
     }
 
-    &__help{
+    &__help {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        svg{
+        svg {
             width: 24px;
             height: 24px;
             fill: var(--color-text-sidebar);
         }
     }
 
-    &__menu-icon{
+    &__menu-icon {
         cursor: pointer;
         width: 18px;
         height: 16px;
@@ -141,13 +142,13 @@
         align-items: center;
         justify-content: center;
 
-        svg{
+        svg {
             fill: var(--color-text-sidebar);
             transform: rotate(90deg) translateX(-4px);
         }
     }
 
-    &__user{
+    &__user {
         width: 100%;
         display: flex;
         align-items: center;
@@ -156,16 +157,15 @@
         gap: 16px;
     }
 
-    &__avatar{
+    &__avatar {
         display: flex;
         align-items: center;
         gap: 12px;
 
-        img{
+        img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
         }
     }
-}  
-
+}

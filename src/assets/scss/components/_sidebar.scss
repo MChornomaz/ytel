@@ -1,18 +1,18 @@
-.sidebar{
-    width: 260px;
-    min-width: 260px;
+.sidebar {
+    width: 16.25rem; 
+    min-width: 16.25rem;
     height: 100%;
     max-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 25px;
-    background-color: var(--color-secondary) ;
-    transition: all .4s ease-in;
+    padding: 1.875rem 1.5625rem; 
+    background-color: var(--color-secondary);
+    transition: all 0.4s ease-in;
     overflow-y: auto;
 
-    &.hidden{
+    &.hidden {
         display: none;
 
         @media screen and (max-width: 900px) {
@@ -20,59 +20,64 @@
         }
     }
 
-    &.minimized{
-        width: 70px;
-        min-width: 40px;
-        padding: 30px 10px;
+    &.minimized {
+        width: 4.375rem; 
+        min-width: 2.5rem; 
+        padding: 1.875rem 0.625rem; 
         padding-right: 0;
 
-
-        .sidebar__select{
+        .sidebar__select {
             display: none;
         }
 
-        .sidebar__logo{
+        .sidebar__logo {
             overflow: hidden;
             width: 100%;
             max-width: 100%;
-            
-            img{
+
+            img {
                 object-fit: contain;
             }
         }
 
-        .sidebar__title{
+        .sidebar__title {
             text-align: center;
         }
 
-        .sidebar__tool-item{
+        .sidebar__tool-item {
             justify-content: center;
-            p{
+
+            p {
                 display: none;
             }
         }
 
-        .sidebar--bottom{
+        .sidebar--bottom {
             padding: 0;
         }
 
-        .sidebar__help{
+        .sidebar__scale{
+            flex-direction: column;
+        }
+
+
+        .sidebar__help {
             justify-content: center;
         }
 
-        .sidebar__key{
+        .sidebar__key {
             display: none;
         }
 
-        .sidebar__menu-icon{
+        .sidebar__menu-icon {
             display: none;
         }
 
-        .sidebar__controls{
+        .sidebar__controls {
             justify-content: center;
         }
 
-        .sidebar__user{
+        .sidebar__user {
             justify-content: center;
         }
     }
@@ -80,153 +85,159 @@
     @media screen and (max-width: 900px) {
         display: flex;
         position: absolute;
-        width: 320px;
+        width: 20rem; 
         height: 100vh;
-        transform: translateX(-320px);
+        transform: translateX(-20rem);
         z-index: 20;
 
-        &.active{
+        &.active {
             transform: translateX(0);
         }
     }
 
-    &--top{
+    &--top {
         width: 100%;
     }
 
-    &--bottom{
+    &--bottom {
         width: 100%;
     }
 
-    &__logo{
+    &__logo {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 40px;
-        margin-bottom: 35px;
+        height: 2.5rem; 
+        margin-bottom: 2.1875rem; 
         cursor: pointer;
 
-        img{
+        img {
             height: 100%;
         }
     }
 
-    &__select{
-        margin-bottom: 20px;
-        
-        h5{
-            margin-bottom: 10px;
+    &__select {
+        margin-bottom: 1.25rem; 
+
+        h5 {
+            margin-bottom: 0.625rem; 
         }
     }
 
-    &__title{
-        font-size: 14px;
+    &__title {
+        font-size: 0.875rem;
         font-weight: 400;
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
     }
 
-    &__tools-list{
-        margin-top: 20px;
+    &__tools-list {
+        margin-top: 1.25rem; 
         list-style: none;
         padding: 0;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 1.25rem; 
     }
 
-    &__icon-container{
-        width: 24px;
-        height: 24px;
+    &__icon-container {
+        width: 1.5rem; 
+        height: 1.5rem; 
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    &__tool-item{
+    &__tool-item {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 0.75rem; 
         cursor: pointer;
 
-        p{
-            font-size: 16px;
+        p {
+            font-size: 1rem; 
             font-weight: 600;
-            line-height: 24px;
+            line-height: 1.5rem; 
             color: var(--color-text-sidebar);
             transition: 0.4s;
-            
-            &:hover{
+
+            &:hover {
                 color: $color-blue-secondary;
             }
-            
         }
     }
 
-    &--bottom{
+    &--bottom {
         width: 100%;
-        padding-right: 25px;
+        padding-right: 1.5625rem; 
         position: relative;
         z-index: 100;
     }
 
-    &__controls{
+    &__controls {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem; 
         position: relative;
         z-index: -1;
     }
 
-    &__key{
-        font-size: 16px;
+    &__key {
+        font-size: 1rem; 
         font-weight: 600;
-        line-height: 24px;
+        line-height: 1.5rem; 
         color: var(--color-text-sidebar);
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             color: rgb(165, 178, 196);
         }
     }
 
-    &__value{
-        font-size: 16px;
+    &__value {
+        font-size: 1rem; 
         font-weight: 700;
-        line-height: 24px;
-
+        line-height: 1.5rem; 
     }
 
-    &__help{
+    &__scale{
+        width: 100%;
         display: flex;
         align-items: center;
-        gap: 12px;
-        margin-top: 45px;
-        margin-bottom: 20px;
+        justify-content: end;
+        gap: 1rem;
+    }
 
-        svg{
-            width: 20px;
-            height: 20px;
+    &__help {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem; 
+        margin-top: 2.8125rem;
+        margin-bottom: 1.25rem; 
+
+        svg {
+            width: 1.25rem; 
+            height: 1.25rem; 
             fill: var(--color-text-sidebar);
         }
     }
 
-    &__menu-icon{
+    &__menu-icon {
         cursor: pointer;
-        width: 18px;
-        height: 16px;
+        width: 2rem; 
+        height: 1rem; 
         display: flex;
         align-items: center;
         justify-content: center;
 
-        svg{
+        svg {
             fill: var(--color-text-sidebar);
         }
     }
 
-    &__user{
+    &__user {
         width: 100%;
         display: flex;
         align-items: center;
@@ -235,16 +246,15 @@
         cursor: pointer;
     }
 
-    &__avatar{
+    &__avatar {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 0.75rem; 
 
-        img{
-            width: 40px;
-            height: 40px;
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
         }
     }
-}  
-
+}
