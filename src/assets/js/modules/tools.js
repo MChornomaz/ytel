@@ -5,29 +5,20 @@ const toolsHandler = () => {
     const backdrop = document.querySelector('.backdrop')
     const toolsShowBTN = document.querySelector('.tools__btn');
     const toolsList = document.querySelector('.tools__list');
-    const workingAreaElement = document.querySelector('#workingArea')
+
 
     toolsShowBTN.addEventListener('click', () => {
         toolsList.classList.toggle('active')
     })
 
-    const manualDialToolsBtn = document.querySelector('#button1');
 
-    manualDialToolsBtn.addEventListener('click', () => {
-        manualDialModal.classList.add('active')
-        backdrop.classList.add('active')
-    })
+
 
     const dispoToolsBtn = document.querySelector('#button2');
-    const groupSelectionToolsBtn = document.querySelector('#button3');
     const transferToolsBtn = document.querySelector('#button4');
-    const agentCallLogToolsBtn = document.querySelector('#button5');
-    const callsInQueueToolsBtn = document.querySelector('#button6');
-    const callChannelsToolsBtn = document.querySelector('#button7');
     const callChannelsErrorToolsBtn = document.querySelector('#button8');
     const connectionErrorToolsBtn = document.querySelector('#button9');
     const agentStatusToolsBtn = document.querySelector('#button10');
-    const messageToolsBtn = document.querySelector('#button11');
     const latencyToolsBtn = document.querySelector('#button12');
     const call1ToolsBtn = document.querySelector('#button13');
     const call2ToolsBtn = document.querySelector('#button14');
@@ -54,24 +45,7 @@ const toolsHandler = () => {
         })
     }
 
-    // group selection modal
-
-
-    const groupSelectionModal = document.querySelector('#groupSelectionModal')
-    const closeGroupSelectionModalBtn = document.querySelector('#groupSelectionCloseBtn')
-
-
-    if(groupSelectionModal && backdrop){
-        groupSelectionToolsBtn.addEventListener('click', () => {
-            groupSelectionModal.classList.add('active')
-            backdrop.classList.add('active')
-        })
-        
-        closeGroupSelectionModalBtn.addEventListener('click', () => {
-            groupSelectionModal.classList.remove('active')
-            backdrop.classList.remove('active')
-        })
-    }
+    
 
 
     // transfer modal
@@ -87,58 +61,6 @@ const toolsHandler = () => {
         
         closeTransferModalBtn.addEventListener('click', () => {
             transferModal.classList.remove('active')
-            backdrop.classList.remove('active')
-        })
-    }
-
-
-    // agent call log modal
-    const agentCallLogModal = document.querySelector('#agentCallLogModal')
-    const closeAgentCallLogModalBtn = document.querySelector('#agentCallLogCloseBtn')
-
-
-    if(agentCallLogModal && backdrop){
-        agentCallLogToolsBtn.addEventListener('click', () => {
-            agentCallLogModal.classList.add('active')
-            backdrop.classList.add('active')
-        })
-        
-        closeAgentCallLogModalBtn.addEventListener('click', () => {
-            agentCallLogModal.classList.remove('active')
-            backdrop.classList.remove('active')
-        })
-    }
-
-    // Calls In Queue modal
-    const callsInQueueModal = document.querySelector('#callsInQueueModal')
-    const closeCallsInQueueModalBtn = document.querySelector('#callsInQueueCloseBtn')
-
-
-    if(callsInQueueModal && backdrop){
-        callsInQueueToolsBtn.addEventListener('click', () => {
-            callsInQueueModal.classList.add('active')
-            backdrop.classList.add('active')
-        })
-        
-        closeCallsInQueueModalBtn.addEventListener('click', () => {
-            callsInQueueModal.classList.remove('active')
-            backdrop.classList.remove('active')
-        })
-    }
-
-    // Call  Channels modal
-    const callChannelsModal = document.querySelector('#callChannelsModal')
-    const closeCallChannelsModalBtn = document.querySelector('#callChannelsCloseBtn')
-
-
-    if(callChannelsModal && backdrop){
-        callChannelsToolsBtn.addEventListener('click', () => {
-            callChannelsModal.classList.add('active')
-            backdrop.classList.add('active')
-        })
-        
-        closeCallChannelsModalBtn.addEventListener('click', () => {
-            callChannelsModal.classList.remove('active')
             backdrop.classList.remove('active')
         })
     }
@@ -197,22 +119,7 @@ const toolsHandler = () => {
     }
 
 
-    // Message modal
-    const messageModal = document.querySelector('#messageModal')
-    const  closeMessageModalBtn = document.querySelector('#messageCloseBtn')
-
-
-    if(messageModal && backdrop){
-        messageToolsBtn.addEventListener('click', () => {
-            messageModal.classList.add('active')
-            backdrop.classList.add('active')
-        })
-        
-        closeMessageModalBtn.addEventListener('click', () => {
-            messageModal.classList.remove('active')
-            backdrop.classList.remove('active')
-        })
-    }
+   
 
 
     // Latency modal
@@ -277,30 +184,7 @@ const toolsHandler = () => {
 
 
     // TOGGLE SIDEBAR LOGIC 
-    const verticalSidebar = document.querySelector('#verticalSidebar');
-    const pageContentElement = document.querySelector('.page-content');
-    const contentElement = document.querySelector('#content');
-
-    let verticalSidebarShown = verticalSidebar.classList.contains('active');
-
-    toggleSidebarToolsBtn.addEventListener('click', () => {
-
-        if(!verticalSidebarShown){
-            verticalSidebar.classList.add('active')
-            sidebarElement.classList.add('hidden');
-            pageContentElement.classList.add('column')
-            contentElement.classList.add('no-border')
-            workingAreaElement.classList.add('small')
-            verticalSidebarShown = !verticalSidebarShown
-        } else  {
-            sidebarElement.classList.remove('hidden');
-            pageContentElement.classList.remove('column')
-            contentElement.classList.remove('no-border')
-            verticalSidebar.classList.remove('active')
-            workingAreaElement.classList.remove('small')
-            verticalSidebarShown = !verticalSidebarShown
-        }
-    })
+    
 }
 
 export {toolsHandler}

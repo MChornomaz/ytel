@@ -15,7 +15,7 @@
 
     &__buttons{
         height: 100%;
-        width: 72px;
+        width: 108px;
         display: flex;
     }
 
@@ -60,6 +60,17 @@
             width: 16px;
             height: 16px;
             fill: $color-white;
+        }
+    }
+
+    &__reset{
+        font-size: 12px;
+        background-color: $color-red;
+        color: $color-white;
+
+        &:hover{
+            color: $color-red;
+            background-color: $color-white;
         }
     }
 }

@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicons  -->
-    <link rel="icon" href="./assets/img/logo.png">
+    <link rel="icon" href="assets/img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&amp;display=swap" rel="stylesheet">
 
 
     <!-- CSS  -->
     
     <!-- BOOTSTRAP CSS  -->
-    <link href="./assets/files/libs/bootstrap/bootstrap.min.css" rel="stylesheet"
+    <link href="assets/files/libs/bootstrap/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <title>Ytel | Main</title>
 </head>
 
@@ -34,8 +34,8 @@
             <!-- SIDEBAR STARTS  -->
             <aside class="sidebar" id="leftSidebar">
                 <div class="sidebar--top">
-                    <div class="sidebar__logo">
-                        <img src="./assets/img/logo.png" alt="Ytel logo">
+                    <div class="sidebar__logo" id="logo">
+                        <img src="assets/img/logo.png" alt="Ytel logo">
                     </div>
                     <div class="sidebar__select">
                         <h5 class="sidebar__title">Select Campaign</h5>
@@ -83,13 +83,13 @@
                             </div>
                             <p>Scripts</p>
                         </li>
-                        <li class="sidebar__tool-item">
+                        <li class="sidebar__tool-item" id="formsBtn">
                             <div class="sidebar__icon-container">
                                 <div id="sidebar-forms-icon"></div>
                             </div>
                             <p>Forms</p>
                         </li>
-                        <li class="sidebar__tool-item">
+                        <li class="sidebar__tool-item" id="messageBtn">
                             <div class="sidebar__icon-container">
                                 <div id="sidebar-message-icon"></div>
                             </div>
@@ -122,7 +122,7 @@
                     <div class="sidebar__controls">
                         <div class="sidebar__user" id="menuBtn">
                             <div class="sidebar__avatar">
-                                <img src="./assets/img/avatar.png" alt="User photo">
+                                <img src="assets/img/avatar.png" alt="User photo">
                                 <p class="sidebar__key">Arip S.</p>
                             </div>
                             <div class="sidebar__menu-icon" >
@@ -135,21 +135,25 @@
                             <!-- DROPDOWN MENU STARTS -->
                             <div class="dropdown" id="menuDropdown">
                                 <ul class="dropdown__list">
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="callsInQueueBtn">
                                         <p>Calls in Queue</p>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="agentCallLogBtn">
                                         <p>Agent Call Log</p>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="callChannelsBtn">
                                         <p>Call Channels</p>
                                     </li>
                                     <li class="dropdown__item dropdown__item--doubled">
                                         <p>Notification</p>
                                         <span class="dropdown__item-value">ON</span>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="groupSelectionBtn">
                                         <p>Groups</p>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled" id="toggleSidebarLeftBtn">
+                                        <p>Toggle sidebar</p>
+                                        <span id="toggleSidebarLeft" class="dropdown__item-value">Left</span>
                                     </li>
                                     <li class="dropdown__item dropdown__item--doubled" id="themeBtn">
                                         <p>Change Theme</p>
@@ -174,30 +178,30 @@
             <aside class="vertical-sidebar" id="verticalSidebar">
                 <div class="vertical-sidebar--left">
                     <div class="vertical-sidebar__logo">
-                        <img src="./assets/img/logo.png" alt="Ytel logo">
+                        <img src="assets/img/logo.png" alt="Ytel logo">
                     </div>
 
                     <ul class="vertical-sidebar__tools-list">
-                        <li class="vertical-sidebar__tool-item" id="mDialBtnVertical">
+                        <li class="vertical-sidebar__tool-item" id="mDialBtnHorizontalSidebar">
                             <div class="vertical-sidebar__icon-container">
                                 <div id="sidebar2-dial-pad-icon"></div> 
                                     
                             </div>
                             <p>M Dial</p>
                         </li>
-                        <li class="vertical-sidebar__tool-item">
+                        <li class="vertical-sidebar__tool-item" id="scriptBtn1">
                             <div class="vertical-sidebar__icon-container">
                                 <div id="sidebar2-file-icon"></div>
                             </div>
                             <p>Scripts</p>
                         </li>
-                        <li class="vertical-sidebar__tool-item">
+                        <li class="vertical-sidebar__tool-item" id="formsBtn1">
                             <div class="vertical-sidebar__icon-container">
                                 <div id="sidebar2-forms-icon"></div>
                             </div>
                             <p>Forms</p>
                         </li>
-                        <li class="vertical-sidebar__tool-item">
+                        <li class="vertical-sidebar__tool-item" id="messageBtn1">
                             <div class="vertical-sidebar__icon-container">
                                 <div id="sidebar2-message-icon"></div>
                             </div>
@@ -225,7 +229,7 @@
                     <div class="vertical-sidebar__controls">
                         <div class="vertical-sidebar__user" id="verticalMenuBtn">
                             <div class="vertical-sidebar__avatar">
-                                <img src="./assets/img/avatar.png" alt="User photo">
+                                <img src="assets/img/avatar.png" alt="User photo">
                                 <p class="vertical-sidebar__key">Arip S.</p>
                             </div>
                             <div class="vertical-sidebar__menu-icon" >
@@ -238,21 +242,25 @@
                             <!-- DROPDOWN MENU STARTS -->
                             <div class="dropdown vertical" id="menuDropdownVertical">
                                 <ul class="dropdown__list">
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="callsInQueueBtn1">
                                         <p>Calls in Queue</p>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="agentCallLogBtn1">
                                         <p>Agent Call Log</p>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="callChannelsBtn1">
                                         <p>Call Channels</p>
                                     </li>
                                     <li class="dropdown__item dropdown__item--doubled">
                                         <p>Notification</p>
                                         <span class="dropdown__item-value">ON</span>
                                     </li>
-                                    <li class="dropdown__item">
+                                    <li class="dropdown__item" id="groupSelectionBtn1">
                                         <p>Groups</p>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled" id="toggleSidebarTopBtn">
+                                        <p>Toggle sidebar</p>
+                                        <span id="toggleSidebarTop" class="dropdown__item-value">Top</span>
                                     </li>
                                     <li class="dropdown__item dropdown__item--doubled" id="themeBtn2">
                                         <p>Change Theme</p>
@@ -849,6 +857,7 @@
                                     d="M23.937 15.992a1 1 0 0 1-.991-.875 6.985 6.985 0 0 0-6.069-6.063.999.999 0 1 1 .248-1.984 8.983 8.983 0 0 1 7.806 7.797 1 1 0 0 1-.994 1.125z" />
                             </svg>
                         </button>
+                        <button class="footer__button footer__reset" id="reset">Reset</button>
                     </div>
                 </footer>
                 <!-- FOOTER ENDS -->
@@ -860,10 +869,10 @@
                     <p class="tray__name">Calls in Queue</p>
                     <div class="tray__icons">
                         <button class="tray__icon" id="calsInQueueExpectBtn">
-                            <img src="./assets/img/icons/expect.png" alt="expect icon">
+                            <img src="assets/img/icons/expect.png" alt="expect icon">
                         </button>
                         <button class="tray__icon">
-                            <img src="./assets/img/icons/link.png" alt="link icon">
+                            <img src="assets/img/icons/link.png" alt="link icon">
                         </button>
                     </div>
                 </div>
@@ -871,10 +880,10 @@
                     <p class="tray__name">Customer Info</p>
                     <div class="tray__icons">
                         <button class="tray__icon" id="customerInfoExpectBtn">
-                            <img src="./assets/img/icons/expect.png" alt="expect icon">
+                            <img src="assets/img/icons/expect.png" alt="expect icon">
                         </button>
                         <button class="tray__icon">
-                            <img src="./assets/img/icons/link.png" alt="link icon">
+                            <img src="assets/img/icons/link.png" alt="link icon">
                         </button>
                     </div>
                 </div>
@@ -882,10 +891,10 @@
                     <p class="tray__name">Scripts</p>
                     <div class="tray__icons">
                         <button class="tray__icon" id="scriptsExpectBtn">
-                            <img src="./assets/img/icons/expect.png" alt="expect icon">
+                            <img src="assets/img/icons/expect.png" alt="expect icon">
                         </button>
                         <button class="tray__icon">
-                            <img src="./assets/img/icons/link.png" alt="link icon">
+                            <img src="assets/img/icons/link.png" alt="link icon">
                         </button>
                     </div>
                 </div>
@@ -1614,10 +1623,10 @@
                                 <td>Agent</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/information-circle.png" alt="help btn">
+                                        <img src="assets/img/icons/information-circle.png" alt="help btn">
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/phone-outgoing-02.png" alt="help btn">
+                                        <img src="assets/img/icons/phone-outgoing-02.png" alt="help btn">
                                     </div>
 
                                 </td>
@@ -1638,10 +1647,10 @@
                                 <td>Agent</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/information-circle.png" alt="help btn">
+                                        <img src="assets/img/icons/information-circle.png" alt="help btn">
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/phone-outgoing-02.png" alt="help btn">
+                                        <img src="assets/img/icons/phone-outgoing-02.png" alt="help btn">
                                     </div>
                                 </td>
                             </tr>
@@ -1661,10 +1670,10 @@
                                 <td>Agent</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/information-circle.png" alt="help btn">
+                                        <img src="assets/img/icons/information-circle.png" alt="help btn">
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/phone-outgoing-02.png" alt="help btn">
+                                        <img src="assets/img/icons/phone-outgoing-02.png" alt="help btn">
                                     </div>
                                 </td>
                             </tr>
@@ -1684,10 +1693,10 @@
                                 <td>Agent</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/information-circle.png" alt="help btn">
+                                        <img src="assets/img/icons/information-circle.png" alt="help btn">
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/phone-outgoing-02.png" alt="help btn">
+                                        <img src="assets/img/icons/phone-outgoing-02.png" alt="help btn">
                                     </div>
                                 </td>
                             </tr>
@@ -1707,10 +1716,10 @@
                                 <td>Agent</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/information-circle.png" alt="help btn">
+                                        <img src="assets/img/icons/information-circle.png" alt="help btn">
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/phone-outgoing-02.png" alt="help btn">
+                                        <img src="assets/img/icons/phone-outgoing-02.png" alt="help btn">
                                     </div>
                                 </td>
                             </tr>
@@ -1821,10 +1830,10 @@
                                 <td>-</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/information-circle.png" alt="help btn">
+                                        <img src="assets/img/icons/information-circle.png" alt="help btn">
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/phone-outgoing-02.png" alt="help btn">
+                                        <img src="assets/img/icons/phone-outgoing-02.png" alt="help btn">
                                     </div>
                                 </td>
                             </tr>
@@ -1837,10 +1846,10 @@
                                 <td>-</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/information-circle.png" alt="help btn">
+                                        <img src="assets/img/icons/information-circle.png" alt="help btn">
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/phone-outgoing-02.png" alt="help btn">
+                                        <img src="assets/img/icons/phone-outgoing-02.png" alt="help btn">
                                     </div>
                                 </td>
                             </tr>
@@ -1853,10 +1862,10 @@
                                 <td>-</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/information-circle.png" alt="help btn">
+                                        <img src="assets/img/icons/information-circle.png" alt="help btn">
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/phone-outgoing-02.png" alt="help btn">
+                                        <img src="assets/img/icons/phone-outgoing-02.png" alt="help btn">
                                     </div>
                                 </td>
                             </tr>
@@ -1869,10 +1878,10 @@
                                 <td>-</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/information-circle.png" alt="help btn">
+                                        <img src="assets/img/icons/information-circle.png" alt="help btn">
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/phone-outgoing-02.png" alt="help btn">
+                                        <img src="assets/img/icons/phone-outgoing-02.png" alt="help btn">
                                     </div>
                                 </td>
                             </tr>
@@ -1885,10 +1894,10 @@
                                 <td>-</td>
                                 <td class="call-modal__icons">
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/information-circle.png" alt="help btn">
+                                        <img src="assets/img/icons/information-circle.png" alt="help btn">
                                     </div>
                                     <div class="call-modal__image-container">
-                                        <img src="./assets/img/icons/phone-outgoing-02.png" alt="help btn">
+                                        <img src="assets/img/icons/phone-outgoing-02.png" alt="help btn">
                                     </div>
                                 </td>
                             </tr>
@@ -2026,7 +2035,7 @@
         <!-- NO CONNECTION ERROR MODAL ENDS  -->
 
         <!-- AGENT STATUS MODAL STARTS  -->
-        <div class="modal-window  table-width" id="agentStatusModal">
+        <div class="modal-window   agent-status" id="agentStatusModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Agents Status</h3>
                 <button id="agentStatusCloseBtn">
@@ -2141,7 +2150,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar avatar-icon">
-                                                <img src="./assets/img/Emoji.png" alt="user avatar">
+                                                <img src="assets/img/Emoji.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info">
                                                 <p class="modal-sidebar__person-name">Group-1213</p>
@@ -2152,7 +2161,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar avatar-icon">
-                                                <img src="./assets/img/Emoji2.png" alt="user avatar">
+                                                <img src="assets/img/Emoji2.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info">
                                                 <p class="modal-sidebar__person-name">Group-1192</p>
@@ -2180,7 +2189,7 @@
                                     <li class="modal-sidebar__list-item active">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <img src="./assets/img/avatar-2.png" alt="user avatar">
+                                                <img src="assets/img/avatar-2.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info">
                                                 <p class="modal-sidebar__person-name">Danny Sanchez</p>
@@ -2192,7 +2201,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <img src="./assets/img/avatar-3.png" alt="user avatar">
+                                                <img src="assets/img/avatar-3.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info--channel">
                                                 <p class="modal-sidebar__person-name">Della Sicitra <span
@@ -2205,7 +2214,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <img src="./assets/img/avatar-4.png" alt="user avatar">
+                                                <img src="assets/img/avatar-4.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info--channel">
                                                 <p class="modal-sidebar__person-name">Viola Junyla <span
@@ -2237,7 +2246,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar avatar-icon">
-                                                <img src="./assets/img/Emoji2.png" alt="user avatar">
+                                                <img src="assets/img/Emoji2.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info--channel">
                                                 <p class="modal-sidebar__person-name">Group-1192</p>
@@ -2265,7 +2274,7 @@
                                     <li class="modal-sidebar__list-item">
                                         <div class="modal-sidebar__person">
                                             <div class="modal-sidebar__avatar">
-                                                <img src="./assets/img/avatar-4.png" alt="user avatar">
+                                                <img src="assets/img/avatar-4.png" alt="user avatar">
                                             </div>
                                             <div class="modal-sidebar__person-info--personal">
                                                 <p class="modal-sidebar__person-name">Viola Junyla <span
@@ -2301,7 +2310,7 @@
                         <div class="modal-message__heading">
                             <div class="modal-message__person">
                                 <div class="modal-message__avatar">
-                                    <img src="./assets/img/avatar-2.png" alt="user avatar">
+                                    <img src="assets/img/avatar-2.png" alt="user avatar">
                                 </div>
                                 <div class="modal-message__person-data">
                                     <p class="modal-message__username">Danny Sanchez</p>
@@ -2345,7 +2354,7 @@
                                         <div class="incoming-message__heading">
                                             <div class="incoming-message__user-data">
                                                 <div class="incoming-message__avatar">
-                                                    <img src="./assets/img/avatar-2.png" alt="user avatar">
+                                                    <img src="assets/img/avatar-2.png" alt="user avatar">
                                                 </div>
                                                 <p class="incoming-message__username">Danny Sanchez</p>
                                             </div>
@@ -2383,7 +2392,7 @@
                                         <div class="incoming-message__heading">
                                             <div class="incoming-message__user-data">
                                                 <div class="incoming-message__avatar">
-                                                    <img src="./assets/img/avatar-2.png" alt="user avatar">
+                                                    <img src="assets/img/avatar-2.png" alt="user avatar">
                                                 </div>
                                                 <p class="incoming-message__username">Danny Sanchez</p>
                                             </div>
@@ -2401,17 +2410,17 @@
                                 <textarea name="message" placeholder="Write message here..."></textarea>
                                 <div class="modal-message__input-icons">
                                     <div class="modal-message__icon-container">
-                                        <img src="./assets/img/icons/smile.png" alt="smile">
+                                        <img src="assets/img/icons/smile.png" alt="smile">
                                     </div>
                                     <div class="modal-message__icon-container">
-                                        <img src="./assets/img/icons/image.png" alt="image icon">
+                                        <img src="assets/img/icons/image.png" alt="image icon">
                                     </div>
                                     <div class="modal-message__icon-container">
-                                        <img src="./assets/img/icons/attechment.png" alt="image icon">
+                                        <img src="assets/img/icons/attechment.png" alt="image icon">
                                     </div>
                                     <button class="modal-message__btn">
                                         <p>Send</p>
-                                        <img src="./assets/img/icons/send.png" alt="send icon ">
+                                        <img src="assets/img/icons/send.png" alt="send icon ">
                                     </button>
 
                                 </div>
@@ -2568,23 +2577,16 @@
         <!-- TOOLS SECTION STARTS (NEED DELETION)  -->
         <div class="tools">
             <div class="tools__list">
-                <button id="button1">Manual Dial</button>
                 <button id="button2">Dispo</button>
-                <button id="button3">Group Selection</button>
                 <button id="button4">Transfer</button>
-                <button id="button5">Agent call log</button>
-                <button id="button6">Calls in Queue</button>
-                <button id="button7">Call Channels</button>
                 <button id="button8">Call Channels Error</button>
                 <button id="button9">Connection Error</button>
                 <button id="button10">Agent Status</button>
-                <button id="button11">Message</button>
                 <button id="button12">Latency</button>
                 <button id="button13">Call1</button>
                 <button id="button14">Call2</button>
                 <button id="button15">Call3</button>
                 <button id="button16">mDial2</button>
-                <button id="button17">toggleSidebar</button>
             </div>
             <button class="tools__btn">TOOLS</button>
         </div>
@@ -2595,11 +2597,11 @@
     </main>
 
     <!-- BOOTSTRAP JS  -->
-    <script src="./assets/files/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/files/libs/bootstrap/bootstrap.min.js"></script>
 
     <!-- GSAP JS  -->
-    <script src="./assets/files/libs/gsap/gsap.min.js"></script>
-    <script src="./assets/files/libs/gsap/Observer.min.js"></script>
+    <script src="assets/files/libs/gsap/gsap.min.js"></script>
+    <script src="assets/files/libs/gsap/Observer.min.js"></script>
 
     <!-- CUSTOM SCRIPTS -->
     <script defer src="/assets/js/app.min.js"></script>

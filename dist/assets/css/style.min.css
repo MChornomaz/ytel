@@ -270,14 +270,14 @@ body {
 }
 
 .backdrop {
-  position: absolute;
+  position: fixed;
   width: 0;
   height: 0;
   top: 0;
   left: 0;
   background-color: #3D3D3D;
   opacity: 0.6;
-  z-index: 110;
+  z-index: 800;
 }
 .backdrop.active {
   width: 100vw;
@@ -301,6 +301,7 @@ body {
   display: flex;
   gap: 20px;
   background-color: var(--color-secondary);
+  overflow: hidden;
 }
 .page-content.column {
   flex-direction: column;
@@ -322,6 +323,7 @@ body {
   background-color: var(--color-main);
   transition: all 0.4s ease-in;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 900px) {
   .content {
@@ -592,32 +594,36 @@ body {
 
 .dropdown {
   width: 241px;
-  height: 304px;
+  height: 344px;
   background-color: var(--color-main);
   border-radius: 8px;
   padding: 12px;
   box-shadow: 0px 10px 30px 0px rgba(29, 73, 113, 0.1);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0px;
-  transform: translateX(-400px);
+  transform: translate(-400px, -45px);
   opacity: 0;
-  z-index: 3;
+  z-index: 600;
   transition: transform 0.2s ease-in, opacity 0.2s ease-in;
 }
 .dropdown.active {
-  transform: translateX(97%);
+  transform: translate(97%, -45px);
+  opacity: 1;
+}
+.dropdown.minimized.active {
+  transform: translate(50%, -45px);
   opacity: 1;
 }
 .dropdown.vertical {
-  left: 0;
+  left: 100%;
   right: 0;
   opacity: 1;
   top: 67px;
-  transform: translate(-100px, -500px);
+  transform: translate(-265px, -500px);
 }
 .dropdown.vertical.active {
-  transform: translate(-100px, 0);
+  transform: translate(-265px, 30px);
 }
 .dropdown__list {
   height: 100%;
@@ -1232,7 +1238,7 @@ body {
 }
 
 .modal-window {
-  position: absolute;
+  position: fixed;
   display: none;
   width: 936px;
   overflow: auto;
@@ -1281,6 +1287,20 @@ body {
 }
 @media screen and (max-width: 1000px) {
   .modal-window.table-width.active {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.modal-window.agent-status.active {
+  width: 850px;
+  max-width: 80vw;
+  overflow-y: auto;
+  overflow-x: scroll;
+  max-height: 550px;
+}
+@media screen and (max-width: 1000px) {
+  .modal-window.agent-status.active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1392,6 +1412,7 @@ body {
 
 .call-controls {
   width: 100%;
+  max-width: 100%;
   margin-bottom: 20px;
   padding-left: 12px;
   padding-right: 20px;
@@ -1784,6 +1805,7 @@ body {
   padding: 30px 25px;
   background-color: var(--color-secondary);
   transition: all 0.4s ease-in;
+  overflow-y: auto;
 }
 .sidebar.hidden {
   display: none;
@@ -1792,6 +1814,50 @@ body {
   .sidebar.hidden {
     display: flex;
   }
+}
+.sidebar.minimized {
+  width: 70px;
+  min-width: 40px;
+  padding: 30px 10px;
+  padding-right: 0;
+}
+.sidebar.minimized .sidebar__select {
+  display: none;
+}
+.sidebar.minimized .sidebar__logo {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+.sidebar.minimized .sidebar__logo img {
+  object-fit: contain;
+}
+.sidebar.minimized .sidebar__title {
+  text-align: center;
+}
+.sidebar.minimized .sidebar__tool-item {
+  justify-content: center;
+}
+.sidebar.minimized .sidebar__tool-item p {
+  display: none;
+}
+.sidebar.minimized .sidebar--bottom {
+  padding: 0;
+}
+.sidebar.minimized .sidebar__help {
+  justify-content: center;
+}
+.sidebar.minimized .sidebar__key {
+  display: none;
+}
+.sidebar.minimized .sidebar__menu-icon {
+  display: none;
+}
+.sidebar.minimized .sidebar__controls {
+  justify-content: center;
+}
+.sidebar.minimized .sidebar__user {
+  justify-content: center;
 }
 @media screen and (max-width: 900px) {
   .sidebar {
@@ -1819,6 +1885,7 @@ body {
   justify-content: center;
   height: 40px;
   margin-bottom: 35px;
+  cursor: pointer;
 }
 .sidebar__logo img {
   height: 100%;
@@ -2122,7 +2189,6 @@ body {
 .working-area__drag-container {
   width: 50%;
   height: 100%;
-  min-height: 600px;
   position: relative;
 }
 @media screen and (max-width: 900px) {
@@ -2143,19 +2209,27 @@ body {
   overflow: hidden;
 }
 .working-area__item {
-  width: 100%;
+  width: 400px;
+  max-width: 35vw;
   border: 0.4px solid var(--card-border-color);
   border-radius: 12px;
   box-shadow: 0px 10px 30px 0px rgba(29, 73, 113, 0.1);
-  height: 100%;
+  height: 600px;
   overflow-y: auto;
   background-color: var(--color-ternary);
-  min-height: 600px;
   padding-top: 8px;
-  z-index: 800;
+  position: fixed;
+  z-index: 200;
 }
 .working-area__item.hidden {
   display: none;
+}
+@media screen and (max-width: 900px) {
+  .working-area__item {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 .working-area__data {
   display: flex;
@@ -2210,7 +2284,7 @@ body {
 }
 .footer__buttons {
   height: 100%;
-  width: 72px;
+  width: 108px;
   display: flex;
 }
 .footer__button {
@@ -2249,6 +2323,15 @@ body {
   width: 16px;
   height: 16px;
   fill: #ffffff;
+}
+.footer__reset {
+  font-size: 12px;
+  background-color: #FF3535;
+  color: #ffffff;
+}
+.footer__reset:hover {
+  color: #FF3535;
+  background-color: #ffffff;
 }
 
 .tray {

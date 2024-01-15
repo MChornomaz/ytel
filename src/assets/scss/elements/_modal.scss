@@ -1,5 +1,5 @@
 .modal-window{
-    position: absolute;
+    position: fixed;
     display: none;
     width: 936px;
     overflow: auto;
@@ -43,6 +43,19 @@
 
     &.table-width.active{
         width: 1100px;
+        max-width: 80vw;
+        overflow-y: auto;
+        overflow-x: scroll;
+        max-height: 550px;
+
+        @media screen and (max-width: 1000px) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &.agent-status.active{
+        width: 850px;
         max-width: 80vw;
         overflow-y: auto;
         overflow-x: scroll;

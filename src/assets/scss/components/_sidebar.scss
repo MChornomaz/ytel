@@ -10,12 +10,70 @@
     padding: 30px 25px;
     background-color: var(--color-secondary) ;
     transition: all .4s ease-in;
+    overflow-y: auto;
 
     &.hidden{
         display: none;
 
         @media screen and (max-width: 900px) {
             display: flex;
+        }
+    }
+
+    &.minimized{
+        width: 70px;
+        min-width: 40px;
+        padding: 30px 10px;
+        padding-right: 0;
+
+
+        .sidebar__select{
+            display: none;
+        }
+
+        .sidebar__logo{
+            overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+            
+            img{
+                object-fit: contain;
+            }
+        }
+
+        .sidebar__title{
+            text-align: center;
+        }
+
+        .sidebar__tool-item{
+            justify-content: center;
+            p{
+                display: none;
+            }
+        }
+
+        .sidebar--bottom{
+            padding: 0;
+        }
+
+        .sidebar__help{
+            justify-content: center;
+        }
+
+        .sidebar__key{
+            display: none;
+        }
+
+        .sidebar__menu-icon{
+            display: none;
+        }
+
+        .sidebar__controls{
+            justify-content: center;
+        }
+
+        .sidebar__user{
+            justify-content: center;
         }
     }
 
@@ -47,6 +105,7 @@
         justify-content: center;
         height: 40px;
         margin-bottom: 35px;
+        cursor: pointer;
 
         img{
             height: 100%;
