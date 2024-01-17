@@ -37,14 +37,12 @@ const windowsControlsHandler = () => {
     // call script element
 
     sidebarScriptsBtn.addEventListener('click', () => {
-        console.log('test')
         scriptDragContainer.classList.toggle('hidden')
     })
 
     // call script element top sidebar
 
     topSidebarScriptsBtn.addEventListener('click', () => {
-        console.log('test')
         scriptDragContainer.classList.toggle('hidden')
     })
 
@@ -68,6 +66,7 @@ const windowsControlsHandler = () => {
         customerTrayElement.classList.add('active');
         customerInfoDragContainer.classList.add('hidden')
         customerInfoDragContainer.classList.remove('expended')
+        sidebarElement.style.display = 'flex';
 
         customerTrayActive = true;
     })
@@ -78,6 +77,7 @@ const windowsControlsHandler = () => {
         customerTrayElement.classList.remove('active');
         customerInfoDragContainer.classList.remove('hidden')
         scriptDragContainer.classList.remove('expended')
+        sidebarElement.style.display = 'flex';
 
         if(!customerTrayActive || !scriptsTrayActive){
             trayElement.classList.remove('active')
@@ -112,7 +112,7 @@ const windowsControlsHandler = () => {
             customerInfoElement.style.transform = 'translate(0px, 0px)';
             customerInfoElement.style.zIndex = 999;
             customerWindowExpanded = true
-            sidebarElement.style.transform = 'translateX(-100%)';
+            sidebarElement.style.display = 'none';
             sidebarTopElement.style.transform = 'translateY(-100%)';
         } else {
 
@@ -127,7 +127,7 @@ const windowsControlsHandler = () => {
             customerInfoElement.style.left = x + 'px';
             customerInfoElement.style.zIndex = zIndex;
             customerWindowExpanded = false
-            sidebarElement.style.transform = 'translateX(0)';
+            sidebarElement.style.display = 'flex';
             sidebarTopElement.style.transform = 'translateY(0)';
             localStorage.removeItem('customerTempData');
         }
@@ -157,7 +157,7 @@ const windowsControlsHandler = () => {
             scriptsElement.style.left = 0;
             scriptsElement.style.transform = 'translate(0px, 0px)';
             scriptsElement.style.zIndex = '999';
-            sidebarElement.style.transform = 'translateX(-100%)';
+            sidebarElement.style.display = 'none';
             sidebarTopElement.style.transform = 'translateY(-100%)';
             scriptsWindowExpanded = true
         } else {
@@ -171,7 +171,7 @@ const windowsControlsHandler = () => {
             scriptsElement.style.left = x + 'px';
             scriptsElement.style.zIndex = zIndex;
             scriptsWindowExpanded = false
-            sidebarElement.style.transform = 'translateX(0)';
+            sidebarElement.style.display = 'flex';
             sidebarTopElement.style.transform = 'translateY(0)';
             localStorage.removeItem('scriptsTempData');
         }
@@ -182,6 +182,7 @@ const windowsControlsHandler = () => {
     closeScriptsBtn.addEventListener('click', () => {
         scriptDragContainer.classList.add('hidden')
         scriptDragContainer.classList.remove('expended')
+        sidebarElement.style.display = 'flex';
         scriptsAreActive = false;
     })
 
@@ -193,6 +194,7 @@ const windowsControlsHandler = () => {
         scriptsTrayElement.classList.add('active');
         scriptDragContainer.classList.add('hidden')
         scriptDragContainer.classList.remove('expended')
+        sidebarElement.style.display = 'flex';
 
         scriptsTrayActive = true;
     })
@@ -202,6 +204,7 @@ const windowsControlsHandler = () => {
         scriptsTrayElement.classList.remove('active');
         scriptDragContainer.classList.remove('hidden')
         customerInfoDragContainer.classList.remove('expended')
+        sidebarElement.style.display = 'flex';
 
         if(!customerTrayActive || !scriptsTrayActive){
             trayElement.classList.remove('active')
@@ -219,6 +222,7 @@ const windowsControlsHandler = () => {
             customerInfoDragContainer.classList.toggle('minimized')
             customerInfoElement.style.height = '60px'
             customerInfoElement.style.minHeight = '60px'
+            sidebarElement.style.display = 'flex';
             customerInfoMinimized = true;
         } else{
 
@@ -233,6 +237,7 @@ const windowsControlsHandler = () => {
                 customerInfoElement.style.height = '100%';
             }   
             customerInfoElement.style.minHeight = '600px'
+            sidebarElement.style.display = 'flex';
             customerInfoMinimized = false;
         }
     })
@@ -245,6 +250,7 @@ const windowsControlsHandler = () => {
             scriptDragContainer.classList.toggle('minimized')
             scriptsElement.style.height = '60px'
             scriptsElement.style.minHeight = '60px'
+            sidebarElement.style.display = 'flex';
             scriptsMinimized = true;
         } else{
 
@@ -258,6 +264,7 @@ const windowsControlsHandler = () => {
                 scriptsElement.style.height = '100%';
             }   
             scriptsElement.style.minHeight = '600px'
+            sidebarElement.style.display = 'flex';
             scriptsMinimized = false;
         }
     })

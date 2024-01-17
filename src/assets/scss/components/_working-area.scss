@@ -53,11 +53,10 @@
 
     &__item {
         width: 25rem;
-        max-width: 35vw;
         border: 0.4px solid var(--card-border-color);
         border-radius: 12px;
         box-shadow: $box-shadow;
-        height: 37.5rem;
+        height: 32.5rem;
         overflow-y: auto;
         background-color: var(--color-ternary);
         padding-top: 0.5rem;

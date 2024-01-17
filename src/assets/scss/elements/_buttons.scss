@@ -246,6 +246,7 @@
     border: 1px solid var(--color-text-main);
     border-radius: 50%;
     transition: all .4s ease-in-out;
+    color: var(--color-text-main);
 
     &:hover{
         transform: scale(1.05);
