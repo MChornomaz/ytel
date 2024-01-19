@@ -15,6 +15,9 @@ import {modalsControls} from './modules/modals-controls.js';
 import {toggleSidebar} from './modules/toggle-sidebar.js';
 import {toggleSidebarWidth} from './modules/toggle-sidebar-width.js';
 import {changeScale} from './modules/change-scale.js';
+import {dragAgentStatus} from './modules/drag-and-drop-agent-status.js'
+import {dragCallsInQueue} from './modules/drag-and-drop-calls-in-queue.js'
+import {dragCallChannels} from './modules/call-channels-drag-and-drop.js'
 
 
 flsFunctions.isWebp()
@@ -32,8 +35,6 @@ messageModalTabsHandler()
 messageModalBurgerHandler()
 
 selectHandler()
-
-windowsControlsHandler()
 
 toolsHandler()  //- remove in the end
 
@@ -53,9 +54,17 @@ toggleSidebarWidth()
 
 changeScale()
 
+dragAgentStatus()
+
+dragCallsInQueue()
+
+dragCallChannels()
+
+windowsControlsHandler()
+
 
 //Working windows position logic
-const workingWindows = document.querySelectorAll('.working-area__item');
+const workingWindows = document.querySelectorAll('.drag-item');
 workingWindows.forEach(el => el.style.zIndex = 10)
 
 workingWindows.forEach(window => {

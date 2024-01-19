@@ -1,13 +1,13 @@
 .modal-window {
     position: fixed;
-    display: none;
+    display: block;
     width: 58.5rem; 
     overflow: auto;
     height: fit-content;
     max-height: 95vh;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 1300%);
+    transform: translate(-50%, 1500%);
     background-color: var(--color-main);
     border-radius: 0.75rem; 
     z-index: 999;
@@ -53,19 +53,7 @@
         }
     }
 
-    &.agent-status.active {
-        width: 53.125rem; 
-        max-width: 80vw;
-        overflow-y: auto;
-        overflow-x: scroll;
-        max-height: 34.375rem; 
-
-        @media screen and (max-width: 1000px) {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
+    
 
     &.error.active {
         width: 34.375rem; 
@@ -91,7 +79,7 @@
     &.latency {
         width: 20rem;
         height: 26.3125rem; 
-        top: calc(100% - 26.3125rem - 1.875rem);
+        top: calc(200% - 26.3125rem - 1.875rem);
         left: calc(100% - 2.125rem - 20rem);
         transform: translate(-100%, 18.75rem); 
     }

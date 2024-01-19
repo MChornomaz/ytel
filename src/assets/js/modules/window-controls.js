@@ -24,14 +24,240 @@ const windowsControlsHandler = () => {
     const sidebarScriptsBtn = document.querySelector('#scriptBtn')
     const topSidebarScriptsBtn = document.querySelector('#scriptBtn1')
     const scriptDragContainer = document.querySelector('#scriptDragContainer')
-    
 
-    let scriptsAreActive = !scriptDragContainer.classList.contains('hidden')
+    // Calls in Queue elements
+    const callsInQueueTrayElement = document.querySelector('#callsInQueueTray')
+    const trayCallsInQueueExpectBtn = document.querySelector('#calsInQueueExpectBtn')
+    const callsInQueueElement = document.querySelector('#callsInQueueModal')
+    const callsInQueueMinimizeBtn = document.querySelector('#minimizeCallsInQueueBtn')
+    let callsInQueueActive = false;
+
+    //Agent Status Element
+    const agentStatusTrayElement = document.querySelector('#agentStatusTray')
+    const trayAgentStatusExpectBtn = document.querySelector('#agentStatusExpectBtn')
+    const agentStatusElement = document.querySelector('#agentStatusModal')
+    const agentStatusMinimizeBtn = document.querySelector('#minimizeAgentStatus')
+    let agentStatusActive = false;
+
+
+    // Call Channels Elements
+    const callChannelsTrayElement = document.querySelector('#callChannelsTray')
+    const trayCallChannelsExpectBtn = document.querySelector('#callChannelsExpectBtn')
+    const callChannelsElement = document.querySelector('#callChannelsModal')
+    const callChannelsMinimizeBtn = document.querySelector('#minimizeCallsChannels')
+    let callChannelsActive = false;
+
 
     const trayElement = document.querySelector('#tray');
 
     let customerTrayActive = false;
     let scriptsTrayActive = false;
+
+    let agentStatusData;
+    let callsInQueData;
+    let callChannelsData;
+
+    const checkTray = () => {
+        const customerInfoInTray = localStorage.getItem('customerInfoInTray')
+        const scriptsInTray = localStorage.getItem('scriptsInTray')
+        const agentStatusInTray = localStorage.getItem('agentStatusInTray')
+        const callsInQueueInTray = localStorage.getItem('callsInQueueInTray')
+        const callChannelsInTray = localStorage.getItem('callChannelsInTray')
+
+        if(customerInfoInTray || scriptsInTray || agentStatusInTray || callsInQueueInTray || callChannelsInTray){
+            trayElement.classList.add('active')
+        } else{
+            trayElement.classList.remove('active')
+        }
+
+        if(customerInfoInTray){
+            customerTrayElement.classList.add('active')
+            customerTrayElement.classList.add('active');
+            customerInfoDragContainer.classList.add('hidden')
+            customerTrayActive = true;
+        } else {
+            customerTrayElement.classList.remove('active')
+        }
+
+        if(scriptsInTray){
+            scriptsTrayElement.classList.add('active')
+            scriptDragContainer.classList.add('hidden')
+            scriptDragContainer.classList.remove('expended')
+            scriptsTrayActive = true;
+        } else {
+            scriptsTrayElement.classList.remove('active')
+        }
+
+        if(agentStatusInTray){
+            agentStatusTrayElement.classList.add('active')
+            agentStatusData = localStorage.getItem('agentStatusTemporalElementPositionAndSize')
+            agentStatusElement.classList.remove('active')
+            agentStatusActive = true;
+           
+        } else {
+            agentStatusTrayElement.classList.remove('active')
+        }
+
+        if(callsInQueueInTray){
+            callsInQueueTrayElement.classList.add('active')
+            callsInQueData = localStorage.getItem('callsInQueueTemporalElementPositionAndSize')
+            callsInQueueTrayElement.classList.add('active');
+            callsInQueueElement.classList.remove('active')
+            callsInQueueActive = true;
+        } else {
+            callsInQueueTrayElement.classList.remove('active')
+        }
+
+        if(callChannelsInTray){
+            callChannelsTrayElement.classList.add('active')
+            
+            callChannelsTrayElement.classList.add('active');
+        callChannelsElement.classList.remove('active')
+        localStorage.setItem('callChannelsInTray', true)
+        sidebarElement.style.display = 'flex';
+
+        callChannelsActive = true;
+        } else {
+            callChannelsTrayElement.classList.remove('active')
+        }
+    }
+
+    
+
+    const checkTrayElementVisibility = () => {
+        if(!callsInQueueActive || 
+            !agentStatusActive || 
+            !callChannelsActive ||
+            !customerTrayActive ||
+            !scriptsTrayActive
+            ){
+                trayElement.classList.add('active')
+            } else{
+                trayElement.classList.add('active')
+            }
+    }
+
+
+    //tray Call Channels
+
+
+    callChannelsMinimizeBtn.addEventListener('click', () => {
+        const baseData = {"x":384,"y":442.5,"width":680,"height":202.875}
+        callChannelsData = JSON.parse(localStorage.getItem('callChannelsElementPositionAndSize'))
+
+        trayElement.classList.add('active')
+        callChannelsTrayElement.classList.add('active');
+        callChannelsElement.classList.remove('active')
+        localStorage.setItem('callChannelsInTray', true)
+        sidebarElement.style.display = 'flex';
+
+        callChannelsActive = true;
+        if(callChannelsData.x !== 0){
+            localStorage.setItem('callChannelsTemporalElementPositionAndSize', JSON.stringify(callChannelsData))
+          } else{
+            localStorage.setItem('callChannelsTemporalElementPositionAndSize', JSON.stringify(baseData))
+        }
+    })
+
+    //expect Call Channels
+
+    trayCallChannelsExpectBtn.addEventListener('click', () => {
+        const elementData = localStorage.getItem('callChannelsTemporalElementPositionAndSize')
+        callChannelsTrayElement.classList.remove('active');
+        callChannelsElement.classList.add('active')
+        sidebarElement.style.display = 'flex';
+
+        callChannelsActive = false
+        checkTrayElementVisibility()
+
+        if(elementData){
+            localStorage.setItem('callChannelsElementPositionAndSize', elementData)
+        }
+        localStorage.removeItem('callChannelsInTray', true)
+
+    })
+
+
+     //tray Agent Status
+
+     agentStatusMinimizeBtn.addEventListener('click', () => {
+        const baseData = {"x":384,"y":442.5,"width":680,"height":202.875}
+        let data = JSON.parse(localStorage.getItem('agentStatusElementPositionAndSize'))
+        
+        trayElement.classList.add('active')
+        agentStatusTrayElement.classList.add('active');
+        agentStatusElement.classList.remove('active')
+        localStorage.setItem('agentStatusInTray', true)
+        sidebarElement.style.display = 'flex';
+
+        agentStatusActive = true;
+        checkTrayElementVisibility()
+        if(data.x !== 0){
+            localStorage.setItem('agentStatusTemporalElementPositionAndSize', JSON.stringify(data))
+        } else{
+            localStorage.setItem('agentStatusTemporalElementPositionAndSize', JSON.stringify(baseData))
+        }
+    })
+
+    //expect Agent Status
+
+    trayAgentStatusExpectBtn.addEventListener('click', () => {
+        
+        const elementData = localStorage.getItem('agentStatusTemporalElementPositionAndSize')
+        agentStatusTrayElement.classList.remove('active');
+        agentStatusElement.classList.add('active')
+        sidebarElement.style.display = 'flex';
+
+        agentStatusActive = false
+        checkTrayElementVisibility()
+        if(elementData){
+            localStorage.setItem('agentStatusElementPositionAndSize', elementData)
+        }
+        localStorage.removeItem('agentStatusInTray', true)
+    })
+
+
+
+
+    //tray Calls in Queue
+    callsInQueueMinimizeBtn.addEventListener('click', () => {
+        const baseData = {"x":384,"y":264.5,"width":680,"height":409.46875}
+        let data = JSON.parse(localStorage.getItem('callsInQueueElementPositionAndSize'))
+
+        trayElement.classList.add('active')
+        callsInQueueTrayElement.classList.add('active');
+        callsInQueueElement.classList.remove('active')
+        localStorage.setItem('callsInQueueInTray', true)
+        sidebarElement.style.display = 'flex';
+
+        callsInQueueActive = true;
+        if(data.x !== 0){
+            localStorage.setItem('callsInQueueTemporalElementPositionAndSize', JSON.stringify(data))
+        } else{
+            localStorage.setItem('callsInQueueTemporalElementPositionAndSize', JSON.stringify(baseData))
+        }
+    })
+
+    //expect Calls in Queue
+
+    trayCallsInQueueExpectBtn.addEventListener('click', () => {
+        const elementData = localStorage.getItem('callsInQueueTemporalElementPositionAndSize')
+        callsInQueueTrayElement.classList.remove('active');
+        callsInQueueElement.classList.add('active')
+        sidebarElement.style.display = 'flex';
+
+        callsInQueueActive = false
+        checkTrayElementVisibility()
+        if(elementData){
+            localStorage.setItem('callsInQueueElementPositionAndSize', elementData)
+        }
+        localStorage.removeItem('callsInQueueInTray', true)
+    })
+    
+
+    let scriptsAreActive = !scriptDragContainer.classList.contains('hidden')
+
+    
 
 
     // call script element
@@ -66,6 +292,7 @@ const windowsControlsHandler = () => {
         customerTrayElement.classList.add('active');
         customerInfoDragContainer.classList.add('hidden')
         customerInfoDragContainer.classList.remove('expended')
+        localStorage.setItem('customerInfoInTray', true)
         sidebarElement.style.display = 'flex';
 
         customerTrayActive = true;
@@ -78,12 +305,10 @@ const windowsControlsHandler = () => {
         customerInfoDragContainer.classList.remove('hidden')
         scriptDragContainer.classList.remove('expended')
         sidebarElement.style.display = 'flex';
-
-        if(!customerTrayActive || !scriptsTrayActive){
-            trayElement.classList.remove('active')
-        }
-
+        localStorage.removeItem('customerInfoInTray', true)
         customerTrayActive = false
+        checkTrayElementVisibility()
+        localStorage.removeItem('customerInfoInTray', true)
     })
 
     //expend customer info
@@ -195,7 +420,7 @@ const windowsControlsHandler = () => {
         scriptDragContainer.classList.add('hidden')
         scriptDragContainer.classList.remove('expended')
         sidebarElement.style.display = 'flex';
-
+        localStorage.setItem('scriptsInTray', true)
         scriptsTrayActive = true;
     })
 
@@ -205,12 +430,10 @@ const windowsControlsHandler = () => {
         scriptDragContainer.classList.remove('hidden')
         customerInfoDragContainer.classList.remove('expended')
         sidebarElement.style.display = 'flex';
-
-        if(!customerTrayActive || !scriptsTrayActive){
-            trayElement.classList.remove('active')
-        }
-
+        localStorage.removeItem('scriptsInTray', true)
         scriptsTrayActive = false
+        checkTrayElementVisibility()
+
     })
 
     //minimize Customer Info
@@ -268,6 +491,8 @@ const windowsControlsHandler = () => {
             scriptsMinimized = false;
         }
     })
+
+    checkTray()
 }
 
 export {windowsControlsHandler}

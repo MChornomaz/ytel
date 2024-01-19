@@ -46,12 +46,12 @@ const modalsControls = () => {
     if(callsInQueueModal && backdrop){
         callsInQueueBtn.addEventListener('click', () => {
             callsInQueueModal.classList.add('active')
-            backdrop.classList.add('active')
+            callsInQueueModal.style.width = '53.125rem'
+            callsInQueueModal.style.height = 'max-content'
         })
         
         closeCallsInQueueModalBtn.addEventListener('click', () => {
             callsInQueueModal.classList.remove('active')
-            backdrop.classList.remove('active')
         })
     }
 
@@ -59,12 +59,12 @@ const modalsControls = () => {
     if(callsInQueueModal && backdrop){
         callsInQueueBtnHorizontalSidebar.addEventListener('click', () => {
             callsInQueueModal.classList.add('active')
-            backdrop.classList.add('active')
+            callsInQueueModal.style.width = '53.125rem'
+            callsInQueueModal.style.height = 'max-content'
         })
         
         closeCallsInQueueModalBtn.addEventListener('click', () => {
             callsInQueueModal.classList.remove('active')
-            backdrop.classList.remove('active')
         })
     }
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -115,12 +115,12 @@ const modalsControls = () => {
     if(callChannelsModal && backdrop){
         callChannelsModalBtn.addEventListener('click', () => {
             callChannelsModal.classList.add('active')
-            backdrop.classList.add('active')
+            callChannelsModal.style.width = '53.125rem'
+            callChannelsModal.style.height = 'max-content'
         })
         
         closeCallChannelsModalBtn.addEventListener('click', () => {
             callChannelsModal.classList.remove('active')
-            backdrop.classList.remove('active')
         })
     }
 
@@ -128,12 +128,13 @@ const modalsControls = () => {
     if(callChannelsModal && backdrop){
         callChannelsModalBtnHorizontalSidebar.addEventListener('click', () => {
             callChannelsModal.classList.add('active')
-            backdrop.classList.add('active')
+            callChannelsModal.style.width = '53.125rem'
+            callChannelsModal.style.height = 'max-content'
         })
         
         closeCallChannelsModalBtn.addEventListener('click', () => {
             callChannelsModal.classList.remove('active')
-            backdrop.classList.remove('active')
+
         })
     }
 

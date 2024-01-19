@@ -3,18 +3,12 @@ const resetInterface = () => {
     const resetBtnTopSidebar = document.querySelector('#reset1');
 
     resetBtn.addEventListener('click', () => {
-        localStorage.removeItem('customerInfoElementPositionAndSize');
-        localStorage.removeItem('scriptsElementPositionAndSize');
-        localStorage.removeItem('scale');
-        localStorage.removeItem('currentScaleValue');
+        localStorage.clear();
         location.reload();
     })
 
     resetBtnTopSidebar.addEventListener('click', () => {
-        localStorage.removeItem('customerInfoElementPositionAndSize');
-        localStorage.removeItem('scriptsElementPositionAndSize');
-        localStorage.removeItem('scale');
-        localStorage.removeItem('currentScaleValue');
+        localStorage.clear();
         location.reload();
     })
 }

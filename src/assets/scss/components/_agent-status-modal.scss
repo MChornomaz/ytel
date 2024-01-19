@@ -7,7 +7,28 @@
     }
 }
 
+
+
 .agent-status {
+    width: 53.125rem; 
+    max-width: 80vw;
+    overflow-y: auto;
+    overflow-x: auto;
+    max-height: 34.375rem; 
+    background-color: var(--color-main);
+    position: fixed;
+    box-shadow: $box-shadow;
+    border-radius: 10px;
+    border: 0.4px solid var(--card-border-color);
+    top: 50%;
+    left: 30%;
+    z-index: 11;
+    display: none;
+
+    &.active{
+        display: block;
+    }
+
     &__table-section {
         width: 100%;
         min-width: 43.75rem; 

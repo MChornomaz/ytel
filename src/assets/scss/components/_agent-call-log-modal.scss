@@ -72,6 +72,7 @@
 
     &__table-section {
         width: 100%;
+        min-width: max-content;
         background-color: var(--modal-bg-color);
         border-radius: 0.75rem; 
         padding: 1rem; 

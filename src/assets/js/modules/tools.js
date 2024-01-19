@@ -106,15 +106,17 @@ const toolsHandler = () => {
     const  closeAgentStatusModalBtn = document.querySelector('#agentStatusCloseBtn')
 
 
-    if(agentStatusModal && backdrop){
+    if(agentStatusModal){
         agentStatusToolsBtn.addEventListener('click', () => {
             agentStatusModal.classList.add('active')
-            backdrop.classList.add('active')
+            agentStatusModal.style.width = '53.125rem'
+            agentStatusModal.style.height = 'max-content'
         })
         
         closeAgentStatusModalBtn.addEventListener('click', () => {
             agentStatusModal.classList.remove('active')
-            backdrop.classList.remove('active')
+            agentStatusModal.style.width = '53.125rem'
+            agentStatusModal.style.height = 'max-content'
         })
     }
 

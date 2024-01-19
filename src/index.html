@@ -614,7 +614,7 @@
                     <div class="working-area__drag-container" id="customerInfoDragContainer">
 
                         <!-- CUSTOMER INFO STARTS  -->
-                        <div class="working-area__item" id="customerWindow">
+                        <div class="working-area__item drag-item" id="customerWindow">
                             <div class="working-area__data" id="customerWindowHeader">
                                 <h3 class="working-area__title">Customer Info</h3>
                                 <div class="working-area__icons">
@@ -796,7 +796,7 @@
 
                     <div class="working-area__drag-container" id="scriptDragContainer">
                         <!-- SCRIPTS SECTION STARTS  -->
-                        <div class="working-area__item" id="scriptsElement">
+                        <div class="working-area__item drag-item" id="scriptsElement">
                             <div class="working-area__data">
                                 <h3 class="working-area__title">Scripts</h3>
                                 <div class="working-area__icons">
@@ -911,6 +911,28 @@
                     <p class="tray__name">Scripts</p>
                     <div class="tray__icons">
                         <button class="tray__icon" id="scriptsExpectBtn">
+                            <img src="assets/img/icons/expect.png" alt="expect icon">
+                        </button>
+                        <button class="tray__icon">
+                            <img src="assets/img/icons/link.png" alt="link icon">
+                        </button>
+                    </div>
+                </div>
+                <div class="tray__item " id="agentStatusTray">
+                    <p class="tray__name">Agent Status</p>
+                    <div class="tray__icons">
+                        <button class="tray__icon" id="agentStatusExpectBtn">
+                            <img src="assets/img/icons/expect.png" alt="expect icon">
+                        </button>
+                        <button class="tray__icon">
+                            <img src="assets/img/icons/link.png" alt="link icon">
+                        </button>
+                    </div>
+                </div>
+                <div class="tray__item " id="callChannelsTray">
+                    <p class="tray__name">Call Channels</p>
+                    <div class="tray__icons">
+                        <button class="tray__icon" id="callChannelsExpectBtn">
                             <img src="assets/img/icons/expect.png" alt="expect icon">
                         </button>
                         <button class="tray__icon">
@@ -1751,16 +1773,30 @@
         <!-- AGENT CALL LOG MODAL ENDS  -->
 
         <!-- CALLS IN QUEUE MODAL STARTS  -->
-        <div class="modal-window table-width " id="callsInQueueModal">
+        <div class="calls-in-queue drag-item" id="callsInQueueModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Calls in Queue</h3>
-                <button id="callsInQueueCloseBtn">
-                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
+                <div class="modal-window__icons">
+                    <button class="modal-window__icon" id="minimizeCallsInQueueBtn">
+                        <svg  viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                                <g data-name="minus-square">
+                                    <path
+                                        d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                    </path>
+                                    <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button id="callsInQueueCloseBtn">
+                        <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-x">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div class="call-modal__controls">
                 <div class="call-modal__controls--left">
@@ -1929,16 +1965,31 @@
         <!-- CALLS IN QUEUE MODAL ENDS  -->
 
         <!-- CALL CHANNELS MODAL STARTS  -->
-        <div class="modal-window table-width" id="callChannelsModal">
+        <div class="call-channels drag-item" id="callChannelsModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Call Channels</h3>
-                <button id="callChannelsCloseBtn">
-                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
+                <div class="modal-window__icons">
+                    <button class="modal-window__icon" id="minimizeCallsChannels">
+                        <svg  viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                                <g data-name="minus-square">
+                                    <path
+                                        d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                    </path>
+                                    <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button id="callChannelsCloseBtn">
+                        <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-x">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                
             </div>
             <div class="modal-window__content">
                 <div class="call-modal__table-section">
@@ -2055,16 +2106,30 @@
         <!-- NO CONNECTION ERROR MODAL ENDS  -->
 
         <!-- AGENT STATUS MODAL STARTS  -->
-        <div class="modal-window   agent-status" id="agentStatusModal">
+        <div class="agent-status drag-item" id="agentStatusModal">
             <div class="modal-window__heading">
                 <h3 class="modal-window__title">Agents Status</h3>
-                <button id="agentStatusCloseBtn">
-                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
+                <div class="modal-window__icons">
+                    <button class="modal-window__icon" id="minimizeAgentStatus">
+                        <svg  viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                                <g data-name="minus-square">
+                                    <path
+                                        d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                    </path>
+                                    <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button id="agentStatusCloseBtn">
+                        <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-x">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div class="modal-window__content  scrollable">
                 <div class="agent-status__table-section">
