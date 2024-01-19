@@ -52,6 +52,7 @@ const modalsControls = () => {
         
         closeCallsInQueueModalBtn.addEventListener('click', () => {
             callsInQueueModal.classList.remove('active')
+            localStorage.removeItem('callsInQueueElementPositionAndSize')
         })
     }
 
@@ -65,6 +66,7 @@ const modalsControls = () => {
         
         closeCallsInQueueModalBtn.addEventListener('click', () => {
             callsInQueueModal.classList.remove('active')
+            localStorage.removeItem('callsInQueueElementPositionAndSize')
         })
     }
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -121,6 +123,7 @@ const modalsControls = () => {
         
         closeCallChannelsModalBtn.addEventListener('click', () => {
             callChannelsModal.classList.remove('active')
+            localStorage.removeItem('callChannelsElementPositionAndSize')
         })
     }
 
@@ -134,6 +137,7 @@ const modalsControls = () => {
         
         closeCallChannelsModalBtn.addEventListener('click', () => {
             callChannelsModal.classList.remove('active')
+            localStorage.removeItem('callChannelsElementPositionAndSize')
 
         })
     }

@@ -117,6 +117,7 @@ const toolsHandler = () => {
             agentStatusModal.classList.remove('active')
             agentStatusModal.style.width = '53.125rem'
             agentStatusModal.style.height = 'max-content'
+            localStorage.removeItem('agentStatusElementPositionAndSize')
         })
     }
 

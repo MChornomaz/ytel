@@ -114,7 +114,7 @@ const windowsControlsHandler = () => {
             callChannelsTrayElement.classList.add('active');
         callChannelsElement.classList.remove('active')
         localStorage.setItem('callChannelsInTray', true)
-        sidebarElement.style.display = 'flex';
+         
 
         callChannelsActive = true;
         } else {
@@ -149,7 +149,7 @@ const windowsControlsHandler = () => {
         callChannelsTrayElement.classList.add('active');
         callChannelsElement.classList.remove('active')
         localStorage.setItem('callChannelsInTray', true)
-        sidebarElement.style.display = 'flex';
+         
 
         callChannelsActive = true;
         if(callChannelsData.x !== 0){
@@ -165,7 +165,7 @@ const windowsControlsHandler = () => {
         const elementData = localStorage.getItem('callChannelsTemporalElementPositionAndSize')
         callChannelsTrayElement.classList.remove('active');
         callChannelsElement.classList.add('active')
-        sidebarElement.style.display = 'flex';
+         
 
         callChannelsActive = false
         checkTrayElementVisibility()
@@ -188,7 +188,7 @@ const windowsControlsHandler = () => {
         agentStatusTrayElement.classList.add('active');
         agentStatusElement.classList.remove('active')
         localStorage.setItem('agentStatusInTray', true)
-        sidebarElement.style.display = 'flex';
+         
 
         agentStatusActive = true;
         checkTrayElementVisibility()
@@ -206,7 +206,7 @@ const windowsControlsHandler = () => {
         const elementData = localStorage.getItem('agentStatusTemporalElementPositionAndSize')
         agentStatusTrayElement.classList.remove('active');
         agentStatusElement.classList.add('active')
-        sidebarElement.style.display = 'flex';
+         
 
         agentStatusActive = false
         checkTrayElementVisibility()
@@ -228,7 +228,7 @@ const windowsControlsHandler = () => {
         callsInQueueTrayElement.classList.add('active');
         callsInQueueElement.classList.remove('active')
         localStorage.setItem('callsInQueueInTray', true)
-        sidebarElement.style.display = 'flex';
+         
 
         callsInQueueActive = true;
         if(data.x !== 0){
@@ -244,7 +244,7 @@ const windowsControlsHandler = () => {
         const elementData = localStorage.getItem('callsInQueueTemporalElementPositionAndSize')
         callsInQueueTrayElement.classList.remove('active');
         callsInQueueElement.classList.add('active')
-        sidebarElement.style.display = 'flex';
+         
 
         callsInQueueActive = false
         checkTrayElementVisibility()
@@ -293,7 +293,7 @@ const windowsControlsHandler = () => {
         customerInfoDragContainer.classList.add('hidden')
         customerInfoDragContainer.classList.remove('expended')
         localStorage.setItem('customerInfoInTray', true)
-        sidebarElement.style.display = 'flex';
+         
 
         customerTrayActive = true;
     })
@@ -304,7 +304,7 @@ const windowsControlsHandler = () => {
         customerTrayElement.classList.remove('active');
         customerInfoDragContainer.classList.remove('hidden')
         scriptDragContainer.classList.remove('expended')
-        sidebarElement.style.display = 'flex';
+         
         localStorage.removeItem('customerInfoInTray', true)
         customerTrayActive = false
         checkTrayElementVisibility()
@@ -342,7 +342,7 @@ const windowsControlsHandler = () => {
         } else {
 
             const tempData = localStorage.getItem('customerTempData')
-
+            localStorage.setItem('customerInfoElementPositionAndSize', tempData)
             let { x, y, width, height, zIndex } = JSON.parse(tempData);
             customerInfoDragContainer.classList.remove('expended');
     
@@ -352,7 +352,6 @@ const windowsControlsHandler = () => {
             customerInfoElement.style.left = x + 'px';
             customerInfoElement.style.zIndex = zIndex;
             customerWindowExpanded = false
-            sidebarElement.style.display = 'flex';
             sidebarTopElement.style.transform = 'translateY(0)';
             localStorage.removeItem('customerTempData');
         }
@@ -387,6 +386,7 @@ const windowsControlsHandler = () => {
             scriptsWindowExpanded = true
         } else {
             const tempData = localStorage.getItem('scriptsTempData')
+            localStorage.setItem('scriptsElementPositionAndSize', tempData)
             let { x, y, width, height, zIndex } = JSON.parse(tempData);
             customerInfoDragContainer.classList.remove('expended');
     
@@ -396,7 +396,6 @@ const windowsControlsHandler = () => {
             scriptsElement.style.left = x + 'px';
             scriptsElement.style.zIndex = zIndex;
             scriptsWindowExpanded = false
-            sidebarElement.style.display = 'flex';
             sidebarTopElement.style.transform = 'translateY(0)';
             localStorage.removeItem('scriptsTempData');
         }
@@ -407,7 +406,7 @@ const windowsControlsHandler = () => {
     closeScriptsBtn.addEventListener('click', () => {
         scriptDragContainer.classList.add('hidden')
         scriptDragContainer.classList.remove('expended')
-        sidebarElement.style.display = 'flex';
+         
         scriptsAreActive = false;
     })
 
@@ -419,7 +418,7 @@ const windowsControlsHandler = () => {
         scriptsTrayElement.classList.add('active');
         scriptDragContainer.classList.add('hidden')
         scriptDragContainer.classList.remove('expended')
-        sidebarElement.style.display = 'flex';
+         
         localStorage.setItem('scriptsInTray', true)
         scriptsTrayActive = true;
     })
@@ -429,7 +428,7 @@ const windowsControlsHandler = () => {
         scriptsTrayElement.classList.remove('active');
         scriptDragContainer.classList.remove('hidden')
         customerInfoDragContainer.classList.remove('expended')
-        sidebarElement.style.display = 'flex';
+         
         localStorage.removeItem('scriptsInTray', true)
         scriptsTrayActive = false
         checkTrayElementVisibility()
@@ -445,7 +444,7 @@ const windowsControlsHandler = () => {
             customerInfoDragContainer.classList.toggle('minimized')
             customerInfoElement.style.height = '60px'
             customerInfoElement.style.minHeight = '60px'
-            sidebarElement.style.display = 'flex';
+             
             customerInfoMinimized = true;
         } else{
 
@@ -460,7 +459,7 @@ const windowsControlsHandler = () => {
                 customerInfoElement.style.height = '100%';
             }   
             customerInfoElement.style.minHeight = '600px'
-            sidebarElement.style.display = 'flex';
+             
             customerInfoMinimized = false;
         }
     })
@@ -473,7 +472,7 @@ const windowsControlsHandler = () => {
             scriptDragContainer.classList.toggle('minimized')
             scriptsElement.style.height = '60px'
             scriptsElement.style.minHeight = '60px'
-            sidebarElement.style.display = 'flex';
+             
             scriptsMinimized = true;
         } else{
 
@@ -487,7 +486,7 @@ const windowsControlsHandler = () => {
                 scriptsElement.style.height = '100%';
             }   
             scriptsElement.style.minHeight = '600px'
-            sidebarElement.style.display = 'flex';
+             
             scriptsMinimized = false;
         }
     })

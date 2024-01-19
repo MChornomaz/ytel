@@ -38,8 +38,6 @@ selectHandler()
 
 toolsHandler()  //- remove in the end
 
-dragCustomerInfo()
-
 dragScripts()
 
 mDialModalHandler()
@@ -61,6 +59,8 @@ dragCallsInQueue()
 dragCallChannels()
 
 windowsControlsHandler()
+
+dragCustomerInfo()
 
 
 //Working windows position logic

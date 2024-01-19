@@ -1,0 +1,2695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons  -->
+    <link rel="icon" href="assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&amp;display=swap&_v=20240119202512" rel="stylesheet">
+
+
+    <!-- CSS  -->
+    
+    <!-- BOOTSTRAP CSS  -->
+    <link href="assets/files/libs/bootstrap/bootstrap.min.css?_v=20240119202512" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="assets/css/style.min.css?_v=20240119202512">
+    <title>Ytel | Main</title>
+</head>
+
+<body class="light">
+    <main class="wrapper">
+        <div class="navigation-burger">
+            <input type="checkbox" class="navigation-burger__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation-burger__button" id="burger-label">
+                <span class="navigation-burger__icon"></span>
+            </label>
+        </div>
+        <div class="page-content">
+            <!-- SIDEBAR STARTS  -->
+            <aside class="sidebar" id="leftSidebar">
+                <div class="sidebar--top">
+                    <div class="sidebar__logo" id="logo">
+                        <picture><source srcset="assets/img/logo.webp" type="image/webp"><img src="assets/img/logo.png" alt="Ytel logo"></picture>
+                    </div>
+                    <div class="sidebar__select">
+                        <h5 class="sidebar__title">Select Campaign</h5>
+                        <div class="select" data-value="0">
+                            <button class="select__btn">
+                                <p class="select__text">Campaign 1 | Testing</p>
+                                <div class="select__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow">
+                                        <path
+                                            d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <ul class="select__dropdown">
+                                <li class="select__option">
+                                    <p class="select__option-label">Campaign 1 | Testing</p>
+                                    <span class="select__option-value">0</span>
+                                </li>
+                                <li class="select__option">
+                                    <p class="select__option-label">Campaign 2 | Testing</p>
+                                    <span class="select__option-value">1</span>
+                                </li>
+                                <li class="select__option">
+                                    <p class="select__option-label">Campaign 3 | Testing</p>
+                                    <span class="select__option-value">2</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <h5 class="sidebar__title">Tools</h5>
+
+                    <ul class="sidebar__tools-list">
+                        <li class="sidebar__tool-item" id="mDialBtn">
+                            <div class="sidebar__icon-container">
+                                <div id="sidebar-dial-pad-icon"></div>                                    
+                            </div>
+                            <p>M Dial</p>
+                        </li>
+                        <li class="sidebar__tool-item" id="scriptBtn">
+                            <div class="sidebar__icon-container">
+                                <div id="sidebar-file-icon"></div>
+                            </div>
+                            <p>Scripts</p>
+                        </li>
+                        <li class="sidebar__tool-item" id="formsBtn">
+                            <div class="sidebar__icon-container">
+                                <div id="sidebar-forms-icon"></div>
+                            </div>
+                            <p>Forms</p>
+                        </li>
+                        <li class="sidebar__tool-item" id="messageBtn">
+                            <div class="sidebar__icon-container">
+                                <div id="sidebar-message-icon"></div>
+                            </div>
+                            <p>Message</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar--bottom">
+                    <div class="sidebar__controls">
+                        <p class="sidebar__key">CallBacks</p>
+                        <p class="sidebar__value">NO</p>
+                    </div>
+                    <div class="sidebar__controls">
+                        <label class="sidebar__key" for="switch">Alt phone dial</label>
+                        <div class="switch-box">
+                            <input class="switch-box__checkbox" type="checkbox" id="switch" >
+                            <label class="switch-box__label" for="switch"></label>
+                        </div>
+                    </div>
+                    <div class="sidebar__controls">
+                        <svg class="sidebar__scale-icon" viewBox="0 0 25 25"><title>Desktop Computer</title><path id="Desktop_Computer" data-name="Desktop Computer" d="M17,23V20H8v3H5v1H20V23ZM23.75,1H1.25A1.25,1.25,0,0,0,0,2.25v15.5A1.25,1.25,0,0,0,1.25,19h22.5A1.25,1.25,0,0,0,25,17.75V2.25A1.25,1.25,0,0,0,23.75,1ZM14,17.5a.5.5,0,0,1-.5.5h-2a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h2a.5.5,0,0,1,.5.5ZM23,15H2V3.25C2,3.11,2,3,2.12,3H22.88c.13,0,.12.11.12.25Z" fill="#0e1d25"></path></svg>
+                        <div class="sidebar__scale">
+                            <button class="scale-btn" id="decreaseInterface">-</button>
+                            <div class="sidebar__current-scale" ><span id="current-scale">100</span>%</div>
+                            <button class="scale-btn" id="increaseInterface">+</button>
+                        </div>
+                    </div>
+                    <div class="sidebar__help">
+                        <svg viewBox="0 0 24 24">
+                            <g data-name="27.Question">
+                                <path
+                                    d="M12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z" />
+                                <path d="M13 16h-2v-4h1a3 3 0 1 0-3-3H7a5 5 0 1 1 6 4.9zM11 18h2v2h-2z" />
+                            </g>
+                        </svg>
+                        <p class="sidebar__key">Help</p>
+                    </div>
+                    <div class="sidebar__controls">
+                        <div class="sidebar__user" id="menuBtn">
+                            <div class="sidebar__avatar">
+                                <picture><source srcset="assets/img/avatar.webp" type="image/webp"><img src="assets/img/avatar.png" alt="User photo"></picture>
+                                <p class="sidebar__key">Arip S.</p>
+                            </div>
+                            <div class="sidebar__menu-icon" >
+                                <svg width="24" height="24">
+                                    <path
+                                        d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                                </svg>
+                            </div>
+
+                            <!-- DROPDOWN MENU STARTS -->
+                            <div class="dropdown" id="menuDropdown">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item" id="callsInQueueBtn">
+                                        <p>Calls in Queue</p>
+                                    </li>
+                                    <li class="dropdown__item" id="agentCallLogBtn">
+                                        <p>Agent Call Log</p>
+                                    </li>
+                                    <li class="dropdown__item" id="callChannelsBtn">
+                                        <p>Call Channels</p>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled">
+                                        <p>Notification</p>
+                                        <span class="dropdown__item-value">ON</span>
+                                    </li>
+                                    <li class="dropdown__item" id="groupSelectionBtn">
+                                        <p>Groups</p>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled" id="toggleSidebarLeftBtn">
+                                        <p>Toggle sidebar</p>
+                                        <span id="toggleSidebarLeft" class="dropdown__item-value">Left</span>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled" id="themeBtn">
+                                        <p>Change Theme</p>
+                                        <span id="themeName" class="dropdown__item-value">Light</span>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled" id="reset">
+                                        <p>Reset interface</p>
+                                    </li>
+                                    <li class="dropdown__item text-red">
+                                        <p>Log out</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- DROPDOWN MENU ENDS -->
+                        </div>
+
+                    </div>
+                </div>
+            </aside>
+            <!-- SIDEBAR ENDS  -->
+
+            <!-- SIDEBAR APPROACH2 STARTS  -->
+
+            <aside class="vertical-sidebar" id="verticalSidebar">
+                <div class="vertical-sidebar--left">
+                    <div class="vertical-sidebar__logo">
+                        <picture><source srcset="assets/img/logo.webp" type="image/webp"><img src="assets/img/logo.png" alt="Ytel logo"></picture>
+                    </div>
+
+                    <ul class="vertical-sidebar__tools-list">
+                        <li class="vertical-sidebar__tool-item" id="mDialBtnHorizontalSidebar">
+                            <div class="vertical-sidebar__icon-container">
+                                <div id="sidebar2-dial-pad-icon"></div> 
+                                    
+                            </div>
+                            <p>M Dial</p>
+                        </li>
+                        <li class="vertical-sidebar__tool-item" id="scriptBtn1">
+                            <div class="vertical-sidebar__icon-container">
+                                <div id="sidebar2-file-icon"></div>
+                            </div>
+                            <p>Scripts</p>
+                        </li>
+                        <li class="vertical-sidebar__tool-item" id="formsBtn1">
+                            <div class="vertical-sidebar__icon-container">
+                                <div id="sidebar2-forms-icon"></div>
+                            </div>
+                            <p>Forms</p>
+                        </li>
+                        <li class="vertical-sidebar__tool-item" id="messageBtn1">
+                            <div class="vertical-sidebar__icon-container">
+                                <div id="sidebar2-message-icon"></div>
+                            </div>
+                            <p>Message</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="vertical-sidebar--right">
+                    <div class="vertical-sidebar__controls">
+                        <label class="vertical-sidebar__key" for="switchVerticalSidebar">Alt phone dial</label>
+                        <div class="switch-box">
+                            <input class="switch-box__checkbox" type="checkbox" id="switchVerticalSidebar" >
+                            <label class="switch-box__label" for="switchVerticalSidebar"></label>
+                        </div>
+                    </div>
+                    <div class="vertical-sidebar__controls">
+                        <div class="sidebar__scale">
+                            <button class="scale-btn" id="decreaseInterface1">-</button>
+                            <div class="sidebar__current-scale"><span id="current-scale1">100</span>%</div>
+                            <button class="scale-btn" id="increaseInterface1">+</button>
+                        </div>
+                    </div>
+                    <div class="vertical-sidebar__help">
+                        <svg viewBox="0 0 24 24">
+                            <g data-name="27.Question">
+                                <path
+                                    d="M12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z" />
+                                <path d="M13 16h-2v-4h1a3 3 0 1 0-3-3H7a5 5 0 1 1 6 4.9zM11 18h2v2h-2z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="vertical-sidebar__controls">
+                        <div class="vertical-sidebar__user" id="verticalMenuBtn">
+                            <div class="vertical-sidebar__avatar">
+                                <picture><source srcset="assets/img/avatar.webp" type="image/webp"><img src="assets/img/avatar.png" alt="User photo"></picture>
+                                <p class="vertical-sidebar__key">Arip S.</p>
+                            </div>
+                            <div class="vertical-sidebar__menu-icon" >
+                                <svg width="24" height="24">
+                                    <path
+                                        d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                                </svg>
+                            </div>
+
+                            <!-- DROPDOWN MENU STARTS -->
+                            <div class="dropdown vertical" id="menuDropdownVertical">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item" id="callsInQueueBtn1">
+                                        <p>Calls in Queue</p>
+                                    </li>
+                                    <li class="dropdown__item" id="agentCallLogBtn1">
+                                        <p>Agent Call Log</p>
+                                    </li>
+                                    <li class="dropdown__item" id="callChannelsBtn1">
+                                        <p>Call Channels</p>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled">
+                                        <p>Notification</p>
+                                        <span class="dropdown__item-value">ON</span>
+                                    </li>
+                                    <li class="dropdown__item" id="groupSelectionBtn1">
+                                        <p>Groups</p>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled" id="toggleSidebarTopBtn">
+                                        <p>Toggle sidebar</p>
+                                        <span id="toggleSidebarTop" class="dropdown__item-value">Top</span>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled" id="themeBtn2">
+                                        <p>Change Theme</p>
+                                        <span id="themeName2" class="dropdown__item-value">Light</span>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--doubled" id="reset1">
+                                        <p>Reset interface</p>
+                                    </li>
+                                    <li class="dropdown__item text-red">
+                                        <p>Log out</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- DROPDOWN MENU ENDS -->
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- SIDEBAR APPROACH 2 ENDS  -->
+
+            <!-- CONTENT STARTS -->
+            <div class="content" id="content">
+
+                <!-- CALL CONTROLS STARTS  -->
+                <div class="heading">
+
+                    <!-- INITIAL CALL CONTROLS STARTS -->
+                    <section class="call-controls" id="initialCallControls">
+                        <div class="call-controls--top">
+                            <div class="call-controls__buttons">
+                                <button class="call-control-btn active-btn" disabled>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 18a6 6 0 0 0 6-6V6A6 6 0 0 0 6 6v6a6 6 0 0 0 6 6zM8 6a4 4 0 0 1 8 0v6a4 4 0 0 1-8 0z" />
+                                        <path
+                                            d="M21 12a1 1 0 0 0-2 0 7 7 0 0 1-14 0 1 1 0 0 0-2 0 9 9 0 0 0 8 8.94V22h-1a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2h-1v-1.06A9 9 0 0 0 21 12z" />
+                                    </svg>
+                                    <p>Active</p>
+                                </button>
+                                <button class="call-control-btn pause-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <g data-name="pause circle">
+                                            <path
+                                                d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z" />
+                                            <path
+                                                d="M14 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0zM8 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0z" />
+                                        </g>
+                                    </svg>
+                                    <p>Pause</p>
+                                </button>
+                            </div>
+                            <div class="call-controls__data">
+                                <p class="call-controls__status" id="callStatus1">Paused</p>
+                                <div class="call-controls__loading">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="call-controls__progress long">
+                                <div class="progress-bar">
+                                    <div class="progress-line">
+                                        <div class="progress-line__progress paused">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="call-controls__time-block">
+                                <p class="call-controls__time">00:00:12</p>
+                                <p class="call-controls__time-status">Time Paused</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- INITIAL CALL CONTROLS ENDS -->
+
+                    <!-- ACTIVE CALL CONTROLS STARTS -->
+
+                    <section class="call-controls extended hidden" id="activeCallControls">
+                        <div class="call-controls--top">
+                            <div class="call-controls__buttons">
+                                <button class="call-control-btn active-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 18a6 6 0 0 0 6-6V6A6 6 0 0 0 6 6v6a6 6 0 0 0 6 6zM8 6a4 4 0 0 1 8 0v6a4 4 0 0 1-8 0z" />
+                                        <path
+                                            d="M21 12a1 1 0 0 0-2 0 7 7 0 0 1-14 0 1 1 0 0 0-2 0 9 9 0 0 0 8 8.94V22h-1a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2h-1v-1.06A9 9 0 0 0 21 12z" />
+                                    </svg>
+                                    <p>Active</p>
+                                </button>
+                                <button class="call-control-btn pause-btn" disabled>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <g data-name="pause circle">
+                                            <path
+                                                d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z" />
+                                            <path
+                                                d="M14 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0zM8 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0z" />
+                                        </g>
+                                    </svg>
+                                    <p>Pause</p>
+                                </button>
+                            </div>
+                            <div class="call-controls__data">
+                                <p class="call-controls__status" id="callStatus">Locating Contact</p>
+                                <div class="call-controls__loading calling">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="call-controls__progress">
+                                <div class="progress-bar">
+                                    <div class="progress-line">
+                                        <div class="progress-line__progress calling">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="call-controls__time-block">
+                                <p class="call-controls__time calling">00:00:12</p>
+                                <p class="call-controls__time-status">Call Time</p>
+                            </div>
+
+
+                            <button class="call-controls__scale-btn" id="callControlsScaleBtn">
+
+                                <svg version="1.1" viewBox="0 0 137.145 137.145"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    enable-background="new 0 0 137.145 137.145">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M109.715,0H27.429C12.28,0,0,12.281,0,27.428v82.287c0,15.148,12.28,27.429,27.429,27.429h82.286    c15.148,0,27.429-12.281,27.429-27.429V27.428C137.144,12.281,124.864,0,109.715,0z M123.43,102.858    c0,11.361-9.21,20.572-20.571,20.572H61.715V61.715h61.715V102.858z M123.43,48H13.715v13.715h34.286v61.715H34.286    c-11.362,0-20.572-9.211-20.572-20.572V61.715h0V48h0V34.286c0-11.361,9.21-20.572,20.572-20.572h68.572    c11.361,0,20.571,9.211,20.571,20.572V48z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            </button>
+                        </div>
+
+                        <div class="call-controls--bottom" id="callBottom1">
+                            <div class="call-controls__call-info">
+                                <p>Called</p>
+                                <p class="call-number">(9193) 4141 411</p>
+                            </div>
+                            <div class="call-controls__controls">
+                                <div class="call-controls__info-row">
+                                    <div class="call-controls__calls-data-row">
+                                        <p>Dialable Leads</p>
+                                        <span class="call-controls__ammount">0</span>
+                                    </div>
+                                    <div class="call-controls__calls-data-row">
+                                        <p>Calls in Queue</p>
+                                        <span class="call-controls__ammount">0</span>
+                                    </div>
+                                </div>
+                                <div class="call-controls__control-buttons">
+                                    <button class="transparent-blue-btn">Hold</button>
+                                    <div class="select call-select" data-value="+1">
+                                        <button class="select__btn">
+                                            <p class="select__text">Transfer</p>
+                                            <div class="select__icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                                    id="keyboard-down-arrow1">
+                                                    <path
+                                                        d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown call-select">
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 1</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 2</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 3</p>
+                                                <span class="select__option-value">3</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <button class="transparent-blue-btn">Voice Mail</button>
+                                    <button class="red-btn">Hangup</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- ACTIVE CALL CONTROLS ENDS -->
+
+
+                    <!-- PAUSED CALL CONTROLS STARTS -->
+
+                    <section class="call-controls extended hidden" id="pausedCallControls">
+                        <div class="call-controls--top-extended">
+                            <div class="call-controls__wrapper">
+                                <div class="call-controls__buttons">
+                                    <button class="call-control-btn active-btn" disabled>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 18a6 6 0 0 0 6-6V6A6 6 0 0 0 6 6v6a6 6 0 0 0 6 6zM8 6a4 4 0 0 1 8 0v6a4 4 0 0 1-8 0z" />
+                                            <path
+                                                d="M21 12a1 1 0 0 0-2 0 7 7 0 0 1-14 0 1 1 0 0 0-2 0 9 9 0 0 0 8 8.94V22h-1a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2h-1v-1.06A9 9 0 0 0 21 12z" />
+                                        </svg>
+                                        <p>Active</p>
+                                    </button>
+                                    <button class="call-control-btn pause-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <g data-name="pause circle">
+                                                <path
+                                                    d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z" />
+                                                <path
+                                                    d="M14 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0zM8 8v8a1 1 0 0 0 2 0V8a1 1 0 0 0-2 0z" />
+                                            </g>
+                                        </svg>
+                                        <p>Pause</p>
+                                    </button>
+                                </div>
+                                <button class="transparent-blue-btn dial-btn">Dial Next Number</button>
+                                <div class="call-controls__data">
+                                    <p class="call-controls__status paused" id="callStatus3">Recording file</p>
+                                    <p class="call-controls__file-name">1931-recordfile.mp3</p>
+                                </div>
+                            </div>
+                            <div class="call-controls__wrapper">
+
+                                <div class="call-controls__progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-line ">
+                                            <div class="progress-line__progress paused" style="left: -40%">
+                                                <div class="progress-point paused"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="call-controls__time-block">
+                                    <p class="call-controls__time calling paused">00:00:12</p>
+                                    <p class="call-controls__time-status">Call Time</p>
+                                </div>
+
+                                <button class="call-controls__scale-btn call-controls__scale-btn--static"
+                                    id="pausedCallControlsScaleBtn">
+                                    <svg version="1.1" viewBox="0 0 137.145 137.145"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        enable-background="new 0 0 137.145 137.145">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M109.715,0H27.429C12.28,0,0,12.281,0,27.428v82.287c0,15.148,12.28,27.429,27.429,27.429h82.286    c15.148,0,27.429-12.281,27.429-27.429V27.428C137.144,12.281,124.864,0,109.715,0z M123.43,102.858    c0,11.361-9.21,20.572-20.571,20.572H61.715V61.715h61.715V102.858z M123.43,48H13.715v13.715h34.286v61.715H34.286    c-11.362,0-20.572-9.211-20.572-20.572V61.715h0V48h0V34.286c0-11.361,9.21-20.572,20.572-20.572h68.572    c11.361,0,20.571,9.211,20.571,20.572V48z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="call-controls--bottom" id="callBottom2">
+                            <div class="call-controls__call-info">
+                                <p>Called</p>
+                                <p class="call-number">(9193) 4141 411</p>
+                            </div>
+                            <div class="call-controls__controls">
+                                <div class="call-controls__info-row">
+                                    <div class="call-controls__calls-data-row">
+                                        <p>Dialable Leads</p>
+                                        <span class="call-controls__ammount">0</span>
+                                    </div>
+                                    <div class="call-controls__calls-data-row">
+                                        <p>Calls in Queue</p>
+                                        <span class="call-controls__ammount">0</span>
+                                    </div>
+                                </div>
+                                <div class="call-controls__control-buttons">
+                                    <button class="transparent-blue-btn">Hold</button>
+                                    <div class="select call-select" data-value="+1">
+                                        <button class="select__btn">
+                                            <p class="select__text">Transfer</p>
+                                            <div class="select__icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                                    id="keyboard-down-arrow2">
+                                                    <path
+                                                        d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <ul class="select__dropdown call-select">
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 1</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 2</p>
+                                                <span class="select__option-value">2</span>
+                                            </li>
+                                            <li class="select__option">
+                                                <p class="select__option-label">Transfer 3</p>
+                                                <span class="select__option-value">3</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="transparent-blue-btn">Voice Mail</button>
+                                    <button class="red-btn">Hangup</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- PAUSED CALL CONTROLS ENDS -->
+                </div>
+
+
+                <!-- CALL CONTROLS ENDS  -->
+
+                <!-- WORKING AREA STARTS  -->
+
+                <section class="working-area" id="workingArea">
+                    <div class="working-area__drag-container" id="customerInfoDragContainer">
+
+                        <!-- CUSTOMER INFO STARTS  -->
+                        <div class="working-area__item drag-item" id="customerWindow">
+                            <div class="working-area__data" id="customerWindowHeader">
+                                <h3 class="working-area__title">Customer Info</h3>
+                                <div class="working-area__icons">
+                                    <button class="working-area__icon" id="unlockCustomer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="minus1">
+                                            <g data-name="Layer 2">
+                                                <g data-name="minus-square">
+                                                    <path
+                                                        d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                                    </path>
+                                                    <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button class="working-area__icon" id="expendCustomer">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8L21 3M21 3H16M21 3V8M8 8L3 3M3 3L3 8M3 3L8 3M8 16L3 21M3 21H8M3 21L3 16M16 16L21 21M21 21V16M21 21H16"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="working-area__icon" id="minimizeCustomer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 32 32"
+                                            id="down-arrow">
+                                            <path
+                                                d="M16 22a2 2 0 0 1-1.41-.59l-10-10a2 2 0 0 1 2.82-2.82L16 17.17l8.59-8.58a2 2 0 0 1 2.82 2.82l-10 10A2 2 0 0 1 16 22Z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="customer-form">
+                                <div class="customer-form__row">
+                                    <div class="input-field">
+                                        <label for="title">Title</label>
+                                        <input type="text" placeholder="Input title" id="title">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="name">Full Name</label>
+                                        <input type="text" placeholder="Input full name" id="name">
+                                    </div>
+                                </div>
+                                <div class="customer-form__row">
+                                    <div class="input-field">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" placeholder="Input phone number" id="phone1">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="altPhone">Alt. Phone Number</label>
+                                        <input type="tel" placeholder="Input alt. phone number" id="altPhone">
+                                    </div>
+                                </div>
+                                <div class="customer-form__row">
+                                    <div class="input-field">
+                                        <label for="email">Email</label>
+                                        <input type="email" placeholder="Input email" id="email">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="security">Security Phrase</label>
+                                        <input type="text" placeholder="Input security phrase" id="security">
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <label for="address1">Address Line 1</label>
+                                    <input type="text" placeholder="Input address line 1" id="address1">
+                                </div>
+                                <div class="input-field">
+                                    <label for="address2">Address Line 2</label>
+                                    <input type="text" placeholder="Input address line 2" id="address2">
+                                </div>
+                                <div class="customer-form__row">
+                                    <div class="input-field">
+                                        <label>City</label>
+                                        <div class="select customer-form__select" data-value="0">
+                                            <button class="select__btn">
+                                                <p class="select__text">Choose city</p>
+                                                <div class="select__icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                                        id="keyboard-down-arrow3">
+                                                        <path
+                                                            d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                            <ul class="select__dropdown">
+                                                <li class="select__option">
+                                                    <p class="select__option-label">City 1</p>
+                                                    <span class="select__option-value">0</span>
+                                                </li>
+                                                <li class="select__option">
+                                                    <p class="select__option-label">City 2</p>
+                                                    <span class="select__option-value">1</span>
+                                                </li>
+                                                <li class="select__option">
+                                                    <p class="select__option-label">City 3</p>
+                                                    <span class="select__option-value">2</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="state">State</label>
+                                        <div class="select customer-form__select" data-value="0">
+                                            <button class="select__btn">
+                                                <p class="select__text">Choose state</p>
+                                                <div class="select__icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                                        id="keyboard-down-arrow4">
+                                                        <path
+                                                            d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                            <ul class="select__dropdown">
+                                                <li class="select__option">
+                                                    <p class="select__option-label">State 1</p>
+                                                    <span class="select__option-value">0</span>
+                                                </li>
+                                                <li class="select__option">
+                                                    <p class="select__option-label">State 2</p>
+                                                    <span class="select__option-value">1</span>
+                                                </li>
+                                                <li class="select__option">
+                                                    <p class="select__option-label">State 3</p>
+                                                    <span class="select__option-value">2</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customer-form__row">
+                                    <div class="input-field">
+                                        <label for="province">Province</label>
+                                        <div class="select customer-form__select" data-value="0">
+                                            <button class="select__btn">
+                                                <p class="select__text">Choose province</p>
+                                                <div class="select__icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                                        id="keyboard-down-arrow5">
+                                                        <path
+                                                            d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                            <ul class="select__dropdown">
+                                                <li class="select__option">
+                                                    <p class="select__option-label">Province 1</p>
+                                                    <span class="select__option-value">0</span>
+                                                </li>
+                                                <li class="select__option">
+                                                    <p class="select__option-label">Province 2</p>
+                                                    <span class="select__option-value">1</span>
+                                                </li>
+                                                <li class="select__option">
+                                                    <p class="select__option-label">Province 3</p>
+                                                    <span class="select__option-value">2</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="postCode">Post Code</label>
+                                        <input type="number" placeholder="Input post code" id="postCode">
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <label for="comment">Comment</label>
+                                    <textarea placeholder="Write comment here..." id="comment"
+                                        rows="5"></textarea>
+                                </div>
+
+                            </div>
+                            <!-- CUSTOMER INFO ENDS  -->
+                        </div>
+                    </div>
+
+                    <div class="working-area__drag-container" id="scriptDragContainer">
+                        <!-- SCRIPTS SECTION STARTS  -->
+                        <div class="working-area__item drag-item" id="scriptsElement">
+                            <div class="working-area__data">
+                                <h3 class="working-area__title">Scripts</h3>
+                                <div class="working-area__icons">
+                                    <button class="working-area__icon" id="unlockScripts">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="minus">
+                                            <g data-name="Layer 2">
+                                                <g data-name="minus-square">
+                                                    <path
+                                                        d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                                    </path>
+                                                    <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button class="working-area__icon" id="expendScripts">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8L21 3M21 3H16M21 3V8M8 8L3 3M3 3L3 8M3 3L8 3M8 16L3 21M3 21H8M3 21L3 16M16 16L21 21M21 21V16M21 21H16"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="working-area__icon" id="minimizeScripts">
+                                        <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 32 32"
+                                            id="down-arrow1">
+                                            <path
+                                                d="M16 22a2 2 0 0 1-1.41-.59l-10-10a2 2 0 0 1 2.82-2.82L16 17.17l8.59-8.58a2 2 0 0 1 2.82 2.82l-10 10A2 2 0 0 1 16 22Z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button class="working-area__icon" id="closeScripts">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-x">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="scripts__content">
+                                <textarea name="scripts"></textarea>
+                                <button class="scripts__refresh">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="refresh">
+                                        <path d="M20,9H15a1,1,0,0,1,0-2h4V3a1,1,0,0,1,2,0V8A1,1,0,0,1,20,9Z"></path>
+                                        <path
+                                            d="M12,22A10,10,0,1,1,20.89,7.42a1,1,0,0,1-1.78.92A8,8,0,1,0,20,12a1,1,0,0,1,2,0A10,10,0,0,1,12,22Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- SCRIPTS SECTION ENDS  -->
+                    </div>
+
+
+
+
+                </section>
+                <!-- WORKING AREA STARTS  -->
+
+                <!-- FOOTER STARTS -->
+                <footer class="footer">
+                    <p class="footer__text">Copyright © 2023 Ytel, IncTM All Right Reserved.</p>
+                    <div class="footer__buttons">
+                        <button class="footer__button footer__record">
+                            <div class="footer__record--white centered">
+                                <div class="footer__record--pink centered">
+                                    <div class="footer__record--red centered"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="footer__button footer__call">
+                            <svg version="1.1" x="0" y="0" viewBox="0 0 32 32">
+                                <path
+                                    d="M22.969 31.818c-3.438 0-7.908-2.857-13.918-8.868C2.361 16.26-.423 11.479.292 7.905c.779-3.897 5.188-6.875 5.375-7a1 1 0 0 1 1.262.125L14 8.101a.999.999 0 0 1 0 1.414l-3.177 3.177c.251.501 1.092 1.809 3.884 4.601s4.1 3.633 4.602 3.884L22.485 18a1.03 1.03 0 0 1 1.414 0l7.071 7.071a1 1 0 0 1 .125 1.262c-.125.188-3.104 4.596-7 5.375-.363.073-.738.11-1.126.11zM6.125 3.053c-1.139.9-3.412 2.944-3.872 5.244-.556 2.78 2.207 7.234 8.212 13.239 6.005 6.005 10.456 8.767 13.239 8.212 2.299-.46 4.344-2.733 5.243-3.872l-5.754-5.754-2.828 2.829c-.732.733-2.096.732-7.071-4.243-2.119-2.118-3.513-3.769-4.145-4.906-.537-.965-.569-1.694-.098-2.165l2.829-2.829-5.755-5.755z"
+                                    style="fill:#ffffff" />
+                                <path class="st0"
+                                    d="M29.964 16.002a1 1 0 0 1-.996-.93c-.452-6.41-5.627-11.587-12.038-12.039a1 1 0 1 1 .141-1.995c7.399.522 13.37 6.496 13.891 13.894A1 1 0 0 1 30.035 16l-.071.002z" />
+                                <path
+                                    d="M23.937 15.992a1 1 0 0 1-.991-.875 6.985 6.985 0 0 0-6.069-6.063.999.999 0 1 1 .248-1.984 8.983 8.983 0 0 1 7.806 7.797 1 1 0 0 1-.994 1.125z" />
+                            </svg>
+                        </button>
+                    </div>
+                </footer>
+                <!-- FOOTER ENDS -->
+            </div>
+
+            <!-- TRAY SECTION STARTS  -->
+            <div class="tray active" id="tray">
+                <div class="tray__item" id="callsInQueueTray">
+                    <p class="tray__name">Calls in Queue</p>
+                    <div class="tray__icons">
+                        <button class="tray__icon" id="calsInQueueExpectBtn">
+                            <picture><source srcset="assets/img/icons/expect.webp" type="image/webp"><img src="assets/img/icons/expect.png" alt="expect icon"></picture>
+                        </button>
+                        <button class="tray__icon">
+                            <picture><source srcset="assets/img/icons/link.webp" type="image/webp"><img src="assets/img/icons/link.png" alt="link icon"></picture>
+                        </button>
+                    </div>
+                </div>
+                <div class="tray__item" id="customerInfoTray">
+                    <p class="tray__name">Customer Info</p>
+                    <div class="tray__icons">
+                        <button class="tray__icon" id="customerInfoExpectBtn">
+                            <picture><source srcset="assets/img/icons/expect.webp" type="image/webp"><img src="assets/img/icons/expect.png" alt="expect icon"></picture>
+                        </button>
+                        <button class="tray__icon">
+                            <picture><source srcset="assets/img/icons/link.webp" type="image/webp"><img src="assets/img/icons/link.png" alt="link icon"></picture>
+                        </button>
+                    </div>
+                </div>
+                <div class="tray__item " id="scriptsTray">
+                    <p class="tray__name">Scripts</p>
+                    <div class="tray__icons">
+                        <button class="tray__icon" id="scriptsExpectBtn">
+                            <picture><source srcset="assets/img/icons/expect.webp" type="image/webp"><img src="assets/img/icons/expect.png" alt="expect icon"></picture>
+                        </button>
+                        <button class="tray__icon">
+                            <picture><source srcset="assets/img/icons/link.webp" type="image/webp"><img src="assets/img/icons/link.png" alt="link icon"></picture>
+                        </button>
+                    </div>
+                </div>
+                <div class="tray__item " id="agentStatusTray">
+                    <p class="tray__name">Agent Status</p>
+                    <div class="tray__icons">
+                        <button class="tray__icon" id="agentStatusExpectBtn">
+                            <picture><source srcset="assets/img/icons/expect.webp" type="image/webp"><img src="assets/img/icons/expect.png" alt="expect icon"></picture>
+                        </button>
+                        <button class="tray__icon">
+                            <picture><source srcset="assets/img/icons/link.webp" type="image/webp"><img src="assets/img/icons/link.png" alt="link icon"></picture>
+                        </button>
+                    </div>
+                </div>
+                <div class="tray__item " id="callChannelsTray">
+                    <p class="tray__name">Call Channels</p>
+                    <div class="tray__icons">
+                        <button class="tray__icon" id="callChannelsExpectBtn">
+                            <picture><source srcset="assets/img/icons/expect.webp" type="image/webp"><img src="assets/img/icons/expect.png" alt="expect icon"></picture>
+                        </button>
+                        <button class="tray__icon">
+                            <picture><source srcset="assets/img/icons/link.webp" type="image/webp"><img src="assets/img/icons/link.png" alt="link icon"></picture>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- TRAY SECTION ENDS  -->
+
+        
+        <!-- CONTENT ENDS -->
+        </div>
+
+
+        <!-- MODALS STARTS  -->
+
+        <!-- BACKDROP -->
+        <div class="backdrop"></div>
+
+
+
+        <!-- MANUAL DIAL MODAL STARTS  -->
+        <div class="modal-window" id="manualDial">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Manual Dial</h3>
+                <button id="mdialCloseBbtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="modal-window__dial">
+                    <div class="customer-form__row modal-window__inputs">
+
+                        <div class=" code-field">
+                            <div class="select m-select" data-value="+1">
+                                <button class="select__btn">
+                                    <p class="select__text">+1</p>
+                                    <div class="select__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow6">
+                                            <path
+                                                d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <ul class="select__dropdown">
+                                    <li class="select__option">
+                                        <p class="select__option-label">+2</p>
+                                        <span class="select__option-value">+2</span>
+                                    </li>
+                                    <li class="select__option">
+                                        <p class="select__option-label">+3</p>
+                                        <span class="select__option-value">+3</span>
+                                    </li>
+                                    <li class="select__option">
+                                        <p class="select__option-label">+4</p>
+                                        <span class="select__option-value">+4</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input class="modal-window__input" type="text" placeholder="eg. 18391913" id="call-number">
+                    </div>
+                    <div class="modal-window__keyboard">
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number1">1</div>
+                            <div class="number" id="number2">2</div>
+                            <div class="number" id="number3">3</div>
+                        </div>
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number4">4</div>
+                            <div class="number" id="number5">5</div>
+                            <div class="number" id="number6">6</div>
+                        </div>
+                        <div class="modal-window__key-row">
+                            <div class="number" id="number7">7</div>
+                            <div class="number" id="number8">8</div>
+                            <div class="number" id="number9">9</div>
+                        </div>
+                        <div class="modal-window__key-row">
+                            <div class="number" id="numberStar">*</div>
+                            <div class="number" id="number0">0</div>
+                            <div class="number" id="numberHash">#</div>
+                        </div>
+                        <div class="centered">
+                            <button class="modal-window__call-btn" id="callBtn">
+                                <svg x="0" y="0" version="1.1" viewBox="0 0 29 29" xml:space="preserve">
+                                    <path
+                                        d="m20.914 17.743-2.091 1.178a1.319 1.319 0 0 1-1.58-.217l-6.979-6.979a1.32 1.32 0 0 1-.217-1.58l1.178-2.091a1.978 1.978 0 0 0-.325-2.37L7.766 2.55a1.978 1.978 0 0 0-2.798 0L3.545 3.972a5.276 5.276 0 0 0-.793 6.446l.714 1.19a41.36 41.36 0 0 0 14.946 14.631l.141.081c2.102 1.201 4.699.851 6.382-.831l1.486-1.486a1.978 1.978 0 0 0 0-2.798l-3.136-3.136a1.978 1.978 0 0 0-2.371-.326z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-window__logs">
+                    <div class="modal-window__log-heading">
+                        <h4>Call Log</h4>
+                        <p><span class="plus">+</span>Complete All Log</p>
+                    </div>
+                    <div class="modal-window__log-list">
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar pink">JD</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Jakob Dorwart</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar green">EW</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Emerson Westervelt</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar grey">TP</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Tiana Press</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                        <div class="modal-window__log">
+                            <div class="modal-window__log-info">
+                                <div class="modal-window__log-avatar green">AD</div>
+                                <div class="modal-window__log-details">
+                                    <h6>Adnan Daryl</h6>
+                                    <p>+13113-18391</p>
+                                </div>
+                            </div>
+                            <p class="modal-window__log-time">30m ago</p>
+                        </div>
+                    </div>
+
+                    <p class="modal-window__log-btn">Quick Dial</p>
+                    <p class="modal-window__log-btn">Last Number Connected</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- MANUAL DIAL MODAL ENDS  -->
+
+        <!-- DISPO MODAL STARTS  -->
+        <div class="modal-window" id="dispoModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Dispo</h3>
+                <button id="dispoCloseBtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="rate-section">
+                    <p class="rate-section__number-name">Unknown Number</p>
+                    <p class="rate-section__number">+1 8171 831</p>
+                    <button class="rate-section__btn">Hangup Again</button>
+                    <p class="rate-section__question">How would you like to rate your last call experience ?</p>
+                    <div class="rate-section__stars">
+                        <svg viewBox="0 0 24 24" id="star">
+                            <g data-name="Layer 2">
+                                <g data-name="star">
+                                    <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                                    <path
+                                        d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg viewBox="0 0 24 24" id="star1">
+                            <g data-name="Layer 2">
+                                <g data-name="star">
+                                    <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                                    <path
+                                        d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg viewBox="0 0 24 24" id="star2">
+                            <g data-name="Layer 2">
+                                <g data-name="star">
+                                    <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                                    <path
+                                        d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg viewBox="0 0 24 24" id="star3">
+                            <g data-name="Layer 2">
+                                <g data-name="star">
+                                    <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                                    <path
+                                        d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg viewBox="0 0 24 24" id="star4">
+                            <g data-name="Layer 2">
+                                <g data-name="star">
+                                    <rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect>
+                                    <path
+                                        d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="result-section">
+                    <h4>Whats Next?</h4>
+                    <div class="result-section__row">
+                        <div class="result-section__radio">
+                            <label for="transferred" class="radio__field">
+                                <input type="radio" name="call-result" id="transferred" class="radio">
+                                <div class="radio__mark"></div>
+                            </label>
+                            <label for="transferred">Call Transferred</label>
+                        </div>
+                        <div class="result-section__radio">
+                            <label for="no-result" class="radio__field">
+                                <input type="radio" name="call-result" id="no-result" class="radio">
+                                <div class="radio__mark"></div>
+                            </label>
+                            <label for="no-result">No Answer</label>
+                        </div>
+                    </div>
+                    <div class="result-section__row">
+                        <div class="result-section__radio">
+                        <label for="machine" class="radio__field">
+                            <input type="radio" name="call-result" id="machine" class="radio">
+                            <div class="radio__mark"></div>
+                        </label>
+                            <label for="machine">Answering Machine</label>
+                        </div>
+                        <div class="result-section__radio">
+                            <label for="sale-made" class="radio__field">
+                                <input type="radio" name="call-result" id="sale-made" class="radio">
+                                <div class="radio__mark"></div>
+                            </label>
+                            <label for="sale-made">Sale Made</label>
+                        </div>
+                    </div>
+                    <div class="result-section__row">
+                        <div class="result-section__radio">
+                            <label for="callback" class="radio__field">
+                                <input type="radio" name="call-result" id="callback" class="radio">
+                                <div class="radio__mark"></div>
+                            </label>
+                            <label for="callback">Call Back</label>
+                        </div>
+                        <div class="result-section__radio">
+                            <label for="not-call" class="radio__field">
+                                <input type="radio" name="call-result" id="not-call" class="radio">
+                                <div class="radio__mark"></div>
+                            </label>
+                            <label for="not-call">Do Not Call</label>
+                        </div>
+                    </div>
+                    <div class="result-section__row">
+                        <div class="result-section__radio">
+                            <label for="not-interested" class="radio__field">
+                                <input type="radio" name="call-result" id="not-interested" class="radio">
+                                <div class="radio__mark"></div>
+                            </label>
+                            <label for="not-interested">Not Interested</label>
+                        </div>
+                        <div class="result-section__radio">
+                            <label for="busy" class="radio__field">
+                                <input type="radio" name="call-result" id="busy" class="radio">
+                                <div class="radio__mark"></div>
+                            </label>
+                            <label for="busy">Busy</label>
+                        </div>
+                    </div>
+                    <div class="result-section__wide-row">
+                        <p>Pause Dialing</p>
+                        <div class="switch-box">
+                            <input class="switch-box__checkbox" type="checkbox" id="pause-dialing" >
+                            <label class="switch-box__label" for="pause-dialing"></label>
+                        </div>
+                    </div>
+                    <div class="result-section__checkbox">
+                        <input type="checkbox" name="remember-pause-dialing" id="remember-pause">
+                        <label for="remember-pause">Remember Pause Dialing</label>
+                    </div>
+                </div>
+            </div>
+            <div class="dispo-modal__footer">
+                <div class="dispo-modal__footer-buttons">
+                    <button class="transparent-blue-btn">Clear</button>
+                    <button class="transparent-blue-btn">Web Form Submit</button>
+                    <button class="blue-btn">Submit</button>
+                </div>
+            </div>
+        </div>
+        <!-- DISPO MODAL ENDS  -->
+
+        <!-- GROUP SELECTION MODAL STARTS  -->
+        <div class="modal-window group " id="groupSelectionModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Group Selection</h3>
+                <button id="groupSelectionCloseBtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="group__section">
+                    <div class="group__heading">
+                        <h4>Available Groups</h4>
+                        <button class="group__select-all-btn">Select All</button>
+                    </div>
+                    <div class="group__row">
+                        <div class="group__checkbox">
+                            <label for="group1" class="checkbox__field">
+                                <input type="checkbox" name="group" id="group1" class="group_checkbox-input checkbox">
+                                <div class="checkbox__img">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.916504 4.58301L3.24984 6.91634L9.08317 1.08301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <label for="group1">Group 1</label>
+                        </div>
+                        <div class="group__checkbox">
+                            <label for="group6" class="checkbox__field">
+                                <input type="checkbox" name="group" id="group6" class="group_checkbox-input checkbox">
+                                <div class="checkbox__img">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.916504 4.58301L3.24984 6.91634L9.08317 1.08301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <label for="group6">Group 6</label>
+                        </div>
+                    </div>
+                    <div class="group__row">
+                        <div class="group__checkbox">
+                            <label for="group2" class="checkbox__field">
+                                <input type="checkbox" name="group" id="group2" class="group_checkbox-input checkbox">
+                                <div class="checkbox__img">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.916504 4.58301L3.24984 6.91634L9.08317 1.08301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <label for="group2">Group 2</label>
+                        </div>
+                        <div class="group__checkbox">
+                            <label for="group7" class="checkbox__field">
+                                <input type="checkbox" name="group" id="group7" class="group_checkbox-input checkbox">
+                                <div class="checkbox__img">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.916504 4.58301L3.24984 6.91634L9.08317 1.08301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <label for="group7">Group 7</label>
+                        </div>
+                    </div>
+                    <div class="group__row">
+                        <div class="group__checkbox">
+                            <label for="group3" class="checkbox__field">
+                                <input type="checkbox" name="group" id="group3" class="group_checkbox-input checkbox">
+                                <div class="checkbox__img">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.916504 4.58301L3.24984 6.91634L9.08317 1.08301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <label for="group3">Group 3</label>
+                        </div>
+                        <div class="group__checkbox">
+                            <label for="group8" class="checkbox__field">
+                                <input type="checkbox" name="group" id="group8" class="group_checkbox-input checkbox">
+                                <div class="checkbox__img">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.916504 4.58301L3.24984 6.91634L9.08317 1.08301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <label for="group8">Group 8</label>
+                        </div>
+                    </div>
+                    <div class="group__row">
+                        <div class="group__checkbox">
+                            <label for="group4" class="checkbox__field">
+                                <input type="checkbox" name="group" id="group4" class="group_checkbox-input checkbox">
+                                <div class="checkbox__img">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.916504 4.58301L3.24984 6.91634L9.08317 1.08301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <label for="group4">Group 4</label>
+                        </div>
+                        <div class="group__checkbox">
+                            <label for="group9" class="checkbox__field">
+                                <input type="checkbox" name="group" id="group9" class="group_checkbox-input checkbox">
+                                <div class="checkbox__img">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.916504 4.58301L3.24984 6.91634L9.08317 1.08301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <label for="group9">Group 9</label>
+                        </div>
+                    </div>
+                    <div class="group__row">
+                        <div class="group__checkbox">
+                            <label for="group5" class="checkbox__field">
+                                <input type="checkbox" name="group" id="group5" class="group_checkbox-input checkbox">
+                                <div class="checkbox__img">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.916504 4.58301L3.24984 6.91634L9.08317 1.08301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <label for="group5">Group 5</label>
+                        </div>
+                        <div class="group__checkbox">
+                            <label for="group10" class="checkbox__field">
+                                <input type="checkbox" name="group" id="group10" class="group_checkbox-input checkbox">
+                                <div class="checkbox__img">
+                                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.916504 4.58301L3.24984 6.91634L9.08317 1.08301" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </label>
+                            <label for="group10">Group 10</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group-modal__footer">
+                <div class="group-modal__footer-content">
+                    <div class="group-modal__switch">
+                        <p>Pause Dialing</p>
+                        <div class="switch-box">
+                            <input class="switch-box__checkbox" type="checkbox" id="group-pause-dialing" checked >
+                            <label class="switch-box__label" for="group-pause-dialing"></label>
+                        </div>
+                    </div>
+                    <button class="blue-btn" disabled>Submit</button>
+                </div>
+            </div>
+        </div>
+        <!-- GROUP SELECTION MODAL ENDS  -->
+
+        <!-- TRANSFER MODAL STARTS  -->
+        <div class="modal-window" id="transferModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Transfer</h3>
+                <button id="transferModalCloseBtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="modal-left">
+                    <div class="modal-left__input">
+                        <h5 class="modal-left__title">Ingroup</h5>
+                        <div class="select" data-value="1">
+                            <button class="select__btn">
+                                <p class="select__text">AgentDirect - Single Agent Directory</p>
+                                <div class="select__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow7">
+                                        <path
+                                            d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <ul class="select__dropdown">
+                                <li class="select__option">
+                                    <p class="select__option-label">AgentDirect - Single Agent Directory</p>
+                                    <span class="select__option-value">2</span>
+                                </li>
+                                <li class="select__option">
+                                    <p class="select__option-label">AgentDirect - Single Agent Directory 1</p>
+                                    <span class="select__option-value">3</span>
+                                </li>
+                                <li class="select__option">
+                                    <p class="select__option-label">AgentDirect - Single Agent Directory 2</p>
+                                    <span class="select__option-value">4</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-left__buttons">
+                        <button class="transparent-violet-btn">Contacts</button>
+                        <button class="transparent-violet-btn">Agents</button>
+                        <button class="transparent-violet-btn">Local Queue</button>
+                    </div>
+                    <div class="modal-left__input mt-3">
+                        <label for="transfer" class="modal-left__title">Transfer Number</label>
+                        <input type="text" name="" id="transfer">
+                    </div>
+                    <div class="modal-left__row">
+                        <p>Overide</p>
+                        <div class="switch-box">
+                            <input class="switch-box__checkbox" type="checkbox" id="overide" />
+                            <label class="switch-box__label" for="overide"></label>
+                        </div>
+                    </div>
+                    <div class="modal-left__row">
+                        <p>Internal Transfer</p>
+                        <div class="switch-box">
+                            <input class="switch-box__checkbox" type="checkbox" id="internal-transfer" checked >
+                            <label class="switch-box__label" for="internal-transfer"></label>
+                        </div>
+                    </div>
+                    <div class="modal-left__input">
+                        <h5 class="modal-left__title">Transfer Time</h5>
+                        <div class="select" data-value="1">
+                            <button class="select__btn">
+                                <p class="select__text">Select Time</p>
+                                <div class="select__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow8">
+                                        <path
+                                            d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <ul class="select__dropdown">
+                                <li class="select__option">
+                                    <p class="select__option-label">Select Time</p>
+                                    <span class="select__option-value">2</span>
+                                </li>
+                                <li class="select__option">
+                                    <p class="select__option-label">Time 1</p>
+                                    <span class="select__option-value">3</span>
+                                </li>
+                                <li class="select__option">
+                                    <p class="select__option-label">Time 2</p>
+                                    <span class="select__option-value">4</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <h5 class="modal-left__title">Call Function</h5>
+                    <div class="modal-right__buttons">
+                        <button class="transparent-violet-btn">Leave</button>
+                        <button class="red-btn">Hangup Both Lines</button>
+                    </div>
+                    <h5 class="modal-left__title">Transfer Type</h5>
+                    <ul class="modal-right__list">
+                        <li class="modal-right__list-item">
+                            <div class="list-content">
+                                <div id="transfer-modal-users-icon"></div>
+                                <p>Blind Transfer</p>
+                            </div>
+                            <svg width="24" height="24">
+                                <path
+                                    d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                            </svg>
+                        </li>
+                        <li class="modal-right__list-item">
+                            <div class="list-content">
+                                <div id="transfer-modal-user-icon"></div>
+                                <p>Dial with Customer</p>
+                            </div>
+                            <svg width="24" height="24">
+                                <path
+                                    d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                            </svg>
+                        </li>
+                        <li class="modal-right__list-item">
+                            <div class="list-content">
+                                <div id="transfer-modal-dial-icon"></div>
+                                <p>Park Customer Dial</p>
+                            </div>
+                            <svg width="24" height="24">
+                                <path
+                                    d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                            </svg>
+                        </li>
+                        <li class="modal-right__list-item">
+                            <div class="list-content">
+                                <div id="transfer-modal-microphone-icon"></div>
+                                <p>Voice Mail</p>
+                            </div>
+                            <svg width="24" height="24">
+                                <path
+                                    d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- TRANSFER MODAL ENDS  -->
+
+        <!-- AGENT CALL LOG MODAL STARTS  -->
+        <div class="modal-window table-width" id="agentCallLogModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Agent Call Log</h3>
+                <button id="agentCallLogCloseBtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="call-modal__controls">
+                <div class="call-modal__controls--left">
+                    <div class="select call-modal" data-value="1">
+                        <button class="select__btn">
+                            <p class="select__text">Today</p>
+                            <div class="select__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow9">
+                                    <path
+                                        d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </button>
+                        <ul class="select__dropdown">
+                            <li class="select__option">
+                                <p class="select__option-label">Today</p>
+                                <span class="select__option-value">2</span>
+                            </li>
+                            <li class="select__option">
+                                <p class="select__option-label">Day 1</p>
+                                <span class="select__option-value">3</span>
+                            </li>
+                            <li class="select__option">
+                                <p class="select__option-label">Day 2</p>
+                                <span class="select__option-value">4</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select call-modal" data-value="1">
+                        <button class="select__btn">
+                            <p class="select__text">Newest</p>
+                            <div class="select__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow10">
+                                    <path
+                                        d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </button>
+                        <ul class="select__dropdown">
+                            <li class="select__option">
+                                <p class="select__option-label">Newest</p>
+                                <span class="select__option-value">2</span>
+                            </li>
+                            <li class="select__option">
+                                <p class="select__option-label">Oldest</p>
+                                <span class="select__option-value">3</span>
+                            </li>
+                            <li class="select__option">
+                                <p class="select__option-label">Variant 3</p>
+                                <span class="select__option-value">4</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="call-modal__search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-search">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="search" name="search" id="log-search" placeholder="Search name or number">
+                </div>
+            </div>
+            <div class="modal-window__content scrollable">
+                <div class="call-modal__table-section">
+                    <table class="call-modal__table">
+                        <thead>
+                            <tr>
+                                <th>Date & Time</th>
+                                <th>Length</th>
+                                <th>Status</th>
+                                <th>Phone</th>
+                                <th>Full Name</th>
+                                <th>Campaign</th>
+                                <th>In/Out</th>
+                                <th>Alt</th>
+                                <th>Hangup</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="call-modal__date">
+                                    <p>2023-11-25</p>
+                                    <span>|</span>
+                                    <p>03:39:36</p>
+                                </td>
+                                <td>22</td>
+                                <td>N</td>
+                                <td>(461) 17361 1881</td>
+                                <td>Jaydon Geidt</td>
+                                <td>QA</td>
+                                <td>Out-Manual</td>
+                                <td>Manual</td>
+                                <td>Agent</td>
+                                <td class="call-modal__icons">
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
+                                    </div>
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="call-modal__date">
+                                    <p>2023-11-25</p>
+                                    <span>|</span>
+                                    <p>03:39:36</p>
+                                </td>
+                                <td>31</td>
+                                <td>N</td>
+                                <td>(1331) 1761 1881</td>
+                                <td>Unknown</td>
+                                <td>QA</td>
+                                <td>Out-Manual</td>
+                                <td>Manual</td>
+                                <td>Agent</td>
+                                <td class="call-modal__icons">
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
+                                    </div>
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="call-modal__date">
+                                    <p>2023-11-25</p>
+                                    <span>|</span>
+                                    <p>03:39:36</p>
+                                </td>
+                                <td>13</td>
+                                <td>N</td>
+                                <td>(1733) 173 1881</td>
+                                <td>Ahmad Siphron</td>
+                                <td>QA</td>
+                                <td>Out-Manual</td>
+                                <td>Manual</td>
+                                <td>Agent</td>
+                                <td class="call-modal__icons">
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
+                                    </div>
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="call-modal__date">
+                                    <p>2023-11-25</p>
+                                    <span>|</span>
+                                    <p>03:39:36</p>
+                                </td>
+                                <td>11</td>
+                                <td>N</td>
+                                <td>(2331) 1761 1881</td>
+                                <td>Zaire Dorwart</td>
+                                <td>QA</td>
+                                <td>Out-Manual</td>
+                                <td>Manual</td>
+                                <td>Agent</td>
+                                <td class="call-modal__icons">
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
+                                    </div>
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="call-modal__date">
+                                    <p>2023-11-25</p>
+                                    <span>|</span>
+                                    <p>03:39:36</p>
+                                </td>
+                                <td>54</td>
+                                <td>N</td>
+                                <td>(7311) 88361 1881</td>
+                                <td>Unknown</td>
+                                <td>QA</td>
+                                <td>Out-Manual</td>
+                                <td>Manual</td>
+                                <td>Agent</td>
+                                <td class="call-modal__icons">
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
+                                    </div>
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- AGENT CALL LOG MODAL ENDS  -->
+
+        <!-- CALLS IN QUEUE MODAL STARTS  -->
+        <div class="calls-in-queue drag-item" id="callsInQueueModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Calls in Queue</h3>
+                <div class="modal-window__icons">
+                    <button class="modal-window__icon" id="minimizeCallsInQueueBtn">
+                        <svg  viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                                <g data-name="minus-square">
+                                    <path
+                                        d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                    </path>
+                                    <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button id="callsInQueueCloseBtn">
+                        <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-x">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="call-modal__controls">
+                <div class="call-modal__controls--left">
+                    <div class="select call-modal" data-value="1">
+                        <button class="select__btn">
+                            <p class="select__text">Today</p>
+                            <div class="select__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow11">
+                                    <path
+                                        d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </button>
+                        <ul class="select__dropdown">
+                            <li class="select__option">
+                                <p class="select__option-label">Today</p>
+                                <span class="select__option-value">2</span>
+                            </li>
+                            <li class="select__option">
+                                <p class="select__option-label">Day 1</p>
+                                <span class="select__option-value">3</span>
+                            </li>
+                            <li class="select__option">
+                                <p class="select__option-label">Day 2</p>
+                                <span class="select__option-value">4</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select call-modal" data-value="1">
+                        <button class="select__btn">
+                            <p class="select__text">Newest</p>
+                            <div class="select__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-down-arrow12">
+                                    <path
+                                        d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </button>
+                        <ul class="select__dropdown">
+                            <li class="select__option">
+                                <p class="select__option-label">Newest</p>
+                                <span class="select__option-value">2</span>
+                            </li>
+                            <li class="select__option">
+                                <p class="select__option-label">Oldest</p>
+                                <span class="select__option-value">3</span>
+                            </li>
+                            <li class="select__option">
+                                <p class="select__option-label">Variant 3</p>
+                                <span class="select__option-value">4</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="call-modal__search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-search">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="search" name="search" id="log-search1" placeholder="Search name or number">
+                </div>
+            </div>
+            <div class="modal-window__content">
+                <div class="call-modal__table-section">
+                    <table class="call-modal__table">
+                        <thead>
+                            <tr>
+                                <th class="px-2">Phone</th>
+                                <th>Full Name</th>
+                                <th>Wait</th>
+                                <th>Agent</th>
+                                <th>Call Group</th>
+                                <th>Type</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-2">(461) 17361 1881</td>
+                                <td>Jaydon Geidt</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td class="call-modal__icons">
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
+                                    </div>
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-2">(461) 17361 1881</td>
+                                <td>Unknown</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td class="call-modal__icons">
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
+                                    </div>
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-2">(461) 17361 1881</td>
+                                <td>Ahmad Siphron</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td class="call-modal__icons">
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
+                                    </div>
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-2">(461) 17361 1881</td>
+                                <td>Zaire Dorwart</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td class="call-modal__icons">
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
+                                    </div>
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-2">(461) 17361 1881</td>
+                                <td>Unknown</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td class="call-modal__icons">
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/information-circle.webp" type="image/webp"><img src="assets/img/icons/information-circle.png" alt="help btn"></picture>
+                                    </div>
+                                    <div class="call-modal__image-container">
+                                        <picture><source srcset="assets/img/icons/phone-outgoing-02.webp" type="image/webp"><img src="assets/img/icons/phone-outgoing-02.png" alt="help btn"></picture>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- CALLS IN QUEUE MODAL ENDS  -->
+
+        <!-- CALL CHANNELS MODAL STARTS  -->
+        <div class="call-channels drag-item" id="callChannelsModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Call Channels</h3>
+                <div class="modal-window__icons">
+                    <button class="modal-window__icon" id="minimizeCallsChannels">
+                        <svg  viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                                <g data-name="minus-square">
+                                    <path
+                                        d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                    </path>
+                                    <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button id="callChannelsCloseBtn">
+                        <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-x">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                
+            </div>
+            <div class="modal-window__content">
+                <div class="call-modal__table-section">
+                    <table class="call-modal__table">
+                        <thead>
+                            <tr>
+                                <th class="px-2">#</th>
+                                <th class="ps-3">Remote Channel</th>
+                                <th class="ps-3">Phone</th>
+                                <th class="ps-4">Full Name</th>
+                                <th class="ps-4">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-2">1</td>
+                                <td class="ps-3">SIP/3860-000002</td>
+                                <td class="ps-3">(461) 17361 1881</td>
+                                <td class="ps-4">Jaydon Geidt</td>
+                                <td class="call-actions ps-4">
+                                    <div class="call-actions__sound">
+                                        <div class="call-channels-volume-minus-icon"></div>
+                                        <div class="call-actions__volume-container">
+                                            <div class="call-actions__volume-bar">
+                                                <div class="call-actions__volume-level">
+                                                    <div class="call-actions__volume-mark"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="call-channels-volume-plus-icon"></div>
+                                    </div>
+                                    <button class="call-actions__mute-btn">
+                                        <div class="call-channels-mute-icon"></div>
+                                        <p>Mute</p>
+                                    </button>
+                                    <button class="call-actions__mute-btn unmute">
+                                        <div class="call-channels-volume-turn-on-icon"></div>
+                                        <p>Mute</p>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-2">2</td>
+                                <td class="ps-3">SIP/5121-000001</td>
+                                <td class="ps-3">(1331) 1761 1881</td>
+                                <td class="ps-4">Unknown</td>
+                                <td class="call-actions ps-4">
+                                    <div class="call-actions__sound">
+                                        <div class="call-channels-volume-minus-icon"></div>
+                                        <div class="call-actions__volume-container">
+                                            <div class="call-actions__volume-bar">
+                                                <div class="call-actions__volume-level">
+                                                    <div class="call-actions__volume-mark"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="call-channels-volume-plus-icon"></div>
+                                    </div>
+                                    <button class="call-actions__mute-btn">
+                                        <div class="call-channels-mute-icon"></div>
+                                        <p>Mute</p>
+                                    </button>
+                                    <button class="call-actions__mute-btn unmute">
+                                        <div class="call-channels-volume-turn-on-icon"></div>
+                                        <p>Mute</p>
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- CALL CHANNELS MODAL ENDS  -->
+
+        <!-- CALL CHANNELS ERROR MODAL STARTS  -->
+        <div class="modal-window error" id="callChannelsErrorModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Call Channels</h3>
+                <button id="callChannelsErrorCloseBtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <div class="error-modal__content">
+                    <div class="error-modal__image"></div>
+                    <h3 class="error-modal__title">Uh-Oh, Empty Zone!</h3>
+                    <p class="error-modal__text">It seems this space is feeling a bit lonely. The content you're after
+                        isn't here. Let's explore elsewhere.</p>
+                </div>
+            </div>
+        </div>
+        <!-- CALL CHANNELS ERROR MODAL ENDS  -->
+
+        <!-- NO CONNECTION ERROR MODAL STARTS  -->
+        <div class="modal-window error" id="connectionErrorModal">
+
+            <div class="modal-window__content">
+                <div class="connection-error-modal__content">
+                    <div class="connection-error-modal__image"></div>
+                    <h3 class="connection-error-modal__title">No Internet Connection</h3>
+                    <p class="connection-error-modal__text">Oh no! It seems like we've hit a snag. Looks like the
+                        internet is on vacation. Let's reconnect and try again.</p>
+                    <button id="connectionErrorCloseBtn" class="blue-btn connection-error-modal__btn">Try
+                        Again!</button>
+                </div>
+            </div>
+        </div>
+        <!-- NO CONNECTION ERROR MODAL ENDS  -->
+
+        <!-- AGENT STATUS MODAL STARTS  -->
+        <div class="agent-status drag-item" id="agentStatusModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Agents Status</h3>
+                <div class="modal-window__icons">
+                    <button class="modal-window__icon" id="minimizeAgentStatus">
+                        <svg  viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                                <g data-name="minus-square">
+                                    <path
+                                        d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z">
+                                    </path>
+                                    <path d="M15 11H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button id="agentStatusCloseBtn">
+                        <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-x">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-window__content  scrollable">
+                <div class="agent-status__table-section">
+                    <table class="agent-status__table">
+                        <thead>
+                            <tr>
+                                <th class="px-2">#</th>
+                                <th class="ps-3">User</th>
+                                <th class="ps-3">Time</th>
+                                <th class="ps-4">Status</th>
+                                <th class="ps-4">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-2">1</td>
+                                <td class="ps-3">3860-QA YCC</td>
+                                <td class="ps-3">01:49</td>
+                                <td class="ps-4">
+                                    <div class="agent-status-modal__circle"></div>
+                                    <p>Paused</p>
+                                </td>
+                                <td class="agent-status__call-actions ps-4">
+                                    <button class="transparent-btn">Ready</button>
+                                    <button class="transparent-btn red">Pause</button>
+                                    <button class="transparent-btn green">In Call</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- AGENT STATUS MODAL ENDS  -->
+
+        <!-- MESSAGE MODAL STARTS  -->
+        <div class="modal-window message-modal" id="messageModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Message</h3>
+                <button id="messageCloseBtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class=" message-modal__wrapper">
+                <div class="message-modal__content">
+                    <div class="navigation-burger">
+                        <input type="checkbox" class="navigation-burger__checkbox" id="message-toggle">
+                        <label for="message-toggle" class="navigation-burger__button" id="message-burger-label">
+                            <span class="navigation-burger__icon"></span>
+                        </label>
+                    </div>
+                    <div class="modal-sidebar" id="messagesSidebar">
+
+                        <button class="modal-sidebar__button">
+                            <p>Create Message</p>
+                            <svg data-name="Layer 1" viewBox="0 0 24 24" id="edit">
+                                <path
+                                    d="M3.5,24h15A3.51,3.51,0,0,0,22,20.487V12.95a1,1,0,0,0-2,0v7.537A1.508,1.508,0,0,1,18.5,22H3.5A1.508,1.508,0,0,1,2,20.487V5.513A1.508,1.508,0,0,1,3.5,4H11a1,1,0,0,0,0-2H3.5A3.51,3.51,0,0,0,0,5.513V20.487A3.51,3.51,0,0,0,3.5,24Z">
+                                </path>
+                                <path
+                                    d="M9.455,10.544l-.789,3.614a1,1,0,0,0,.271.921,1.038,1.038,0,0,0,.92.269l3.606-.791a1,1,0,0,0,.494-.271l9.114-9.114a3,3,0,0,0,0-4.243,3.07,3.07,0,0,0-4.242,0l-9.1,9.123A1,1,0,0,0,9.455,10.544Zm10.788-8.2a1.022,1.022,0,0,1,1.414,0,1.009,1.009,0,0,1,0,1.413l-.707.707L19.536,3.05Zm-8.9,8.914,6.774-6.791,1.4,1.407-6.777,6.793-1.795.394Z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="modal-sidebar__tabs">
+                            <div class="modal-sidebar__tab active" id="allTabBtn">
+                                <p>All</p>
+                                <span>2</span>
+                            </div>
+                            <div class="modal-sidebar__tab" id="unreadTabBtn">
+                                <p>Unread</p>
+                            </div>
+                        </div>
+                        <div class="modal-sidebar__search">
+                            <input type="text" name="searchMessage" id="searchMessage" placeholder="Search...">
+                            <svg viewBox="0 0 24 24" id="search">
+                                <g data-name="Layer 2">
+                                    <path
+                                        d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"
+                                        data-name="search"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="modal-sidebar__channels" id="allTab">
+                            <div class="modal-sidebar__channel">
+                                <input type="checkbox" class="modal-sidebar__channel-input" id="toggleChannels" checked>
+                                <label class="modal-sidebar__channel-heading" for="toggleChannels">
+                                    <h4>Channels</h4>
+                                    <svg width="16" height="16" id="arrow">
+                                        <path
+                                            style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"
+                                            fill="#34485c" fill-rule="evenodd"
+                                            d="m-938.3 917.362-.7-.7 5.3-5.3 5.3 5.3-.7.7-4.6-4.6-4.6 4.6z" color="#000"
+                                            font-family="sans-serif" font-weight="400" overflow="visible"
+                                            transform="translate(942 -906.362)"></path>
+                                    </svg>
+                                </label>
+                                <ul class="modal-sidebar__list" id="channelsList">
+                                    <li class="modal-sidebar__list-item">
+                                        <div class="modal-sidebar__person">
+                                            <div class="modal-sidebar__avatar avatar-icon">
+                                                <picture><source srcset="assets/img/Emoji.webp" type="image/webp"><img src="assets/img/Emoji.png" alt="user avatar"></picture>
+                                            </div>
+                                            <div class="modal-sidebar__person-info">
+                                                <p class="modal-sidebar__person-name">Group-1213</p>
+                                            </div>
+                                        </div>
+                                        <p class="modal-sidebar__date">11/04/2023</p>
+                                    </li>
+                                    <li class="modal-sidebar__list-item">
+                                        <div class="modal-sidebar__person">
+                                            <div class="modal-sidebar__avatar avatar-icon">
+                                                <picture><source srcset="assets/img/Emoji2.webp" type="image/webp"><img src="assets/img/Emoji2.png" alt="user avatar"></picture>
+                                            </div>
+                                            <div class="modal-sidebar__person-info">
+                                                <p class="modal-sidebar__person-name">Group-1192</p>
+                                            </div>
+                                        </div>
+                                        <p class="modal-sidebar__date">10/24/2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-sidebar__channel">
+                                <input type="checkbox" class="modal-sidebar__channel-input" id="personalInputCheckbox"
+                                    checked>
+                                <label class="modal-sidebar__channel-heading" for="personalInputCheckbox">
+                                    <h4>Personal</h4>
+                                    <svg width="16" height="16" id="arrow1">
+                                        <path
+                                            style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"
+                                            fill="#34485c" fill-rule="evenodd"
+                                            d="m-938.3 917.362-.7-.7 5.3-5.3 5.3 5.3-.7.7-4.6-4.6-4.6 4.6z" color="#000"
+                                            font-family="sans-serif" font-weight="400" overflow="visible"
+                                            transform="translate(942 -906.362)"></path>
+                                    </svg>
+                                </label>
+                                <ul class="modal-sidebar__list" id="personalList">
+                                    <li class="modal-sidebar__list-item active">
+                                        <div class="modal-sidebar__person">
+                                            <div class="modal-sidebar__avatar">
+                                                <picture><source srcset="assets/img/avatar-2.webp" type="image/webp"><img src="assets/img/avatar-2.png" alt="user avatar"></picture>
+                                            </div>
+                                            <div class="modal-sidebar__person-info">
+                                                <p class="modal-sidebar__person-name">Danny Sanchez</p>
+                                                <p class="modal-sidebar__person-message">We deal with a lot ...</p>
+                                            </div>
+                                        </div>
+                                        <p class="modal-sidebar__date">Today</p>
+                                    </li>
+                                    <li class="modal-sidebar__list-item">
+                                        <div class="modal-sidebar__person">
+                                            <div class="modal-sidebar__avatar">
+                                                <picture><source srcset="assets/img/avatar-3.webp" type="image/webp"><img src="assets/img/avatar-3.png" alt="user avatar"></picture>
+                                            </div>
+                                            <div class="modal-sidebar__person-info--channel">
+                                                <p class="modal-sidebar__person-name">Della Sicitra <span
+                                                        class="modal-sidebar__circle"></span></p>
+                                                <p class="modal-sidebar__person-message">Sure, a demo would ...</p>
+                                            </div>
+                                        </div>
+                                        <p class="modal-sidebar__date">Yesterday</p>
+                                    </li>
+                                    <li class="modal-sidebar__list-item">
+                                        <div class="modal-sidebar__person">
+                                            <div class="modal-sidebar__avatar">
+                                                <picture><source srcset="assets/img/avatar-4.webp" type="image/webp"><img src="assets/img/avatar-4.png" alt="user avatar"></picture>
+                                            </div>
+                                            <div class="modal-sidebar__person-info--channel">
+                                                <p class="modal-sidebar__person-name">Viola Junyla <span
+                                                        class="modal-sidebar__circle"></span></p>
+                                                <p class="modal-sidebar__person-message">Understood.!</p>
+                                            </div>
+                                        </div>
+                                        <p class="modal-sidebar__date">Yesterday</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-sidebar__channels hidden" id="unreadTab">
+                            <div class="modal-sidebar__channel">
+                                <input type="checkbox" class="modal-sidebar__channel-input" id="toggleChannelsHidden"
+                                    checked>
+                                <label class="modal-sidebar__channel-heading" for="toggleChannelsHidden">
+                                    <h4>Channels</h4>
+                                    <svg width="16" height="16" id="arrow2">
+                                        <path
+                                            style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"
+                                            fill="#34485c" fill-rule="evenodd"
+                                            d="m-938.3 917.362-.7-.7 5.3-5.3 5.3 5.3-.7.7-4.6-4.6-4.6 4.6z" color="#000"
+                                            font-family="sans-serif" font-weight="400" overflow="visible"
+                                            transform="translate(942 -906.362)"></path>
+                                    </svg>
+                                </label>
+                                <ul class="modal-sidebar__list active">
+                                    <li class="modal-sidebar__list-item">
+                                        <div class="modal-sidebar__person">
+                                            <div class="modal-sidebar__avatar avatar-icon">
+                                                <picture><source srcset="assets/img/Emoji2.webp" type="image/webp"><img src="assets/img/Emoji2.png" alt="user avatar"></picture>
+                                            </div>
+                                            <div class="modal-sidebar__person-info--channel">
+                                                <p class="modal-sidebar__person-name">Group-1192</p>
+                                            </div>
+                                        </div>
+                                        <p class="modal-sidebar__date">10/24/2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-sidebar__channel">
+                                <input type="checkbox" class="modal-sidebar__channel-input"
+                                    id="personalInputCheckboxHidden">
+                                <label class="modal-sidebar__channel-heading" for="personalInputCheckboxHidden">
+                                    <h4>Personal</h4>
+                                    <svg width="16" height="16" id="arrow3">
+                                        <path
+                                            style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"
+                                            fill="#34485c" fill-rule="evenodd"
+                                            d="m-938.3 917.362-.7-.7 5.3-5.3 5.3 5.3-.7.7-4.6-4.6-4.6 4.6z" color="#000"
+                                            font-family="sans-serif" font-weight="400" overflow="visible"
+                                            transform="translate(942 -906.362)"></path>
+                                    </svg>
+                                </label>
+                                <ul class="modal-sidebar__list active">
+                                    <li class="modal-sidebar__list-item">
+                                        <div class="modal-sidebar__person">
+                                            <div class="modal-sidebar__avatar">
+                                                <picture><source srcset="assets/img/avatar-4.webp" type="image/webp"><img src="assets/img/avatar-4.png" alt="user avatar"></picture>
+                                            </div>
+                                            <div class="modal-sidebar__person-info--personal">
+                                                <p class="modal-sidebar__person-name">Viola Junyla <span
+                                                        class="modal-sidebar__circle"></span></p>
+                                                <p class="modal-sidebar__person-message">Understood.!</p>
+                                            </div>
+                                        </div>
+                                        <p class="modal-sidebar__date">Yesterday</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-sidebar__controls">
+                            <svg viewBox="0 0 24 24">
+                                <g data-name="27.Question">
+                                    <path
+                                        d="M12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z" />
+                                    <path d="M13 16h-2v-4h1a3 3 0 1 0-3-3H7a5 5 0 1 1 6 4.9zM11 18h2v2h-2z" />
+                                </g>
+                            </svg>
+                            <p class="modal-sidebar__controls-text">Help</p>
+                        </div>
+                        <div class="modal-sidebar__controls">
+                            <svg data-name="Layer 1" viewBox="0 0 24 24" id="setting">
+                                <path
+                                    d="M19.9 12.66a1 1 0 0 1 0-1.32l1.28-1.44a1 1 0 0 0 .12-1.17l-2-3.46a1 1 0 0 0-1.07-.48l-1.88.38a1 1 0 0 1-1.15-.66l-.61-1.83a1 1 0 0 0-.95-.68h-4a1 1 0 0 0-1 .68l-.56 1.83a1 1 0 0 1-1.15.66L5 4.79a1 1 0 0 0-1 .48L2 8.73a1 1 0 0 0 .1 1.17l1.27 1.44a1 1 0 0 1 0 1.32L2.1 14.1a1 1 0 0 0-.1 1.17l2 3.46a1 1 0 0 0 1.07.48l1.88-.38a1 1 0 0 1 1.15.66l.61 1.83a1 1 0 0 0 1 .68h4a1 1 0 0 0 .95-.68l.61-1.83a1 1 0 0 1 1.15-.66l1.88.38a1 1 0 0 0 1.07-.48l2-3.46a1 1 0 0 0-.12-1.17ZM18.41 14l.8.9-1.28 2.22-1.18-.24a3 3 0 0 0-3.45 2L12.92 20h-2.56L10 18.86a3 3 0 0 0-3.45-2l-1.18.24-1.3-2.21.8-.9a3 3 0 0 0 0-4l-.8-.9 1.28-2.2 1.18.24a3 3 0 0 0 3.45-2L10.36 4h2.56l.38 1.14a3 3 0 0 0 3.45 2l1.18-.24 1.28 2.22-.8.9a3 3 0 0 0 0 3.98Zm-6.77-6a4 4 0 1 0 4 4 4 4 0 0 0-4-4Zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2Z">
+                                </path>
+                            </svg>
+                            <p class="modal-sidebar__controls-text">Setting</p>
+                        </div>
+                    </div>
+                    <div class="modal-message">
+                        <div class="modal-message__heading">
+                            <div class="modal-message__person">
+                                <div class="modal-message__avatar">
+                                    <picture><source srcset="assets/img/avatar-2.webp" type="image/webp"><img src="assets/img/avatar-2.png" alt="user avatar"></picture>
+                                </div>
+                                <div class="modal-message__person-data">
+                                    <p class="modal-message__username">Danny Sanchez</p>
+                                    <p class="modal-message__status">
+                                        <span class="modal-message__circle online"></span>
+                                        Online
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-message__icons">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="phone">
+                                    <g data-name="Layer 2">
+                                        <g data-name="phone-call">
+                                            <path d="M13 8a3 3 0 0 1 3 3 1 1 0 0 0 2 0 5 5 0 0 0-5-5 1 1 0 0 0 0 2z">
+                                            </path>
+                                            <path
+                                                d="M13 4a7 7 0 0 1 7 7 1 1 0 0 0 2 0 9 9 0 0 0-9-9 1 1 0 0 0 0 2zm8.75 11.91a1 1 0 0 0-.72-.65l-6-1.37a1 1 0 0 0-.92.26c-.14.13-.15.14-.8 1.38a9.91 9.91 0 0 1-4.87-4.89C9.71 10 9.72 10 9.85 9.85a1 1 0 0 0 .26-.92L8.74 3a1 1 0 0 0-.65-.72 3.79 3.79 0 0 0-.72-.18A3.94 3.94 0 0 0 6.6 2 4.6 4.6 0 0 0 2 6.6 15.42 15.42 0 0 0 17.4 22a4.6 4.6 0 0 0 4.6-4.6 4.77 4.77 0 0 0-.06-.76 4.34 4.34 0 0 0-.19-.73zM17.4 20A13.41 13.41 0 0 1 4 6.6 2.61 2.61 0 0 1 6.6 4h.33L8 8.64l-.54.28c-.86.45-1.54.81-1.18 1.59a11.85 11.85 0 0 0 7.18 7.21c.84.34 1.17-.29 1.62-1.16l.29-.55L20 17.07v.33a2.61 2.61 0 0 1-2.6 2.6z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <svg viewBox="0 0 24 24" id="search1">
+                                    <g data-name="Layer 2">
+                                        <path
+                                            d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"
+                                            data-name="search"></path>
+                                    </g>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="dots-three-vertical">
+                                    <rect width="256" height="256" fill="none"></rect>
+                                    <circle cx="128" cy="64" r="16"></circle>
+                                    <circle cx="128" cy="128" r="16"></circle>
+                                    <circle cx="128" cy="192" r="16"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="modal-message__content">
+                            <div class="modal-message__messages">
+                                <div class="incoming-message">
+                                    <div class="incoming-message__container">
+                                        <div class="incoming-message__heading">
+                                            <div class="incoming-message__user-data">
+                                                <div class="incoming-message__avatar">
+                                                    <picture><source srcset="assets/img/avatar-2.webp" type="image/webp"><img src="assets/img/avatar-2.png" alt="user avatar"></picture>
+                                                </div>
+                                                <p class="incoming-message__username">Danny Sanchez</p>
+                                            </div>
+                                            <p class="incoming-message__time">Sunday 08:05am</p>
+                                        </div>
+                                        <div class="incoming-message__message">
+                                            <p class="incoming-message__text">Hi, I'm interested in your product. Can
+                                                you tell me more about it?</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="send-message">
+                                    <div class="send-message__container">
+                                        <div class="send-message__heading">
+                                            <p class="send-message__time">Sunday 08:13am</p>
+                                            <p class="send-message__username">You</p>
+                                        </div>
+                                        <div class="send-message__message">
+                                            <p class="send-message__text">Absolutely, I'd recommend our top-notch CRM
+                                                solution. It's tailored to enhance productivity for corporations like
+                                                yours. Can I get more insights into your specific needs?</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-message__separator">
+                                    <div class="modal-message__separator-line"></div>
+                                    <div class="modal-message__separator-text">Today</div>
+                                    <div class="modal-message__separator-line"></div>
+                                </div>
+
+                                <div class="incoming-message">
+                                    <div class="incoming-message__container">
+                                        <div class="incoming-message__heading">
+                                            <div class="incoming-message__user-data">
+                                                <div class="incoming-message__avatar">
+                                                    <picture><source srcset="assets/img/avatar-2.webp" type="image/webp"><img src="assets/img/avatar-2.png" alt="user avatar"></picture>
+                                                </div>
+                                                <p class="incoming-message__username">Danny Sanchez</p>
+                                            </div>
+                                            <p class="incoming-message__time">Today 09:12am</p>
+                                        </div>
+                                        <div class="incoming-message__message">
+                                            <p class="incoming-message__text">We deal with a lot of client data, and
+                                                managing it efficiently has become quite a task. We need something that
+                                                streamlines our processes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-message__text-zone">
+                                <textarea name="message" placeholder="Write message here..."></textarea>
+                                <div class="modal-message__input-icons">
+                                    <div class="modal-message__icon-container">
+                                        <picture><source srcset="assets/img/icons/smile.webp" type="image/webp"><img src="assets/img/icons/smile.png" alt="smile"></picture>
+                                    </div>
+                                    <div class="modal-message__icon-container">
+                                        <picture><source srcset="assets/img/icons/image.webp" type="image/webp"><img src="assets/img/icons/image.png" alt="image icon"></picture>
+                                    </div>
+                                    <div class="modal-message__icon-container">
+                                        <picture><source srcset="assets/img/icons/attechment.webp" type="image/webp"><img src="assets/img/icons/attechment.png" alt="image icon"></picture>
+                                    </div>
+                                    <button class="modal-message__btn">
+                                        <p>Send</p>
+                                        <picture><source srcset="assets/img/icons/send.webp" type="image/webp"><img src="assets/img/icons/send.png" alt="send icon "></picture>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MESSAGE MODAL ENDS  -->
+
+        <!-- LATENCY MODAL STARTS  -->
+        <div class="modal-window latency" id="latencyModal">
+            <div class="modal-window__heading">
+                <h3 class="modal-window__title">Browser Connection</h3>
+                <button id="latencyModalCloseBtn">
+                    <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="latency-modal__wrapper">
+                <div class="latency-modal__content">
+                    <div class="latency-modal__image"></div>
+                    <p class="latency-modal__title">
+                        Latency:
+                        <span> High (450ms)</span>
+                    </p>
+                    <p class="latency-modal__average">Session Average: 309ms</p>
+                    <p class="latency-modal__text">Latency measures the time it takes for your browser to communicate
+                        with our servers. When latency is high, you may experience call quality issues. Contact your
+                        company manager if you are experiencing problems.</p>
+                </div>
+            </div>
+        </div>
+        <!-- LATENCY MODAL ENDS  -->
+
+        <!-- mDIAL APPROACH 2 MODAL STARTS  -->
+        <div class="mdial" id="mDial2Modal">
+            <div class="mdial-log">
+                <div class="triangle"></div>
+                <div class="mdial-log__content">
+                    <div class="mdial-log__heading">
+                        <h3>Call Log</h3>
+                        <p>+ Complete Call Log </p>
+                    </div>
+                    <div class="mdial-log__data">
+                        <div class="mdial-log__data--top">N/A</div>
+                        <div class="mdial-log__data--bottom"></div>
+                    </div>
+                    <div class="mdial-log__container">
+                        <div class="mdial-log__quick-dial">
+                            <div class="mdial-log__info">
+                                <h4>Quick Dial</h4>
+                                <p>Last Number Connected</p>
+                            </div>
+                            <div class="mdial-log__button">
+                                <button class="blue-btn reversed">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdial-keyboard">
+                <div class="mdial-keyboard__heading">
+                    <h3 class="mdial-keyboard__title">Manual Dial</h3>
+                    <button id="mDial2CloseBtn">
+                        <svg viewBox="0 0 24 24" fill="#7A7A7A" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-x">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mdial-keyboard__content">
+                    <div class="mdial-keyboard__form">
+                        <input class="mdial-keyboard__code" type="text" placeholder="01" id="phoneCode">
+                        <input class="mdial-keyboard__input" type="text" placeholder="eg. 18391913" id="phoneNumber">
+                    </div>
+                    <div class="mdial-keyboard__keyboard">
+                        <div class="mdial-keyboard__key-row">
+
+                            <div class="mdial-keyboard__number-wrapper">
+                                <div class="mdial-keyboard__number" id="n1">1</div>
+                            </div>
+                            <div class="mdial-keyboard__number-wrapper">
+                                <div class="mdial-keyboard__number" id="n2">2</div>
+                            </div>
+                            <div class="mdial-keyboard__number-wrapper">
+                                <div class="mdial-keyboard__number" id="n3">3</div>
+                            </div>
+                        </div>
+                        <div class="mdial-keyboard__key-row">
+                            <div class="mdial-keyboard__number-wrapper">
+                                <div class="mdial-keyboard__number" id="n4">4</div>
+                            </div>
+                            <div class="mdial-keyboard__number-wrapper">
+                                <div class="mdial-keyboard__number" id="n5">5</div>
+                            </div>
+                            <div class="mdial-keyboard__number-wrapper">
+                                <div class="mdial-keyboard__number" id="n6">6</div>
+                            </div>
+                        </div>
+                        <div class="mdial-keyboard__key-row">
+                            <div class="mdial-keyboard__number-wrapper">
+                                <div class="mdial-keyboard__number" id="n7">7</div>
+                            </div>
+                            <div class="mdial-keyboard__number-wrapper">
+                                <div class="mdial-keyboard__number" id="n8">8</div>
+                            </div>
+                            <div class="mdial-keyboard__number-wrapper">
+                                <div class="mdial-keyboard__number" id="n9">9</div>
+                            </div>
+                        </div>
+                        <div class="mdial-keyboard__key-row">
+                            <div class="mdial-keyboard__number star" id="n*">
+                                <p>*</p>
+                            </div>
+                            <div class="mdial-keyboard__number" id="n0">0</div>
+                            <div class="mdial-keyboard__number" id="n#">#</div>
+                        </div>
+                        <div class="mdial-keyboard__actions">
+                            <button class="mdial-keyboard__call-btn" id="callBtn1">
+                                <div class="mdial-keyboard__call-btn-wrapper">
+                                    <svg x="0" y="0" version="1.1" viewBox="0 0 29 29" xml:space="preserve">
+                                        <path
+                                            d="m20.914 17.743-2.091 1.178a1.319 1.319 0 0 1-1.58-.217l-6.979-6.979a1.32 1.32 0 0 1-.217-1.58l1.178-2.091a1.978 1.978 0 0 0-.325-2.37L7.766 2.55a1.978 1.978 0 0 0-2.798 0L3.545 3.972a5.276 5.276 0 0 0-.793 6.446l.714 1.19a41.36 41.36 0 0 0 14.946 14.631l.141.081c2.102 1.201 4.699.851 6.382-.831l1.486-1.486a1.978 1.978 0 0 0 0-2.798l-3.136-3.136a1.978 1.978 0 0 0-2.371-.326z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <button class="mdial-keyboard__delete-btn">
+                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.2923 2.0745L10.1761 0.958252L5.75065 5.38367L1.32523 0.958252L0.208984 2.0745L4.6344 6.49992L0.208984 10.9253L1.32523 12.0416L5.75065 7.61617L10.1761 12.0416L11.2923 10.9253L6.8669 6.49992L11.2923 2.0745Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- mDIAL APPROACH 2 MODAL ENDS  -->
+
+        <!-- MODALS ENDS  -->
+
+
+        <!-- TOOLS SECTION STARTS (NEED DELETION)  -->
+        <div class="tools">
+            <div class="tools__list">
+                <button id="button2">Dispo</button>
+                <button id="button4">Transfer</button>
+                <button id="button8">Call Channels Error</button>
+                <button id="button9">Connection Error</button>
+                <button id="button10">Agent Status</button>
+                <button id="button12">Latency</button>
+                <button id="button13">Call1</button>
+                <button id="button14">Call2</button>
+                <button id="button15">Call3</button>
+                <button id="button16">mDial2</button>
+            </div>
+            <button class="tools__btn">TOOLS</button>
+        </div>
+
+        <!-- TOOLS SECTION ENDS (NEED DELETION)  -->
+
+
+    </main>
+
+    <!-- BOOTSTRAP JS  -->
+    <script src="assets/files/libs/bootstrap/bootstrap.min.js?_v=20240119202512"></script>
+
+    <!-- GSAP JS  -->
+    <script src="assets/files/libs/gsap/gsap.min.js?_v=20240119202512"></script>
+    <script src="assets/files/libs/gsap/Observer.min.js?_v=20240119202512"></script>
+
+    <!-- CUSTOM SCRIPTS -->
+    <script defer src="./assets/js/app.min.js?_v=20240119202512"></script>
+</body>
+
+</html>
