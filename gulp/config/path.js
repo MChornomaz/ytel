@@ -20,14 +20,14 @@ export const path = {
         fonts: `${srcFolder}/assets/fonts/`,
         svg: `${srcFolder}/assets/img/**/*.svg`,
         scss: `${srcFolder}/assets/scss/style.scss`,
-        html: `${srcFolder}/*.html`,
+        html: `${srcFolder}/*.php`,
         files: `${srcFolder}/assets/files/**/*.*`,
         svgicons: `${srcFolder}/assets/svgicons/*.svg`,
     },
     watch: {
         js: `${srcFolder}/assets/js/**/*.js`,
         scss: `${srcFolder}/assets/scss/**/*.scss`,
-        html: `${srcFolder}/**/*.html`,
+        html: `${srcFolder}/**/*.php`,
         images: `${srcFolder}/assets/img/**/*.{jpg,jpeg,png,gif,svg,ico,webp}`,
         files: `${srcFolder}/assets/files/**/*.*`
     },
