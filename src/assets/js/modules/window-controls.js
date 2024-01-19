@@ -354,6 +354,12 @@ const windowsControlsHandler = () => {
             customerWindowExpanded = false
             sidebarTopElement.style.transform = 'translateY(0)';
             localStorage.removeItem('customerTempData');
+
+            const isTopSidebarShown = JSON.parse(localStorage.getItem('isVerticalSidebarShown'))
+            if(!isTopSidebarShown){
+                sidebarElement.style.display = 'flex';
+            }
+            
         }
     });
 
@@ -398,6 +404,11 @@ const windowsControlsHandler = () => {
             scriptsWindowExpanded = false
             sidebarTopElement.style.transform = 'translateY(0)';
             localStorage.removeItem('scriptsTempData');
+
+            const isTopSidebarShown = JSON.parse(localStorage.getItem('isVerticalSidebarShown'))
+            if(!isTopSidebarShown){
+                sidebarElement.style.display = 'flex';
+            }
         }
     })
 

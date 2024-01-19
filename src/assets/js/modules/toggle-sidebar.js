@@ -37,18 +37,22 @@ const toggleSidebar = () => {
     }
 
     toggleLeftSidebarBtn.addEventListener('click', () => {
-        let verticalSidebarShown = JSON.parse(localStorage.getItem('isVerticalSidebarShown')) || false ;
+        let verticalSidebarShown = JSON.parse(localStorage.getItem('isVerticalSidebarShown')) ;
         if(!verticalSidebarShown){
+            console.log('test')
             verticalSidebar.classList.add('active')
             sidebarElement.classList.add('hidden');
+            sidebarElement.style.display = 'none';
             pageContentElement.classList.add('column')
             contentElement.classList.add('no-border')
             workingAreaElement.classList.add('small')
             localStorage.setItem('isVerticalSidebarShown', true)
+            console.log(localStorage.getItem('isVerticalSidebarShown'))
             const customerInfoData = JSON.parse(localStorage.getItem('customerInfoElementPositionAndSize'))
             customerInfoData.x = customerInfoData.x + 260
             localStorage.setItem('customerInfoElementPositionAndSize', JSON.stringify(customerInfoData))
         } else  {
+            console.log('error')
             sidebarElement.classList.remove('hidden');
             pageContentElement.classList.remove('column')
             contentElement.classList.remove('no-border')
@@ -60,20 +64,26 @@ const toggleSidebar = () => {
     })
 
     toggleTopSidebarBtn.addEventListener('click', () => {
-        let verticalSidebarShown = JSON.parse(localStorage.getItem('isVerticalSidebarShown')) || false ;
+        let verticalSidebarShown = JSON.parse(localStorage.getItem('isVerticalSidebarShown')) || true ;
         if(!verticalSidebarShown){
             verticalSidebar.classList.add('active')
             sidebarElement.classList.add('hidden');
+            sidebarElement.style.display = 'none';
             pageContentElement.classList.add('column')
             contentElement.classList.add('no-border')
             workingAreaElement.classList.add('small')
             localStorage.setItem('isVerticalSidebarShown', true)
+            const customerInfoData = JSON.parse(localStorage.getItem('customerInfoElementPositionAndSize'))
+            customerInfoData.x = customerInfoData.x + 260
+            localStorage.setItem('customerInfoElementPositionAndSize', JSON.stringify(customerInfoData))
         } else  {
+            console.log('hide')
             sidebarElement.classList.remove('hidden');
             pageContentElement.classList.remove('column')
             contentElement.classList.remove('no-border')
             verticalSidebar.classList.remove('active')
             workingAreaElement.classList.remove('small')
+            sidebarElement.style.display = 'flex';
             localStorage.setItem('isVerticalSidebarShown', false)
         }
     })
