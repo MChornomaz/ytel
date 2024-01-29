@@ -1,3 +1,5 @@
+import {getMaxZIndex} from './getMaxZindex.js'
+
 const modalsControls = () => {
 
     // MESSAGE MODAL ///////////////////////////////////////////////////////////////////
@@ -45,8 +47,10 @@ const modalsControls = () => {
     //left sidebar
     if(callsInQueueModal && backdrop){
         callsInQueueBtn.addEventListener('click', () => {
+            const zIndex = getMaxZIndex()
+            callsInQueueModal.style.zIndex = zIndex + 1
             callsInQueueModal.classList.add('active')
-            callsInQueueModal.style.width = '53.125rem'
+            callsInQueueModal.style.width = '62rem'
             callsInQueueModal.style.height = 'max-content'
         })
         
@@ -59,8 +63,10 @@ const modalsControls = () => {
     //top sidebar
     if(callsInQueueModal && backdrop){
         callsInQueueBtnHorizontalSidebar.addEventListener('click', () => {
+            const zIndex = getMaxZIndex()
+            callsInQueueModal.style.zIndex = zIndex + 1
             callsInQueueModal.classList.add('active')
-            callsInQueueModal.style.width = '53.125rem'
+            callsInQueueModal.style.width = '62rem'
             callsInQueueModal.style.height = 'max-content'
         })
         
@@ -116,8 +122,10 @@ const modalsControls = () => {
     //left sidebar
     if(callChannelsModal && backdrop){
         callChannelsModalBtn.addEventListener('click', () => {
+            const zIndex = getMaxZIndex()
+            callChannelsModal.style.zIndex = zIndex + 1
             callChannelsModal.classList.add('active')
-            callChannelsModal.style.width = '53.125rem'
+            callChannelsModal.style.width = '63rem'
             callChannelsModal.style.height = 'max-content'
         })
         
@@ -130,6 +138,8 @@ const modalsControls = () => {
     //top sidebar
     if(callChannelsModal && backdrop){
         callChannelsModalBtnHorizontalSidebar.addEventListener('click', () => {
+            const zIndex = getMaxZIndex()
+            callChannelsModal.style.zIndex = zIndex + 1
             callChannelsModal.classList.add('active')
             callChannelsModal.style.width = '53.125rem'
             callChannelsModal.style.height = 'max-content'

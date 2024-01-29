@@ -1,3 +1,5 @@
+import {getMaxZIndex} from './getMaxZindex.js'
+
 // TOOLS  - DELETE IN THE END
 const toolsHandler = () => {
     const sidebarElement = document.querySelector('#leftSidebar');
@@ -111,6 +113,8 @@ const toolsHandler = () => {
             agentStatusModal.classList.add('active')
             agentStatusModal.style.width = '53.125rem'
             agentStatusModal.style.height = 'max-content'
+            const zIndex = getMaxZIndex()
+            agentStatusModal.style.zIndex = zIndex + 1
         })
         
         closeAgentStatusModalBtn.addEventListener('click', () => {

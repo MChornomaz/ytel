@@ -18,6 +18,7 @@ import {changeScale} from './modules/change-scale.js';
 import {dragAgentStatus} from './modules/drag-and-drop-agent-status.js'
 import {dragCallsInQueue} from './modules/drag-and-drop-calls-in-queue.js'
 import {dragCallChannels} from './modules/call-channels-drag-and-drop.js'
+import {setWindowsPositions} from './modules/windows-position.js'
 
 
 flsFunctions.isWebp()
@@ -62,52 +63,5 @@ windowsControlsHandler()
 
 dragCustomerInfo()
 
-
-//Working windows position logic
-const workingWindows = document.querySelectorAll('.drag-item');
-workingWindows.forEach(el => el.style.zIndex = 10)
-
-workingWindows.forEach(window => {
-    window.addEventListener('mousedown', () => {
-        const otherWindowsIndexes = Array.from(workingWindows)
-            .filter(otherWindow => otherWindow !== window)
-            .map(otherWindow => parseInt(otherWindow.style.zIndex) || 200);
-
-        const maxOtherIndex = Math.max(...otherWindowsIndexes);
-
-        const newZIndex = maxOtherIndex + 1;
-        const resetLimit = 500;
-
-        if (newZIndex > resetLimit) {
-            workingWindows.forEach(otherWindow => {
-                otherWindow.style.zIndex = '10';
-            });
-            window.style.zIndex = '11';
-        } else {
-            window.style.zIndex = newZIndex.toString();
-        }
-
-        window.addEventListener('mousemove', () => {
-            const otherWindowsIndexes = Array.from(workingWindows)
-                .filter(otherWindow => otherWindow !== window)
-                .map(otherWindow => parseInt(otherWindow.style.zIndex) || 10);
-    
-            const maxOtherIndex = Math.max(...otherWindowsIndexes);
-    
-            const newZIndex = maxOtherIndex + 1;
-            const resetLimit = 500;
-    
-            if (newZIndex > resetLimit) {
-                workingWindows.forEach(otherWindow => {
-                    otherWindow.style.zIndex = '10';
-                });
-                window.style.zIndex = '11';
-            } else {
-                window.style.zIndex = newZIndex.toString();
-            }
-    
-            
-        });
-    });
-});
+setWindowsPositions()
 

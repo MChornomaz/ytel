@@ -1,3 +1,5 @@
+import {getMaxZIndex} from './getMaxZindex.js'
+
 // WINDOWS CONTROLS
 const windowsControlsHandler = () => {
 
@@ -122,8 +124,6 @@ const windowsControlsHandler = () => {
         }
     }
 
-    
-
     const checkTrayElementVisibility = () => {
         if(!callsInQueueActive || 
             !agentStatusActive || 
@@ -142,7 +142,7 @@ const windowsControlsHandler = () => {
 
 
     callChannelsMinimizeBtn.addEventListener('click', () => {
-        const baseData = {"x":384,"y":442.5,"width":680,"height":202.875}
+        const baseData = {"x":384,"y":442.5,"width":780,"height":202.875}
         callChannelsData = JSON.parse(localStorage.getItem('callChannelsElementPositionAndSize'))
 
         trayElement.classList.add('active')
@@ -263,25 +263,45 @@ const windowsControlsHandler = () => {
     // call script element
 
     sidebarScriptsBtn.addEventListener('click', () => {
+        const zIndex = getMaxZIndex()
+        scriptDragContainer.style.zIndex = zIndex + 1
         scriptDragContainer.classList.toggle('hidden')
+        if(scriptsTrayElement.classList.contains('active')){
+            scriptsTrayElement.classList.remove('active')
+        }
     })
 
     // call script element top sidebar
 
     topSidebarScriptsBtn.addEventListener('click', () => {
+        const zIndex = getMaxZIndex()
+        scriptDragContainer.style.zIndex = zIndex + 1
         scriptDragContainer.classList.toggle('hidden')
+        if(scriptsTrayElement.classList.contains('active')){
+            scriptsTrayElement.classList.remove('active')
+        }
     })
 
     // call forms element left sidebar
 
     formsBtn.addEventListener('click', () => {
+        const zIndex = getMaxZIndex()
+        customerInfoDragContainer.style.zIndex = zIndex + 1
         customerInfoDragContainer.classList.toggle('hidden')
+        if(customerTrayElement.classList.contains('active')){
+            customerTrayElement.classList.remove('active')
+        }
     })
 
     // call forms element top sidebar
 
     formsBtnHorizontalSidebar.addEventListener('click', () => {
+        const zIndex = getMaxZIndex()
+        customerInfoDragContainer.style.zIndex = zIndex + 1
         customerInfoDragContainer.classList.toggle('hidden')
+        if(customerTrayElement.classList.contains('active')){
+            customerTrayElement.classList.remove('active')
+        }
     })
 
 
